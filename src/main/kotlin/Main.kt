@@ -1,4 +1,6 @@
-val solution = SampleSolution() // edit this
+import solutions.*
+
+val solution = Solution876() // edit this
 
 fun main() {
     solution.runGivenTestCases()
