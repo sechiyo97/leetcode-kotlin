@@ -10,7 +10,7 @@ fun binarySearch(nums: IntArray, target: Int): Int {
             target < nums[mid] -> max = mid - 1
             else -> return mid
         }
-        mid = (min+max)/2
+        mid = (min/2.0 + max/2.0).toInt()
     }
     return -1
 }
