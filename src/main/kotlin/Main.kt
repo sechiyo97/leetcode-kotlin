@@ -1,8 +1,8 @@
-import solutions.*
+import solution.*
 
-val solution = Solution876() // edit this
+val solution = SampleSolution() // edit here
 
 fun main() {
-    solution.runGivenTestCases()
-//    solution.runInputCase()
+    solution.runGivenTestCases() // for given tests
+//    solution.runInputCase() // for user input case
 }
