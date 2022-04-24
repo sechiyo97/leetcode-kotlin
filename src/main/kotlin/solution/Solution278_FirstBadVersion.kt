@@ -18,7 +18,6 @@ class Solution278_FirstBadVersion: Solution<Solution278_FirstBadVersion.Params, 
         fun isBadVersion(version: Int) = version >= firstBadVersion
     }
 
-
     override fun algorithm(params: Params): Int {
         val n = params.n
         val bad = params.bad

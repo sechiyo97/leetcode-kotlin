@@ -4,7 +4,7 @@ import java.lang.StringBuilder
 
 fun String.toIntArray(): IntArray {
     val exceptParenthesis = this.removePrefix("[").removeSuffix("]")
-    return exceptParenthesis.split(",").map { it.toInt() }.toIntArray()
+    return exceptParenthesis.split(",").map { it.trim().toInt() }.toIntArray()
 }
 
 fun String.to2DIntArray(): Array<IntArray> {
