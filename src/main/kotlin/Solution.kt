@@ -10,7 +10,7 @@ abstract class Solution<InputType, OutputType> {
         val input = readLine()!!
         val params = inputToParamType(input)
         val result = algorithm(params)
-        println("result is $result")
+        println("result is ${result.convertToString()}")
     }
 
     fun runGivenTestCases() {
