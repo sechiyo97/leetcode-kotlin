@@ -80,6 +80,4 @@ abstract class Solution<InputType, OutputType> {
         class Success<Type>: TestResult<Type>()
         class Fail<Type>(val was: Type, val expected: Type): TestResult<Type>()
     }
-
-    class CaseNotRegisteredException: Exception()
 }
