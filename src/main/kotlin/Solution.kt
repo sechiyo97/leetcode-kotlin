@@ -1,83 +1,94 @@
-abstract class Solution<InputType, OutputType> {
+import common.checkContentEquals
+import common.convertToString
+
+// Todo: add kdoc
+sealed class Solution<InputType, OutputType, GivenResultType> {
+    // implementation required for actual solutions
     protected abstract val givenTestCases: Map<String, OutputType>
     protected open val customTestCases: Map<String, OutputType> = emptyMap()
 
-    protected abstract fun algorithm(params: InputType): OutputType
+    abstract fun algorithm(input: InputType): GivenResultType
+    abstract fun inputStringToInputType(input: String): InputType
 
-    protected abstract  fun inputToParamType(input: String): InputType
-
-    fun runWithInputCase() {
-        print("Your Input: ")
-        val input = readLine()!!
-        val params = inputToParamType(input)
-        val result = algorithm(params)
-        println("result is ${result.convertToString()}")
+    // open methods
+    fun testWithGivenCases() {
+        println("====== run given test cases ======")
+        runTestsForCases(givenTestCases)
+    }
+    fun testWithCustomCases() {
+        println("====== run custom test cases =====")
+        runTestsForCases(customTestCases)
     }
 
-    fun testWithGivenCases() = runTestsForCases(givenTestCases)
-    fun testWithCustomCases() = runTestsForCases(customTestCases)
+    fun runWithInputCase() {
+        println("==== get result of input case ====")
+        print("your input: ")
+        val inputString = readLine()!!
+        val result = getResultForInputString(inputString)
+        println("result: ${result.convertToString()}")
+    }
 
-    fun runTestsForCases(testCases: Map<String, OutputType>) {
+    // implementation required for classes that override Solution class
+    abstract fun getResultForInputString(inputString: String): OutputType
+    abstract fun checkTestCaseSuccess(inputString: String, expected: OutputType): TestResult<OutputType>
+
+    // no need to implement
+    private fun runTestsForCases(testCases: Map<String, OutputType>) {
         var passCases = 0
         val totalCases = testCases.size
-        testCases.keys.forEachIndexed{ index, input ->
-            println("case $index: $input")
+        testCases.keys.forEachIndexed { index, input ->
+            print("case $index: ")
             val expected = testCases[input]!!
-            when (val result = checkTestSuccess(input, expected)) {
+            when (val result = checkTestCaseSuccess(input, expected)) {
                 is TestResult.Success -> {
                     passCases++
-                    println("Pass")
+                    val resultString = result.result.convertToString()
+                    println("pass (input: $input, result: $resultString)")
                 }
                 is TestResult.Fail -> {
-                    val wasString = result.was.convertToString()
+                    val resultString = result.result.convertToString()
                     val expectedString = result.expected.convertToString()
-                    println("Fail (was: $wasString, expected: $expectedString)")
+                    println("fail (input: $input, result: $resultString, expected: $expectedString)")
                 }
             }
-            println()
         }
         println("passed cases: $passCases/$totalCases")
     }
 
-    private fun checkTestSuccess(input: String, expected: OutputType): TestResult<OutputType> {
-        val params = inputToParamType(input)
-        val was = algorithm(params)
-        val pass = was.checkContentEquals(expected)
-        return if (pass) TestResult.Success() else TestResult.Fail(was, expected)
-    }
-
-    private fun OutputType.convertToString(): String {
-        return when(this) {
-            is IntArray -> this.contentToString()
-            is BooleanArray -> this.contentToString()
-            is FloatArray -> this.contentToString()
-            is DoubleArray -> this.contentToString()
-            is ByteArray -> this.contentToString()
-            is CharArray -> this.contentToString()
-            is LongArray -> this.contentToString()
-            is ShortArray -> this.contentToString()
-            is Array<*> -> this.contentToString()
-            else -> this.toString()
-        }
-    }
-
-    private fun OutputType.checkContentEquals(other: OutputType): Boolean {
-        return when(this) {
-            is IntArray -> this.contentEquals(other as IntArray)
-            is BooleanArray -> this.contentEquals(other as BooleanArray)
-            is FloatArray -> this.contentEquals(other as FloatArray)
-            is DoubleArray -> this.contentEquals(other as DoubleArray)
-            is ByteArray -> this.contentEquals(other as ByteArray)
-            is CharArray -> this.contentEquals(other as CharArray)
-            is LongArray -> this.contentEquals(other as LongArray)
-            is ShortArray -> this.contentEquals(other as ShortArray)
-            is Array<*> -> this.contentEquals(other as Array<*>)
-            else -> this == other
-        }
-    }
-
     sealed class TestResult<OutputType> {
-        class Success<Type>: TestResult<Type>()
-        class Fail<Type>(val was: Type, val expected: Type): TestResult<Type>()
+        class Success<Type>(val result: Type): TestResult<Type>()
+        class Fail<Type>(val result: Type, val expected: Type): TestResult<Type>()
+    }
+
+    abstract class General<InputType, OutputType>: Solution<InputType, OutputType, OutputType>() {
+        override fun getResultForInputString(inputString: String): OutputType {
+            val input = inputStringToInputType(inputString)
+            return algorithm(input)
+        }
+
+        override fun checkTestCaseSuccess(inputString: String, expected: OutputType): TestResult<OutputType> {
+            val input = inputStringToInputType(inputString)
+            val result = algorithm(input)
+            val pass = result.checkContentEquals(expected)
+            return if (pass) TestResult.Success(result) else TestResult.Fail(result, expected)
+        }
+    }
+
+    abstract class InPlaceArray<InputType, ArrayType> : Solution<InputType, ArrayType, Unit>() {
+        abstract fun inputTypeToArrayType(input: InputType): ArrayType
+
+        override fun getResultForInputString(inputString: String): ArrayType {
+            val input = inputStringToInputType(inputString)
+            algorithm(input)
+            return inputTypeToArrayType(input)
+        }
+
+        override fun checkTestCaseSuccess(inputString: String, expected: ArrayType): TestResult<ArrayType> {
+            val input = inputStringToInputType(inputString)
+            algorithm(input)
+            val result = inputTypeToArrayType(input)
+            val pass = result.checkContentEquals(expected)
+            return if (pass) TestResult.Success(result) else TestResult.Fail(result, expected)
+        }
     }
 }

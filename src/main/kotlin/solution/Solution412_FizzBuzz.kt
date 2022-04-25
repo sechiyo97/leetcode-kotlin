@@ -2,7 +2,7 @@ package solution
 
 import Solution
 
-class Solution412_FizzBuzz: Solution<Int, List<String>>() {
+class Solution412_FizzBuzz: Solution.General<Int, List<String>>() {
     override val givenTestCases: Map<String, List<String>> = mapOf(
         "3" to listOf("1", "2", "Fizz"),
         "5" to listOf("1", "2", "Fizz", "4", "Buzz"),
@@ -20,7 +20,7 @@ class Solution412_FizzBuzz: Solution<Int, List<String>>() {
         return answer
     }
 
-    override fun inputToParamType(input: String): Int {
+    override fun inputStringToInputType(input: String): Int {
         return Integer.valueOf(input)
     }
 

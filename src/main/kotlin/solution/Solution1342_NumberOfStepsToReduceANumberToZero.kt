@@ -2,7 +2,7 @@ package solution
 
 import Solution
 
-class Solution1342_NumberOfStepsToReduceANumberToZero : Solution<Int, Int>() {
+class Solution1342_NumberOfStepsToReduceANumberToZero : Solution.General<Int, Int>() {
     override val givenTestCases = mapOf(
         "14" to 6,
         "8" to 4,
@@ -19,7 +19,7 @@ class Solution1342_NumberOfStepsToReduceANumberToZero : Solution<Int, Int>() {
         return steps
     }
 
-    override fun inputToParamType(input: String): Int {
+    override fun inputStringToInputType(input: String): Int {
         return input.toInt()
     }
 }

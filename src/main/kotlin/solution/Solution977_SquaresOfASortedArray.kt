@@ -3,7 +3,7 @@ package solution
 import Solution
 import common.toIntArray
 
-class Solution977_SquaresOfASortedArray: Solution<IntArray, IntArray>() {
+class Solution977_SquaresOfASortedArray: Solution.General<IntArray, IntArray>() {
     override val givenTestCases: Map<String, IntArray> = mapOf(
         "[-4,-1,0,3,10]" to intArrayOf(0,1,9,16,100),
         "[-7,-3,2,3,11]" to intArrayOf(4,9,9,49,121)
@@ -12,8 +12,8 @@ class Solution977_SquaresOfASortedArray: Solution<IntArray, IntArray>() {
         "[-1]" to intArrayOf(1)
     )
 
-    override fun algorithm(params: IntArray): IntArray {
-        val nums = params
+    override fun algorithm(input: IntArray): IntArray {
+        val nums = input
 
         val n = nums.size
         val result = IntArray(n)
@@ -53,7 +53,7 @@ class Solution977_SquaresOfASortedArray: Solution<IntArray, IntArray>() {
         return result
     }
 
-    override fun inputToParamType(input: String): IntArray {
+    override fun inputStringToInputType(input: String): IntArray {
         return input.toIntArray()
     }
 }
