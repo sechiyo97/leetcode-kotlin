@@ -1,8 +1,9 @@
-import solution.*
+import solution.sample.SampleSolution_General
 
-val solution = SampleSolution() // edit here
+val solution = SampleSolution_General() // edit here
 
 fun main() {
-    solution.runGivenTestCases() // for given tests
-//    solution.runInputCase() // for user input case
+    solution.testWithGivenCases() // for given tests
+    solution.testWithCustomCases() // for custom tests
+    solution.runWithInputCase() // for user input case
 }

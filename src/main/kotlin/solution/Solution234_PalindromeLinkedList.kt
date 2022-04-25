@@ -4,7 +4,7 @@ import Solution
 import common.model.ListNode
 import common.toIntArray
 
-class Solution234_PalindromeLinkedList: Solution<ListNode?, Boolean>(){
+class Solution234_PalindromeLinkedList: Solution.General<ListNode?, Boolean>(){
     override val givenTestCases: Map<String, Boolean> = mapOf(
         "[1,2,2,1]" to true,
         "[1,2]" to false
@@ -13,8 +13,8 @@ class Solution234_PalindromeLinkedList: Solution<ListNode?, Boolean>(){
         "[1,2,3,2,3,2,1]" to true
     )
 
-    override fun algorithm(params: ListNode?): Boolean {
-        var currentNode: ListNode? = params
+    override fun algorithm(input: ListNode?): Boolean {
+        var currentNode: ListNode? = input
         val list = mutableListOf<Int>()
         var size = 0
         while (currentNode != null) {
@@ -35,7 +35,7 @@ class Solution234_PalindromeLinkedList: Solution<ListNode?, Boolean>(){
         return true
     }
 
-    override fun inputToParamType(input: String): ListNode? {
+    override fun inputStringToInputType(input: String): ListNode? {
         val heads = input.toIntArray()
 
         var currentNode: ListNode? = ListNode(0)

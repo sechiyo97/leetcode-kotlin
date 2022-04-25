@@ -2,7 +2,7 @@ package solution
 
 import Solution
 
-class Solution383_RansomNote: Solution<Solution383_RansomNote.Params, Boolean>(){
+class Solution383_RansomNote: Solution.General<Solution383_RansomNote.Params, Boolean>(){
     class Params(val ransomNote: String, val magazine: String)
 
     override val givenTestCases: Map<String, Boolean> = mapOf(
@@ -11,9 +11,9 @@ class Solution383_RansomNote: Solution<Solution383_RansomNote.Params, Boolean>()
         "aa aab" to true
     )
 
-    override fun algorithm(params: Params): Boolean {
-        val ransomNote = params.ransomNote
-        val magazine = params.magazine
+    override fun algorithm(input: Params): Boolean {
+        val ransomNote = input.ransomNote
+        val magazine = input.magazine
 
         val atoz = List(26) { 0 }.toMutableList()
         magazine.forEach { atoz[it.toInt() - 97]++}
@@ -25,7 +25,7 @@ class Solution383_RansomNote: Solution<Solution383_RansomNote.Params, Boolean>()
         return true
     }
 
-    override fun inputToParamType(input: String): Params {
+    override fun inputStringToInputType(input: String): Params {
         val split = input.split(" ")
         return Params(split[0], split[1])
     }

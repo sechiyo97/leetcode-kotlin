@@ -4,8 +4,7 @@ import Solution
 import common.swap
 import common.toIntArray
 
-// must use same variable for input and output
-class Solution189_RotateArray: Solution<Solution189_RotateArray.Params, IntArray>(){
+class Solution189_RotateArray: Solution.InPlaceArray<Solution189_RotateArray.Params, IntArray>(){
     class Params(val nums: IntArray, val k: Int)
 
     override val givenTestCases: Map<String, IntArray> = mapOf(
@@ -22,7 +21,7 @@ class Solution189_RotateArray: Solution<Solution189_RotateArray.Params, IntArray
      * Time Complexity: O(n)
      * Space Complexity: O(n)
      */
-//    override fun algorithm(params: Params): IntArray {
+//    override fun algorithm(params: Params) {
 //        val nums = params.nums
 //        val k = params.k
 //
@@ -30,8 +29,6 @@ class Solution189_RotateArray: Solution<Solution189_RotateArray.Params, IntArray
 //        val newArray = IntArray(n)
 //        for (i in 0 until n) newArray[(i+k)%n] = nums[i]
 //        for (i in 0 until n) nums[i] = newArray[i]
-//
-//        return nums // no return value in actual problem
 //    }
 
     /**
@@ -39,23 +36,25 @@ class Solution189_RotateArray: Solution<Solution189_RotateArray.Params, IntArray
      * Time Complexity: O(n)
      * Space Complexity: O(1)
      */
-    override fun algorithm(params: Params): IntArray {
-        val nums = params.nums
-        val k = params.k
+    override fun algorithm(input: Params) {
+        val nums = input.nums
+        val k = input.k
 
         val n = nums.size
         val simpleK = k%n
         for (i in 0 until (n-simpleK)/2) nums.swap(i, (n-1)-simpleK-i)
         for (i in 0 until simpleK/2) nums.swap((n-simpleK)+i, (n-1)-i)
         for (i in 0 until n/2) nums.swap(i, (n-1)-i)
-
-        return nums // no return value in actual problem
     }
 
-    override fun inputToParamType(input: String): Params {
+    override fun inputStringToInputType(input: String): Params {
         val split = input.split(" ")
         val nums = split[0].toIntArray()
         val k = split[1].toInt()
         return Params(nums, k)
+    }
+
+    override fun inputTypeToArrayType(input: Params): IntArray {
+        return input.nums
     }
 }

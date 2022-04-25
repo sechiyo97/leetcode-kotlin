@@ -3,17 +3,17 @@ package solution
 import Solution
 import common.toIntArray
 
-class Solution53_MaximumSubarray: Solution<IntArray, Int>() {
+class Solution53_MaximumSubarray: Solution.General<IntArray, Int>() {
     override val givenTestCases: Map<String, Int> = mapOf(
         "[-2,1,-3,4,-1,2,1,-5,4]" to 6,
         "[1]" to 1,
         "[5,4,-1,7,8]" to 23
     )
 
-    override fun algorithm(params: IntArray): Int {
+    override fun algorithm(input: IntArray): Int {
         var maxSum = -10000
         var sum = 0
-        params.forEach { current ->
+        input.forEach { current ->
             val calculatedSum = sum + current
             when {
                 calculatedSum < 0 -> {
@@ -33,7 +33,7 @@ class Solution53_MaximumSubarray: Solution<IntArray, Int>() {
         return maxSum
     }
 
-    override fun inputToParamType(input: String): IntArray {
+    override fun inputStringToInputType(input: String): IntArray {
         return input.toIntArray()
     }
 }

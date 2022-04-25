@@ -2,7 +2,7 @@ package solution
 
 import Solution
 
-class Solution278_FirstBadVersion: Solution<Solution278_FirstBadVersion.Params, Int>() {
+class Solution278_FirstBadVersion: Solution.General<Solution278_FirstBadVersion.Params, Int>() {
     class Params(val n: Int, val bad: Int)
 
     override val givenTestCases: Map<String, Int> = mapOf(
@@ -20,9 +20,9 @@ class Solution278_FirstBadVersion: Solution<Solution278_FirstBadVersion.Params, 
         fun isBadVersion(version: Int) = version >= firstBadVersion
     }
 
-    override fun algorithm(params: Params): Int {
-        val n = params.n
-        val bad = params.bad
+    override fun algorithm(input: Params): Int {
+        val n = input.n
+        val bad = input.bad
 
         val versions = Versions(n, bad)
 
@@ -39,7 +39,7 @@ class Solution278_FirstBadVersion: Solution<Solution278_FirstBadVersion.Params, 
         return mid+1
     }
 
-    override fun inputToParamType(input: String): Params {
+    override fun inputStringToInputType(input: String): Params {
         val split = input.split(" ")
         return Params(split[0].toInt(), split[1].toInt())
     }

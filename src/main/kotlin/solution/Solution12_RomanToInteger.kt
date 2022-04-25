@@ -1,8 +1,6 @@
 package solution
 
-import Solution
-
-class Solution12_RomanToInteger : Solution<String, Int>() {
+class Solution12_RomanToInteger : Solution.General<String, Int>() {
     override val givenTestCases = mapOf(
         "III" to 3,
         "IV" to 4,
@@ -10,10 +8,10 @@ class Solution12_RomanToInteger : Solution<String, Int>() {
         "MCMXCIV" to 1994
     )
 
-    override fun algorithm(params: String): Int {
+    override fun algorithm(input: String): Int {
         var result = 0
         var lastRomanIntValue = 0
-        params.forEach { char ->
+        input.forEach { char ->
             val currentRomanIntValue = romanMap[char] ?: 0
             if (currentRomanIntValue > lastRomanIntValue)
                 lastRomanIntValue = currentRomanIntValue - lastRomanIntValue
@@ -25,7 +23,7 @@ class Solution12_RomanToInteger : Solution<String, Int>() {
         return result + lastRomanIntValue
     }
 
-    override fun inputToParamType(input: String): String {
+    override fun inputStringToInputType(input: String): String {
         return input
     }
 
