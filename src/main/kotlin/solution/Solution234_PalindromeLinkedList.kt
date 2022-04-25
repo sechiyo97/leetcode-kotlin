@@ -7,7 +7,9 @@ import common.toIntArray
 class Solution234_PalindromeLinkedList: Solution<ListNode?, Boolean>(){
     override val givenTestCases: Map<String, Boolean> = mapOf(
         "[1,2,2,1]" to true,
-        "[1,2]" to false,
+        "[1,2]" to false
+    )
+    override val customTestCases: Map<String, Boolean> = mapOf(
         "[1,2,3,2,3,2,1]" to true
     )
 

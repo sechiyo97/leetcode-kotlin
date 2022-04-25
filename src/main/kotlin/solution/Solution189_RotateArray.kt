@@ -10,7 +10,9 @@ class Solution189_RotateArray: Solution<Solution189_RotateArray.Params, IntArray
 
     override val givenTestCases: Map<String, IntArray> = mapOf(
         "[1,2,3,4,5,6,7] 3" to intArrayOf(5,6,7,1,2,3,4),
-        "[-1,-100,3,99] 2" to intArrayOf(3,99,-1,-100),
+        "[-1,-100,3,99] 2" to intArrayOf(3,99,-1,-100)
+    )
+    override val customTestCases: Map<String, IntArray> = mapOf(
         "[-1] 2" to intArrayOf(-1),
         "[-1,-2] 23" to intArrayOf(-2,-1)
     )

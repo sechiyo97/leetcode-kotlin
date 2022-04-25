@@ -7,7 +7,9 @@ class Solution278_FirstBadVersion: Solution<Solution278_FirstBadVersion.Params, 
 
     override val givenTestCases: Map<String, Int> = mapOf(
         "5 4" to 4,
-        "1 1" to 1,
+        "1 1" to 1
+    )
+    override val customTestCases: Map<String, Int> = mapOf(
         "6 5" to 5
     )
 

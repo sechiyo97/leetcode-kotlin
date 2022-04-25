@@ -1,11 +1,12 @@
 abstract class Solution<InputType, OutputType> {
     protected abstract val givenTestCases: Map<String, OutputType>
+    protected open val customTestCases: Map<String, OutputType> = emptyMap()
 
     protected abstract fun algorithm(params: InputType): OutputType
 
     protected abstract  fun inputToParamType(input: String): InputType
 
-    fun runInputCase() {
+    fun runWithInputCase() {
         print("Your Input: ")
         val input = readLine()!!
         val params = inputToParamType(input)
@@ -13,26 +14,36 @@ abstract class Solution<InputType, OutputType> {
         println("result is ${result.convertToString()}")
     }
 
-    fun runGivenTestCases() {
+    fun testWithGivenCases() = runTestsForCases(givenTestCases)
+    fun testWithCustomCases() = runTestsForCases(customTestCases)
+
+    fun runTestsForCases(testCases: Map<String, OutputType>) {
         var passCases = 0
-        val totalCases = givenTestCases.size
-        givenTestCases.keys.forEachIndexed{ index, input ->
+        val totalCases = testCases.size
+        testCases.keys.forEachIndexed{ index, input ->
             println("case $index: $input")
-            val params = inputToParamType(input)
-            val result = algorithm(params)
-            val expected = givenTestCases[input]
-            if (result.checkContentEquals(expected)) {
-                passCases++
-                println("Pass")
-            }
-            else {
-                val wasString = result?.convertToString()
-                val expectedString = expected?.convertToString()
-                println("Fail (was: $wasString, expected: $expectedString)")
+            val expected = testCases[input]!!
+            when (val result = checkTestSuccess(input, expected)) {
+                is TestResult.Success -> {
+                    passCases++
+                    println("Pass")
+                }
+                is TestResult.Fail -> {
+                    val wasString = result.was.convertToString()
+                    val expectedString = result.expected.convertToString()
+                    println("Fail (was: $wasString, expected: $expectedString)")
+                }
             }
             println()
         }
         println("passed cases: $passCases/$totalCases")
+    }
+
+    private fun checkTestSuccess(input: String, expected: OutputType): TestResult<OutputType> {
+        val params = inputToParamType(input)
+        val was = algorithm(params)
+        val pass = was.checkContentEquals(expected)
+        return if (pass) TestResult.Success() else TestResult.Fail(was, expected)
     }
 
     private fun OutputType.convertToString(): String {
@@ -50,7 +61,7 @@ abstract class Solution<InputType, OutputType> {
         }
     }
 
-    private fun OutputType.checkContentEquals(other: OutputType?): Boolean {
+    private fun OutputType.checkContentEquals(other: OutputType): Boolean {
         return when(this) {
             is IntArray -> this.contentEquals(other as IntArray)
             is BooleanArray -> this.contentEquals(other as BooleanArray)
@@ -64,4 +75,11 @@ abstract class Solution<InputType, OutputType> {
             else -> this == other
         }
     }
+
+    sealed class TestResult<OutputType> {
+        class Success<Type>: TestResult<Type>()
+        class Fail<Type>(val was: Type, val expected: Type): TestResult<Type>()
+    }
+
+    class CaseNotRegisteredException: Exception()
 }
