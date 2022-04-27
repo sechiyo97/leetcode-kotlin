@@ -1,5 +1,6 @@
 import common.checkContentEquals
 import common.convertToString
+import common.model.ListNode
 
 // Todo: add kdoc
 sealed class Solution<InputType, OutputType, GivenResultType> {
@@ -38,18 +39,24 @@ sealed class Solution<InputType, OutputType, GivenResultType> {
         val totalCases = testCases.size
         testCases.keys.forEachIndexed { index, input ->
             print("case $index: ")
-            val expected = testCases[input]!!
-            when (val result = checkTestCaseSuccess(input, expected)) {
-                is TestResult.Success -> {
-                    passCases++
-                    val resultString = result.result.convertToString()
-                    println("pass (input: $input, result: $resultString)")
+            try {
+                val expected = testCases[input]!!
+                testCases["WER"]!!
+                when (val result = checkTestCaseSuccess(input, expected)) {
+                    is TestResult.Success -> {
+                        passCases++
+                        val resultString = result.result.convertToString()
+                        println("pass (input: $input, result: $resultString)")
+                    }
+                    is TestResult.Fail -> {
+                        val resultString = result.result.convertToString()
+                        val expectedString = result.expected.convertToString()
+                        println("fail (input: $input, result: $resultString, expected: $expectedString)")
+                    }
                 }
-                is TestResult.Fail -> {
-                    val resultString = result.result.convertToString()
-                    val expectedString = result.expected.convertToString()
-                    println("fail (input: $input, result: $resultString, expected: $expectedString)")
-                }
+            } catch (e: Exception) {
+                println("\nexception in case: $input")
+                throw e
             }
         }
         println("passed cases: $passCases/$totalCases")
