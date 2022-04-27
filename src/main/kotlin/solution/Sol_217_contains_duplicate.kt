@@ -3,7 +3,7 @@ package solution
 import Solution
 import common.toIntArray
 
-class Solution217_ContainsDuplicate: Solution.General<IntArray, Boolean>() {
+class Sol_217_contains_duplicate: Solution.General<IntArray, Boolean>() {
     override val givenTestCases: Map<String, Boolean> = mapOf(
         "[1,2,3,1]" to true,
         "[1,2,3,4]" to false,

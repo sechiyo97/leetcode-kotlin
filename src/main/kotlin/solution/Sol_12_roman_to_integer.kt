@@ -1,6 +1,6 @@
 package solution
 
-class Solution12_RomanToInteger : Solution.General<String, Int>() {
+class Sol_12_roman_to_integer : Solution.General<String, Int>() {
     override val givenTestCases = mapOf(
         "III" to 3,
         "IV" to 4,

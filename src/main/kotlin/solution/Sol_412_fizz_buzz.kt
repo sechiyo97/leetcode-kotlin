@@ -2,7 +2,7 @@ package solution
 
 import Solution
 
-class Solution412_FizzBuzz: Solution.General<Int, List<String>>() {
+class Sol_412_fizz_buzz: Solution.General<Int, List<String>>() {
     override val givenTestCases: Map<String, List<String>> = mapOf(
         "3" to listOf("1", "2", "Fizz"),
         "5" to listOf("1", "2", "Fizz", "4", "Buzz"),

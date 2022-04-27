@@ -2,7 +2,7 @@ package solution
 
 import Solution
 
-class Solution383_RansomNote: Solution.General<Solution383_RansomNote.Params, Boolean>(){
+class Sol_383_ransom_note: Solution.General<Sol_383_ransom_note.Params, Boolean>(){
     class Params(val ransomNote: String, val magazine: String)
 
     override val givenTestCases: Map<String, Boolean> = mapOf(
