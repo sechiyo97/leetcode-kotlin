@@ -41,7 +41,6 @@ sealed class Solution<InputType, OutputType, GivenResultType> {
             print("case $index: ")
             try {
                 val expected = testCases[input]!!
-                testCases["WER"]!!
                 when (val result = checkTestCaseSuccess(input, expected)) {
                     is TestResult.Success -> {
                         passCases++
