@@ -2,10 +2,13 @@ from os import listdir
 from os.path import isfile, join
 import leetcode
 
+solution_file_dir = "src/main/kotlin/solution/"
+
 leetcode_api_instance = leetcode.DefaultApi(leetcode.ApiClient(leetcode.Configuration()))
 leetcode_query_get_question_info = """
     query getQuestionDetail($titleSlug: String!) {
         question(titleSlug: $titleSlug) {
+            title
             difficulty
             stats
         }
@@ -26,7 +29,7 @@ Easy | Medium | Hard
 ------------- | ------------- | -------------\
 """
 table_header_problems = """\
-\# | name | link | difficulty | accepted rate
+\# | Problem(Solution) | LeetCode Link | Difficulty | Accepted Rate
 ------------- | ------------- | ------------- | ------------- | -------------\
 """
 
@@ -48,15 +51,12 @@ def get_table_content_string_problems(problems):
     
 
 class Problem:
-    def __init__(self, problem_number, problem_ref_name):
+    def __init__(self, problem_number, problem_ref_name, solution_file_name):
         self.problem_number = problem_number
         self.problem_ref_name = problem_ref_name
-        self.__update_name()
+        self.solution_file_name = solution_file_name
         self.__update_info()
 
-    def __update_name(self):
-        self.problem_name = ' '.join([name[0].upper() + name[1:].lower() for name in problem_ref_name.split('-')])
-        
     def __update_info(self):
         graphql_request = leetcode.GraphqlQuery(
             query=leetcode_query_get_question_info,
@@ -66,31 +66,35 @@ class Problem:
 
         info = leetcode_api_instance.graphql_post(body=graphql_request)
         question = info.data.question
+        self.title = question.title
         self.difficulty = question.difficulty
         self.acRate = eval(question.stats)['acRate']
 
-    def get_problem_link_title(self):
-        return self.problem_number + ". " + self.problem_name
+    def get_leet_code_link_title(self):
+        return self.problem_number + ". " + self.title
         
-    def get_problem_link(self):
+    def get_leet_code_link(self):
         return "https://leetcode.com/problems/" + self.problem_ref_name
+        
+    def get_solution_path(self):
+        return solution_file_dir + self.solution_file_name
         
     def to_read_me_line(self):
         return self.problem_number +\
-            " | " + self.problem_name +\
-            " | " + "["+self.get_problem_link_title()+"]("+self.get_problem_link()+")" +\
+            " | " + "["+self.title+"]("+self.get_solution_path()+")" +\
+            " | " + "["+self.get_leet_code_link_title()+"]("+self.get_leet_code_link()+")" +\
             " | " + self.difficulty +\
             " | " + self.acRate +\
             "\n"
 
-solution_files = [f for f in listdir("src/main/kotlin/solution/") if f[0:3]=="Sol"]
+solution_files = [f for f in listdir(solution_file_dir) if f[0:3]=="Sol"]
 
 problems = []
 for solution_file in solution_files:
     split = solution_file.split(".")[0].split("_")
     problem_number = split[1]
     problem_ref_name = "-".join(split[2:])
-    problem = Problem(problem_number, problem_ref_name)
+    problem = Problem(problem_number, problem_ref_name, solution_file)
     problems.append(problem)
     
 problems.sort(key=lambda solution: int(solution.problem_number))
