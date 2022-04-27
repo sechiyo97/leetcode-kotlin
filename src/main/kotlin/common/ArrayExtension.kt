@@ -3,14 +3,6 @@ package common
 import java.lang.StringBuilder
 
 fun IntArray.swap(first: Int, second: Int) { this[first] = this[second].also { this[second] = this[first] } }
-fun BooleanArray.swap(first: Int, second: Int) { this[first] = this[second].also { this[second] = this[first] } }
-fun FloatArray.swap(first: Int, second: Int) { this[first] = this[second].also { this[second] = this[first] } }
-fun DoubleArray.swap(first: Int, second: Int) { this[first] = this[second].also { this[second] = this[first] } }
-fun ByteArray.swap(first: Int, second: Int) { this[first] = this[second].also { this[second] = this[first] } }
-fun CharArray.swap(first: Int, second: Int) { this[first] = this[second].also { this[second] = this[first] } }
-fun LongArray.swap(first: Int, second: Int) { this[first] = this[second].also { this[second] = this[first] } }
-fun ShortArray.swap(first: Int, second: Int) { this[first] = this[second].also { this[second] = this[first] } }
-fun Array<Any>.swap(first: Int, second: Int) { this[first] = this[second].also { this[second] = this[first] } }
 
 fun String.toIntArray(): IntArray {
     val exceptParenthesis = this.removePrefix("[").removeSuffix("]")
