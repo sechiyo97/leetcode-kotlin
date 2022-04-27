@@ -1,7 +1,10 @@
 package solution
 
 import Solution
+import common.convertToString
+import common.swap
 import common.toIntArray
+import java.util.LinkedList
 
 class Solution283_MoveZeroes: Solution.InPlaceArray<IntArray, IntArray>() {
     override val givenTestCases: Map<String, IntArray> = mapOf(
@@ -10,6 +13,19 @@ class Solution283_MoveZeroes: Solution.InPlaceArray<IntArray, IntArray>() {
     )
 
     override fun algorithm(input: IntArray) {
+        val nums = input
+
+        val zeroIndexQueue = LinkedList<Int>()
+        for (i in nums.indices) {
+            if (nums[i] == 0) zeroIndexQueue.offer(i)
+            else {
+                val targetZeroIndex = zeroIndexQueue.poll() ?: continue
+                val temp = nums[i]
+                nums[i] = nums[targetZeroIndex]
+                nums[targetZeroIndex] = temp
+                zeroIndexQueue.offer(i)
+            }
+        }
     }
 
     override fun inputStringToInputType(input: String): IntArray {
