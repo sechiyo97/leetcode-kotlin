@@ -18,7 +18,18 @@ class Sol_19_remove_nth_node_from_end_of_list: Solution.General<Sol_19_remove_nt
         val head = input.head
         val n = input.n
 
-        return head
+        val dummy = ListNode(0).apply { next = head }
+        var left: ListNode? = dummy
+        var right: ListNode? = dummy
+        for (i in 0..n) right = right?.next
+
+        while(right != null) {
+            left = left?.next
+            right = right.next
+        }
+
+        left?.next = left?.next?.next
+        return dummy.next
     }
 
     override fun inputStringToInputType(input: String): Params {
