@@ -1,5 +1,7 @@
 package common.model
 
+import common.convertToString
+
 class ListNode(var `val`: Int) {
     var next: ListNode? = null
 
@@ -31,6 +33,10 @@ class ListNode(var `val`: Int) {
         var result = `val`
         result = 31 * result + (next?.hashCode() ?: 0)
         return result
+    }
+
+    override fun toString(): String {
+        return this.toIntArray().convertToString()
     }
 }
 
