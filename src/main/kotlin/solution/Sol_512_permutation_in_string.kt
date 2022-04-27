@@ -9,7 +9,7 @@ class Sol_512_permutation_in_string: Solution.General<Sol_512_permutation_in_str
         "ab eidboaoo" to false
     )
 
-    override fun algorithm(params: Params): Boolean {
+    override fun algorithm(input: Params): Boolean {
         return false
     }
 

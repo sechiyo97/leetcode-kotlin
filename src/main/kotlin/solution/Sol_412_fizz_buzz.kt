@@ -9,9 +9,9 @@ class Sol_412_fizz_buzz: Solution.General<Int, List<String>>() {
         "15" to listOf("1","2","Fizz","4","Buzz","Fizz","7","8","Fizz","Buzz","11","Fizz","13","14","FizzBuzz")
     )
 
-    override fun algorithm(params: Int): List<String> {
+    override fun algorithm(input: Int): List<String> {
         val answer = mutableListOf<String>()
-        for (i in 1..params) {
+        for (i in 1..input) {
             val fizz = i%3 == 0
             val buzz = i%5 == 0
             val result = if(fizz&&buzz) "FizzBuzz" else if(fizz) "Fizz" else if(buzz) "Buzz" else i.toString()
