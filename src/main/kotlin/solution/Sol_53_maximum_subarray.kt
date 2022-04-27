@@ -3,7 +3,7 @@ package solution
 import Solution
 import common.toIntArray
 
-class Solution53_MaximumSubarray: Solution.General<IntArray, Int>() {
+class Sol_53_maximum_subarray: Solution.General<IntArray, Int>() {
     override val givenTestCases: Map<String, Int> = mapOf(
         "[-2,1,-3,4,-1,2,1,-5,4]" to 6,
         "[1]" to 1,

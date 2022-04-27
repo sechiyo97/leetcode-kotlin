@@ -2,7 +2,7 @@ package solution
 
 import common.toIntArray
 
-class Solution35_SearchInsertPosition: Solution.General<Solution35_SearchInsertPosition.Params, Int>(){
+class Sol_35_search_insert_position: Solution.General<Sol_35_search_insert_position.Params, Int>(){
     class Params(val nums: IntArray, val target: Int)
 
     override val givenTestCases: Map<String, Int> = mapOf(

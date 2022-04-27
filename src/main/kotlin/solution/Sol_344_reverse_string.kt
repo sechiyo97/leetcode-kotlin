@@ -2,7 +2,7 @@ package solution
 
 import Solution
 
-class Solution344_ReverseString: Solution.InPlaceArray<CharArray, CharArray>(){
+class Sol_344_reverse_string: Solution.InPlaceArray<CharArray, CharArray>(){
     override val givenTestCases: Map<String, CharArray> = mapOf(
         "hello" to "olleh".toCharArray(),
         "hannah" to "hannah".toCharArray()

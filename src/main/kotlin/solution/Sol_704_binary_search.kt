@@ -4,7 +4,7 @@ import Solution
 import common.algorithm.binarySearch
 import common.toIntArray
 
-class Solution704_BinarySearch: Solution.General<Solution704_BinarySearch.Params, Int>() {
+class Sol_704_binary_search: Solution.General<Sol_704_binary_search.Params, Int>() {
     class Params(val nums: IntArray, val target: Int)
 
     override val givenTestCases: Map<String, Int> = mapOf(
