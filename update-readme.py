@@ -1,38 +1,68 @@
 from os import listdir
 from os.path import isfile, join
+import leetcode
+
+leetcode_api_instance = leetcode.DefaultApi(leetcode.ApiClient(leetcode.Configuration()))
+leetcode_query_get_question_info = """
+    query getQuestionDetail($titleSlug: String!) {
+        question(titleSlug: $titleSlug) {
+            difficulty
+            stats
+        }
+    }
+"""
 
 header =""" \
 # leetcode-kotlin
 LeetCode Algorithm Practice
             
 ## Problem Solved
-\#  | name | link
-------------- | ------------- | -------------
+\#  | name | link | difficulty
+------------- | ------------- | ------------- | -------------
 """
 
-class Solution:
+class Problem:
     def __init__(self, problem_number, problem_name):
         self.problem_number = problem_number
         self.problem_name = problem_name
-    def toReadMeLine(self):
-        return self.problem_number + " | " + self.problem_name + " | " + "https://leetcode.com/problems/" + self.problem_name + "\n"
+        self.__updateInfo()
+        
+    def __updateInfo(self):
+        graphql_request = leetcode.GraphqlQuery(
+            query=leetcode_query_get_question_info,
+            variables=leetcode.GraphqlQueryGetQuestionDetailVariables(title_slug=self.problem_name),
+            operation_name="getQuestionDetail"
+        )
 
+        info = leetcode_api_instance.graphql_post(body=graphql_request)
+        question = info.data.question
+        self.difficulty = question.difficulty
+        self.stats = question.stats
+        
+    def toReadMeLine(self):
+        return self.problem_number +\
+            " | " + self.problem_name +\
+            " | " + "https://leetcode.com/problems/" + self.problem_name +\
+            " | " + self.difficulty +\
+            "\n"
+    
 solution_files = [f for f in listdir("src/main/kotlin/solution/") if f[0:3]=="Sol"]
 
-solutions = []
+problems = []
 for solution_file in solution_files:
     split = solution_file.split(".")[0].split("_")
     problem_number = split[1]
     problem_name = "-".join(split[2:])
-    solutions.append(Solution(problem_number, problem_name))
+    problem = Problem(problem_number, problem_name)
+    problems.append(problem)
     
 
-solutions.sort(key=lambda solution: int(solution.problem_number))
+problems.sort(key=lambda solution: int(solution.problem_number))
 
 readme = open("README.md", "w")
 readme.write(header)
 
-for solution in solutions:
-    readme.write(solution.toReadMeLine())
+for problem in problems:
+    readme.write(problem.toReadMeLine())
 
 readme.close()
