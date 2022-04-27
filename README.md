@@ -10,22 +10,22 @@ Easy | Medium | Hard
 ------------- | ------------- | -------------
 15 | 2 | 0
 
-\# | name | link | difficulty | accepted rate
+\# | Problem(Solution) | LeetCode Link | Difficulty | Accepted Rate
 ------------- | ------------- | ------------- | ------------- | -------------
-12 | Roman To Integer | [12. Roman To Integer](https://leetcode.com/problems/roman-to-integer) | Easy | 57.9%
-35 | Search Insert Position | [35. Search Insert Position](https://leetcode.com/problems/search-insert-position) | Easy | 42.3%
-53 | Maximum Subarray | [53. Maximum Subarray](https://leetcode.com/problems/maximum-subarray) | Easy | 49.5%
-167 | Two Sum Ii Input Array Is Sorted | [167. Two Sum Ii Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted) | Medium | 58.7%
-189 | Rotate Array | [189. Rotate Array](https://leetcode.com/problems/rotate-array) | Medium | 38.6%
-217 | Contains Duplicate | [217. Contains Duplicate](https://leetcode.com/problems/contains-duplicate) | Easy | 60.8%
-234 | Palindrome Linked List | [234. Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list) | Easy | 46.6%
-278 | First Bad Version | [278. First Bad Version](https://leetcode.com/problems/first-bad-version) | Easy | 41.6%
-283 | Move Zeroes | [283. Move Zeroes](https://leetcode.com/problems/move-zeroes) | Easy | 60.6%
-344 | Reverse String | [344. Reverse String](https://leetcode.com/problems/reverse-string) | Easy | 74.8%
-383 | Ransom Note | [383. Ransom Note](https://leetcode.com/problems/ransom-note) | Easy | 55.8%
-412 | Fizz Buzz | [412. Fizz Buzz](https://leetcode.com/problems/fizz-buzz) | Easy | 66.6%
-704 | Binary Search | [704. Binary Search](https://leetcode.com/problems/binary-search) | Easy | 55.3%
-876 | The K Weakest Rows In A Matrix | [876. The K Weakest Rows In A Matrix](https://leetcode.com/problems/the-k-weakest-rows-in-a-matrix) | Easy | 74.3%
-977 | Squares Of A Sorted Array | [977. Squares Of A Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array) | Easy | 71.6%
-1342 | Number Of Steps To Reduce A Number To Zero | [1342. Number Of Steps To Reduce A Number To Zero](https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero) | Easy | 85.6%
-1672 | Richest Customer Wealth | [1672. Richest Customer Wealth](https://leetcode.com/problems/richest-customer-wealth) | Easy | 89.3%
+12 | [Roman to Integer](src/main/kotlin/solution/Sol_12_roman_to_integer.kt) | [12. Roman to Integer](https://leetcode.com/problems/roman-to-integer) | Easy | 57.9%
+35 | [Search Insert Position](src/main/kotlin/solution/Sol_35_search_insert_position.kt) | [35. Search Insert Position](https://leetcode.com/problems/search-insert-position) | Easy | 42.3%
+53 | [Maximum Subarray](src/main/kotlin/solution/Sol_53_maximum_subarray.kt) | [53. Maximum Subarray](https://leetcode.com/problems/maximum-subarray) | Easy | 49.5%
+167 | [Two Sum II - Input Array Is Sorted](src/main/kotlin/solution/Sol_167_two_sum_ii_input_array_is_sorted.kt) | [167. Two Sum II - Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted) | Medium | 58.7%
+189 | [Rotate Array](src/main/kotlin/solution/Sol_189_rotate-array.kt) | [189. Rotate Array](https://leetcode.com/problems/rotate-array) | Medium | 38.6%
+217 | [Contains Duplicate](src/main/kotlin/solution/Sol_217_contains_duplicate.kt) | [217. Contains Duplicate](https://leetcode.com/problems/contains-duplicate) | Easy | 60.8%
+234 | [Palindrome Linked List](src/main/kotlin/solution/Sol_234_palindrome_linked_list.kt) | [234. Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list) | Easy | 46.6%
+278 | [First Bad Version](src/main/kotlin/solution/Sol_278_first_bad_version.kt) | [278. First Bad Version](https://leetcode.com/problems/first-bad-version) | Easy | 41.6%
+283 | [Move Zeroes](src/main/kotlin/solution/Sol_283_move_zeroes.kt) | [283. Move Zeroes](https://leetcode.com/problems/move-zeroes) | Easy | 60.6%
+344 | [Reverse String](src/main/kotlin/solution/Sol_344_reverse_string.kt) | [344. Reverse String](https://leetcode.com/problems/reverse-string) | Easy | 74.8%
+383 | [Ransom Note](src/main/kotlin/solution/Sol_383_ransom_note.kt) | [383. Ransom Note](https://leetcode.com/problems/ransom-note) | Easy | 55.8%
+412 | [Fizz Buzz](src/main/kotlin/solution/Sol_412_fizz_buzz.kt) | [412. Fizz Buzz](https://leetcode.com/problems/fizz-buzz) | Easy | 66.6%
+704 | [Binary Search](src/main/kotlin/solution/Sol_704_binary_search.kt) | [704. Binary Search](https://leetcode.com/problems/binary-search) | Easy | 55.3%
+876 | [The K Weakest Rows in a Matrix](src/main/kotlin/solution/Sol_876_the_k_weakest_rows_in_a_matrix.kt) | [876. The K Weakest Rows in a Matrix](https://leetcode.com/problems/the-k-weakest-rows-in-a-matrix) | Easy | 74.3%
+977 | [Squares of a Sorted Array](src/main/kotlin/solution/Sol_977_squares_of_a_sorted_array.kt) | [977. Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array) | Easy | 71.6%
+1342 | [Number of Steps to Reduce a Number to Zero](src/main/kotlin/solution/Sol_1342_number_of_steps_to_reduce_a_number_to_zero.kt) | [1342. Number of Steps to Reduce a Number to Zero](https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero) | Easy | 85.6%
+1672 | [Richest Customer Wealth](src/main/kotlin/solution/Sol_1672_richest_customer_wealth.kt) | [1672. Richest Customer Wealth](https://leetcode.com/problems/richest-customer-wealth) | Easy | 89.3%
