@@ -12,7 +12,17 @@ class Sol_167_two_sum_ii_input_array_is_sorted: Solution.General<Sol_167_two_sum
     )
 
     override fun algorithm(input: Params): IntArray {
-        return input.numbers
+        val numbers = input.numbers
+        val target = input.target
+
+        var left = 0
+        var right = numbers.lastIndex
+        while(numbers[left]+numbers[right] != target) {
+            if (numbers[left]+numbers[right] > target) right--
+            else left++
+        }
+
+        return intArrayOf(left+1, right+1)
     }
 
     override fun inputStringToInputType(input: String): Params {
