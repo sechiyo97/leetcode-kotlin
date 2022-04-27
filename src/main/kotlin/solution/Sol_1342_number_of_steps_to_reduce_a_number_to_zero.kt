@@ -2,7 +2,7 @@ package solution
 
 import Solution
 
-class Solution1342_NumberOfStepsToReduceANumberToZero : Solution.General<Int, Int>() {
+class Sol_1342_number_of_steps_to_reduce_a_number_to_zero : Solution.General<Int, Int>() {
     override val givenTestCases = mapOf(
         "14" to 6,
         "8" to 4,

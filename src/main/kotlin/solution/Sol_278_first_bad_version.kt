@@ -2,7 +2,7 @@ package solution
 
 import Solution
 
-class Solution278_FirstBadVersion: Solution.General<Solution278_FirstBadVersion.Params, Int>() {
+class Sol_278_first_bad_version: Solution.General<Sol_278_first_bad_version.Params, Int>() {
     class Params(val n: Int, val bad: Int)
 
     override val givenTestCases: Map<String, Int> = mapOf(

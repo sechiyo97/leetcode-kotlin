@@ -4,7 +4,7 @@ import Solution
 import common.model.ListNode
 import common.toIntArray
 
-class Solution234_PalindromeLinkedList: Solution.General<ListNode?, Boolean>(){
+class Sol_234_palindrome_linked_list: Solution.General<ListNode?, Boolean>(){
     override val givenTestCases: Map<String, Boolean> = mapOf(
         "[1,2,2,1]" to true,
         "[1,2]" to false

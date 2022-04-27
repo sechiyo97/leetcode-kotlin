@@ -3,7 +3,7 @@ package solution
 import Solution
 import common.to2DIntArray
 
-class Solution876_TheKWeakestRowsInAMatrix: Solution.General<Solution876_TheKWeakestRowsInAMatrix.Params, IntArray>() {
+class Sol_876_the_k_weakest_rows_in_a_matrix: Solution.General<Sol_876_the_k_weakest_rows_in_a_matrix.Params, IntArray>() {
     class Params(val mat: Array<IntArray>, val k: Int)
 
     override val givenTestCases: Map<String, IntArray> =  mapOf(

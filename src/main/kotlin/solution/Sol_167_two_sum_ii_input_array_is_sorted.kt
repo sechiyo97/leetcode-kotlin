@@ -2,7 +2,7 @@ package solution
 
 import common.toIntArray
 
-class Solution167_TwoSumIiInputArrayIsSorted: Solution.General<Solution167_TwoSumIiInputArrayIsSorted.Params, IntArray>(){
+class Sol_167_two_sum_ii_input_array_is_sorted: Solution.General<Sol_167_two_sum_ii_input_array_is_sorted.Params, IntArray>(){
     class Params(val numbers: IntArray, val target: Int)
 
     override val givenTestCases: Map<String, IntArray> = mapOf(
