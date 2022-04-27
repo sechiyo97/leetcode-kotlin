@@ -31,7 +31,7 @@ sealed class Solution<InputType, OutputType, GivenResultType> {
 
     // implementation required for classes that override Solution class
     abstract fun getResultForInputString(inputString: String): OutputType
-    abstract fun checkTestCaseSuccess(inputString: String, expected: OutputType): TestResult<OutputType>
+    abstract fun checkTestCaseSuccess(inputString: String, expected: OutputType?): TestResult<OutputType>
 
     // no need to implement
     private fun runTestsForCases(testCases: Map<String, OutputType>) {
@@ -40,7 +40,7 @@ sealed class Solution<InputType, OutputType, GivenResultType> {
         testCases.keys.forEachIndexed { index, input ->
             print("case $index: ")
             try {
-                val expected = testCases[input]!!
+                val expected = testCases[input]
                 when (val result = checkTestCaseSuccess(input, expected)) {
                     is TestResult.Success -> {
                         passCases++
@@ -62,8 +62,8 @@ sealed class Solution<InputType, OutputType, GivenResultType> {
     }
 
     sealed class TestResult<OutputType> {
-        class Success<Type>(val result: Type): TestResult<Type>()
-        class Fail<Type>(val result: Type, val expected: Type): TestResult<Type>()
+        class Success<Type>(val result: Type?): TestResult<Type>()
+        class Fail<Type>(val result: Type?, val expected: Type?): TestResult<Type>()
     }
 
     abstract class General<InputType, OutputType>: Solution<InputType, OutputType, OutputType>() {
@@ -72,7 +72,7 @@ sealed class Solution<InputType, OutputType, GivenResultType> {
             return algorithm(input)
         }
 
-        override fun checkTestCaseSuccess(inputString: String, expected: OutputType): TestResult<OutputType> {
+        override fun checkTestCaseSuccess(inputString: String, expected: OutputType?): TestResult<OutputType> {
             val input = inputStringToInputType(inputString)
             val result = algorithm(input)
             val pass = result.checkContentEquals(expected)
@@ -89,7 +89,7 @@ sealed class Solution<InputType, OutputType, GivenResultType> {
             return inputTypeToArrayType(input)
         }
 
-        override fun checkTestCaseSuccess(inputString: String, expected: ArrayType): TestResult<ArrayType> {
+        override fun checkTestCaseSuccess(inputString: String, expected: ArrayType?): TestResult<ArrayType> {
             val input = inputStringToInputType(inputString)
             algorithm(input)
             val result = inputTypeToArrayType(input)
