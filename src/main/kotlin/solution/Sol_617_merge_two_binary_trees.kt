@@ -2,9 +2,7 @@ package solution
 
 import Solution
 import common.model.TreeNode
-import common.model.toHeadListNode
 import common.model.toRootTreeNode
-import common.toIntArray
 import common.toNullableIntArray
 
 class Sol_617_merge_two_binary_trees: Solution.General<Sol_617_merge_two_binary_trees.Params, TreeNode?>() {
