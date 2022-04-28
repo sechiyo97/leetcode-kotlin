@@ -32,7 +32,7 @@ class SampleSolution_InPlaceArray_MultipleParams: Solution.InPlaceArray<SampleSo
         return Params(nums, add)
     }
 
-    override fun inputTypeToArrayType(input: Params): IntArray {
+    override fun getTargetArrayFromInput(input: Params): IntArray {
         return input.nums
     }
 }

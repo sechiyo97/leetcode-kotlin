@@ -9,9 +9,9 @@ class Sol_1342_number_of_steps_to_reduce_a_number_to_zero : Solution.General<Int
         "123" to 12
     )
 
-    override fun algorithm(params: Int): Int {
+    override fun algorithm(input: Int): Int {
         var steps = 0
-        var curNum = params
+        var curNum = input
         while (curNum > 0) {
             if (curNum%2 == 0) curNum/=2 else curNum--
             steps++

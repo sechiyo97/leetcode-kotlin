@@ -8,8 +8,8 @@ class Sol_557_reverse_words_in_a_string: Solution.General<String, String>() {
         "God Ding" to "doG gniD"
     )
 
-    override fun algorithm(params: String): String {
-        val s = params
+    override fun algorithm(input: String): String {
+        val s = input
 
         val ssb = StringBuilder()
         var putIndex = 0

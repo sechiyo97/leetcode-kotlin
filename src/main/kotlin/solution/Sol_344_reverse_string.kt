@@ -22,7 +22,7 @@ class Sol_344_reverse_string: Solution.InPlaceArray<CharArray, CharArray>(){
         return input.toCharArray()
     }
 
-    override fun inputTypeToArrayType(input: CharArray): CharArray {
+    override fun getTargetArrayFromInput(input: CharArray): CharArray {
         return input
     }
 }

@@ -1,6 +1,5 @@
 import common.checkContentEquals
 import common.convertToString
-import common.model.ListNode
 
 // Todo: add kdoc
 sealed class Solution<InputType, OutputType, GivenResultType> {
@@ -80,19 +79,19 @@ sealed class Solution<InputType, OutputType, GivenResultType> {
         }
     }
 
-    abstract class InPlaceArray<InputType, ArrayType> : Solution<InputType, ArrayType, Unit>() {
-        abstract fun inputTypeToArrayType(input: InputType): ArrayType
+    abstract class InPlaceArray<InputType, TargetArrayType> : Solution<InputType, TargetArrayType, Unit>() {
+        abstract fun getTargetArrayFromInput(input: InputType): TargetArrayType
 
-        override fun getResultForInputString(inputString: String): ArrayType {
+        override fun getResultForInputString(inputString: String): TargetArrayType {
             val input = inputStringToInputType(inputString)
             algorithm(input)
-            return inputTypeToArrayType(input)
+            return getTargetArrayFromInput(input)
         }
 
-        override fun checkTestCaseSuccess(inputString: String, expected: ArrayType?): TestResult<ArrayType> {
+        override fun checkTestCaseSuccess(inputString: String, expected: TargetArrayType?): TestResult<TargetArrayType> {
             val input = inputStringToInputType(inputString)
             algorithm(input)
-            val result = inputTypeToArrayType(input)
+            val result = getTargetArrayFromInput(input)
             val pass = result.checkContentEquals(expected)
             return if (pass) TestResult.Success(result) else TestResult.Fail(result, expected)
         }
