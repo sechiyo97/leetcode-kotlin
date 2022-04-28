@@ -2,7 +2,7 @@ package solution
 
 import Solution
 
-class Sol_512_permutation_in_string: Solution.General<Sol_512_permutation_in_string.Params, Boolean>() {
+class Sol_567_permutation_in_string: Solution.General<Sol_567_permutation_in_string.Params, Boolean>() {
     data class Params(val s1: String, val s2: String)
     override val givenTestCases: Map<String, Boolean> = mapOf(
         "ab eidbaooo" to true,
