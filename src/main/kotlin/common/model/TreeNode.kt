@@ -53,30 +53,32 @@ class TreeNode(var `val`: Int) {
         result = 31 * result + (right?.hashCode() ?: 0)
         return result
     }
-}
 
-fun Array<Int?>.toRootTreeNode(): TreeNode? {
-    if (this.isEmpty()) return null
-    val firstNode = this[0] ?: return null
+    companion object {
+        fun fromNullableIntArray(array: Array<Int?>): TreeNode? {
+            if (array.isEmpty()) return null
+            val firstNode = array[0] ?: return null
 
-    val headNode = TreeNode(firstNode)
-    fillTreeNode(headNode, 0)
+            val headNode = TreeNode(firstNode)
+            fillTreeNode(array, headNode,0)
 
-    return headNode
-}
-private fun Array<Int?>.fillTreeNode(node: TreeNode?, index: Int) {
-    node ?: return
-    val leftNodeIndex = index + (index + 1)
-    val rightNodeIndex = index + (index + 2)
+            return headNode
+        }
+        private fun fillTreeNode(array: Array<Int?>, node: TreeNode?, index: Int) {
+            node ?: return
+            val leftNodeIndex = index + (index + 1)
+            val rightNodeIndex = index + (index + 2)
 
-    if (leftNodeIndex < this.size) {
-        val leftValue = this[leftNodeIndex]
-        node.left = if (leftValue != null) TreeNode(leftValue) else null
-        this.fillTreeNode(node.left, leftNodeIndex)
-    }
-    if (rightNodeIndex < this.size) {
-        val rightValue = this[rightNodeIndex]
-        node.right = if (rightValue != null) TreeNode(rightValue) else null
-        this.fillTreeNode(node.right, rightNodeIndex)
+            if (leftNodeIndex < array.size) {
+                val leftValue = array[leftNodeIndex]
+                node.left = if (leftValue != null) TreeNode(leftValue) else null
+                this.fillTreeNode(array, node.left, leftNodeIndex)
+            }
+            if (rightNodeIndex < array.size) {
+                val rightValue = array[rightNodeIndex]
+                node.right = if (rightValue != null) TreeNode(rightValue) else null
+                this.fillTreeNode(array, node.right, rightNodeIndex)
+            }
+        }
     }
 }
