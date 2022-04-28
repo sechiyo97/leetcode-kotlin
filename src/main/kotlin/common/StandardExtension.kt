@@ -10,7 +10,7 @@ fun <Type> Type.convertToString(): String {
         is CharArray -> this.contentToString()
         is LongArray -> this.contentToString()
         is ShortArray -> this.contentToString()
-        is Array<*> -> this.contentToString()
+        is Array<*> -> this.joinToString { it.convertToString() }
         else -> this.toString()
     }
 }
@@ -25,7 +25,7 @@ fun <Type> Type.checkContentEquals(other: Type): Boolean {
         is CharArray -> this.contentEquals(other as CharArray)
         is LongArray -> this.contentEquals(other as LongArray)
         is ShortArray -> this.contentEquals(other as ShortArray)
-        is Array<*> -> this.contentEquals(other as Array<*>)
+        is Array<*> -> this.indices.map { this[it].checkContentEquals((other as Array<*>)[it]) }.all { it }
         else -> this == other
     }
 }
