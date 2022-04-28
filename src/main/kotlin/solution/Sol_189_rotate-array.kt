@@ -54,7 +54,7 @@ class `Sol_189_rotate-array`: Solution.InPlaceArray<`Sol_189_rotate-array`.Param
         return Params(nums, k)
     }
 
-    override fun inputTypeToArrayType(input: Params): IntArray {
+    override fun getTargetArrayFromInput(input: Params): IntArray {
         return input.nums
     }
 }

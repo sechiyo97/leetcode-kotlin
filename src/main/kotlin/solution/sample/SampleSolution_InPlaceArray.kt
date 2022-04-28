@@ -27,5 +27,5 @@ class SampleSolution_InPlaceArray: Solution.InPlaceArray<IntArray, IntArray>() {
         return input.toIntArray()
     }
 
-    override fun inputTypeToArrayType(input: IntArray): IntArray = input
+    override fun getTargetArrayFromInput(input: IntArray): IntArray = input
 }
