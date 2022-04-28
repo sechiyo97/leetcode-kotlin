@@ -29,7 +29,7 @@ class Sol_283_move_zeroes: Solution.InPlaceArray<IntArray, IntArray>() {
     override fun inputStringToInputType(input: String): IntArray {
         return input.toIntArray()
     }
-    override fun inputTypeToArrayType(input: IntArray): IntArray {
+    override fun getTargetArrayFromInput(input: IntArray): IntArray {
         return input
     }
 
