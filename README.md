@@ -4,11 +4,11 @@ LeetCode Algorithm Practice
 ## Problem Solved
 Total |
 ------------- |
-21 |
+25 |
 
 Easy | Medium | Hard
 ------------- | ------------- | -------------
-16 | 5 | 0
+18 | 7 | 0
 
 \# | Problem(Solution) | LeetCode Link | Difficulty | Accepted Rate
 ------------- | ------------- | ------------- | ------------- | -------------
@@ -27,9 +27,13 @@ Easy | Medium | Hard
 383 | [Ransom Note](src/main/kotlin/solution/Sol_383_ransom_note.kt) | [383. Ransom Note](https://leetcode.com/problems/ransom-note) | Easy | 55.8%
 412 | [Fizz Buzz](src/main/kotlin/solution/Sol_412_fizz_buzz.kt) | [412. Fizz Buzz](https://leetcode.com/problems/fizz-buzz) | Easy | 66.6%
 557 | [Reverse Words in a String](src/main/kotlin/solution/Sol_557_reverse_words_in_a_string.kt) | [557. Reverse Words in a String](https://leetcode.com/problems/reverse-words-in-a-string) | Medium | 28.5%
+567 | [Permutation in String](src/main/kotlin/solution/Sol_567_permutation_in_string.kt) | [567. Permutation in String](https://leetcode.com/problems/permutation-in-string) | Medium | 44.8%
+617 | [Merge Two Binary Trees](src/main/kotlin/solution/Sol_617_merge_two_binary_trees.kt) | [617. Merge Two Binary Trees](https://leetcode.com/problems/merge-two-binary-trees) | Easy | 77.9%
+695 | [Max Area of Island](src/main/kotlin/solution/Sol_695_max_area_of_island.kt) | [695. Max Area of Island](https://leetcode.com/problems/max-area-of-island) | Medium | 69.7%
 704 | [Binary Search](src/main/kotlin/solution/Sol_704_binary_search.kt) | [704. Binary Search](https://leetcode.com/problems/binary-search) | Easy | 55.3%
+733 | [Flood Fill](src/main/kotlin/solution/Sol_733_flood_fill.kt) | [733. Flood Fill](https://leetcode.com/problems/flood-fill) | Easy | 58.2%
 876 | [Middle of the Linked List](src/main/kotlin/solution/Sol_876_middle_of_the_linked_list.kt) | [876. Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list) | Easy | 72.6%
 977 | [Squares of a Sorted Array](src/main/kotlin/solution/Sol_977_squares_of_a_sorted_array.kt) | [977. Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array) | Easy | 71.6%
 1337 | [The K Weakest Rows in a Matrix](src/main/kotlin/solution/Sol_1337_the_k_weakest_rows_in_a_matrix.kt) | [1337. The K Weakest Rows in a Matrix](https://leetcode.com/problems/the-k-weakest-rows-in-a-matrix) | Easy | 74.3%
 1342 | [Number of Steps to Reduce a Number to Zero](src/main/kotlin/solution/Sol_1342_number_of_steps_to_reduce_a_number_to_zero.kt) | [1342. Number of Steps to Reduce a Number to Zero](https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero) | Easy | 85.6%
-1672 | [Richest Customer Wealth](src/main/kotlin/solution/Sol_1672_richest_customer_wealth.kt) | [1672. Richest Customer Wealth](https://leetcode.com/problems/richest-customer-wealth) | Easy | 89.3%
+1672 | [Richest Customer Wealth](src/main/kotlin/solution/Sol_1672_richest_customer_wealth.kt) | [1672. Richest Customer Wealth](https://leetcode.com/problems/richest-customer-wealth) | Easy | 89.2%
