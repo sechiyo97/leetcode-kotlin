@@ -8,6 +8,10 @@ fun String.toIntArray(): IntArray {
     val exceptParenthesis = this.removePrefix("[").removeSuffix("]")
     return exceptParenthesis.split(",").map { it.trim().toInt() }.toIntArray()
 }
+fun String.toNullableIntArray(): Array<Int?> {
+    val exceptParenthesis = this.removePrefix("[").removeSuffix("]")
+    return exceptParenthesis.split(",").map { it.trim().toIntOrNull() }.toTypedArray()
+}
 
 fun String.to2DIntArray(): Array<IntArray> {
     val exceptParenthesis = this.removePrefix("[").removeSuffix("]")
