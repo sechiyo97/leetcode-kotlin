@@ -10,7 +10,7 @@ fun <Type> Type.convertToString(): String {
         is CharArray -> this.contentToString()
         is LongArray -> this.contentToString()
         is ShortArray -> this.contentToString()
-        is Array<*> -> this.joinToString { it.convertToString() }
+        is Array<*> -> '[' + this.joinToString { it.convertToString() } + ']'
         else -> this.toString()
     }
 }
