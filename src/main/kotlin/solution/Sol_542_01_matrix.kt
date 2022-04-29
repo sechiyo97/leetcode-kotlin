@@ -1,4 +1,4 @@
-package solution.sample
+package solution
 
 import common.to2DIntArray
 import java.util.LinkedList
