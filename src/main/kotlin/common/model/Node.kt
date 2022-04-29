@@ -3,7 +3,6 @@ package common.model
 import common.convertToString
 import common.toIntArray
 import kotlin.math.log2
-import kotlin.math.pow
 
 fun main() {
     val node = Node.fromIntArray("[1,2,3,4,5,6,7]".toIntArray())
@@ -24,28 +23,26 @@ class Node(var `val`: Int) {
     }
 
     fun toNullableIntArray(): Array<Int?> {
-        val targetArray = Array<Int?>(2.toDouble().pow(depth.toDouble()).toInt()-1) { null }
-        fillIntArray(this, 0, targetArray)
-
+        val result = mutableListOf<Node?>()
         var curNode: Node? = this
         while (curNode != null) {
-            curNode = curNode.left
+            var curNodeRow: Node? = curNode
+            while (curNodeRow != null) {
+                result.add(curNodeRow)
+                curNodeRow = curNodeRow.next
+            }
+            result.add(null)
+           curNode = curNode.left
         }
-
-        val mutableList = targetArray.toMutableList()
-        for (i in 0 until depth) {
-            mutableList.add((i+1)*(i+1), null)
-        }
-
-        return mutableList.toTypedArray()
+        return result.map { it?.`val` }.toTypedArray()
     }
-    private fun fillIntArray(node: Node?, curIndex: Int, targetArray: Array<Int?>) {
+    private fun fillNodeArray(node: Node?, curIndex: Int, targetArray: Array<Node?>) {
         node?:return
-        targetArray[curIndex] = node.`val`
+        targetArray[curIndex] = node
         val nextLeftIndex = curIndex + (curIndex + 1)
         val nextRightIndex = curIndex + (curIndex + 2)
-        fillIntArray(node.left, nextLeftIndex, targetArray)
-        fillIntArray(node.right, nextRightIndex, targetArray)
+        fillNodeArray(node.left, nextLeftIndex, targetArray)
+        fillNodeArray(node.right, nextRightIndex, targetArray)
     }
 
     override fun equals(other: Any?): Boolean {
@@ -78,7 +75,8 @@ class Node(var `val`: Int) {
             nodes.forEachIndexed { index, node ->
                 val leftNextIndex = index + (index + 1)
                 val rightNextIndex = index + (index + 2)
-                val nextIndex = if (log2((index + 1).toDouble()).isInt()) null else index+1
+                val isLastOfRow = log2((index + 2).toDouble()).isInt()
+                val nextIndex = if (isLastOfRow) null else index+1
                 if (leftNextIndex < count) node.left = nodes[leftNextIndex]
                 if (rightNextIndex < count) node.right = nodes[rightNextIndex]
                 if (nextIndex != null && nextIndex < count) node.next = nodes[nextIndex]

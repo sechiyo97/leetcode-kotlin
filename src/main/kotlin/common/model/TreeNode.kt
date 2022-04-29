@@ -19,9 +19,7 @@ class TreeNode(var `val`: Int) {
         fillIntArray(this, 0, targetArray)
 
         var curNode: TreeNode? = this
-        val list = mutableListOf<Int>()
         while (curNode != null) {
-            list.add(curNode.`val`)
             curNode = curNode.left
         }
         return targetArray
