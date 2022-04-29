@@ -1,10 +1,8 @@
 package solution
 
+import Solution
 import common.checkContentEquals
-import common.convertToString
 import common.to2DIntArray
-import common.toIntArray
-import kotlin.math.exp
 
 class Sol_77_combinations: Solution.General<Sol_77_combinations.Params, List<List<Int>>>() {
     data class Params(val n: Int, val k: Int)
@@ -18,11 +16,19 @@ class Sol_77_combinations: Solution.General<Sol_77_combinations.Params, List<Lis
         return listOf(listOf(1))
     }
 
+
     override fun checkEquals(result: List<List<Int>>, expected: List<List<Int>>?): Boolean {
-        val sortedResult = result.map { it.sortedBy { it }.toIntArray()}.sortedBy { it[0] }.toTypedArray()
-        val sortedExpected = expected?.map { it.sortedBy { it }.toIntArray()}?.sortedBy { it[0] }?.toTypedArray()
-        val pass = sortedResult.checkContentEquals(sortedExpected)
-        return pass
+        val sortedResult = result
+            .map { it.sortedBy { value -> value }.toIntArray() }
+            .filterNot { it.isEmpty() }
+            .sortedBy { it[0] }
+            .toTypedArray()
+        val sortedExpected = expected
+            ?.map { it.sortedBy { value -> value }.toIntArray() }
+            ?.filterNot { it.isEmpty() }
+            ?.sortedBy { it[0] }
+            ?.toTypedArray()
+        return sortedResult.checkContentEquals(sortedExpected)
     }
 
     override fun inputStringToInputType(input: String): Params {
