@@ -4,11 +4,11 @@ LeetCode Algorithm Practice
 ## Problem Solved
 Total |
 ------------- |
-26 |
+27 |
 
 Easy | Medium | Hard
 ------------- | ------------- | -------------
-18 | 8 | 0
+18 | 9 | 0
 
 \# | Problem(Solution) | LeetCode Link | Difficulty | Accepted Rate
 ------------- | ------------- | ------------- | ------------- | -------------
@@ -27,6 +27,7 @@ Easy | Medium | Hard
 344 | [Reverse String](src/main/kotlin/solution/Sol_344_reverse_string.kt) | [344. Reverse String](https://leetcode.com/problems/reverse-string) | Easy | 74.8%
 383 | [Ransom Note](src/main/kotlin/solution/Sol_383_ransom_note.kt) | [383. Ransom Note](https://leetcode.com/problems/ransom-note) | Easy | 55.8%
 412 | [Fizz Buzz](src/main/kotlin/solution/Sol_412_fizz_buzz.kt) | [412. Fizz Buzz](https://leetcode.com/problems/fizz-buzz) | Easy | 66.6%
+542 | [01 Matrix](src/main/kotlin/solution/Sol_542_01_matrix.kt) | [542. 01 Matrix](https://leetcode.com/problems/01-matrix) | Medium | 43.8%
 557 | [Reverse Words in a String](src/main/kotlin/solution/Sol_557_reverse_words_in_a_string.kt) | [557. Reverse Words in a String](https://leetcode.com/problems/reverse-words-in-a-string) | Medium | 28.5%
 567 | [Permutation in String](src/main/kotlin/solution/Sol_567_permutation_in_string.kt) | [567. Permutation in String](https://leetcode.com/problems/permutation-in-string) | Medium | 44.8%
 617 | [Merge Two Binary Trees](src/main/kotlin/solution/Sol_617_merge_two_binary_trees.kt) | [617. Merge Two Binary Trees](https://leetcode.com/problems/merge-two-binary-trees) | Easy | 77.9%
