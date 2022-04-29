@@ -4,11 +4,11 @@ LeetCode Algorithm Practice
 ## Problem Solved
 Total |
 ------------- |
-25 |
+26 |
 
 Easy | Medium | Hard
 ------------- | ------------- | -------------
-18 | 7 | 0
+18 | 8 | 0
 
 \# | Problem(Solution) | LeetCode Link | Difficulty | Accepted Rate
 ------------- | ------------- | ------------- | ------------- | -------------
@@ -17,8 +17,9 @@ Easy | Medium | Hard
 19 | [Remove Nth Node From End of List](src/main/kotlin/solution/Sol_19_remove_nth_node_from_end_of_list.kt) | [19. Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list) | Medium | 38.3%
 35 | [Search Insert Position](src/main/kotlin/solution/Sol_35_search_insert_position.kt) | [35. Search Insert Position](https://leetcode.com/problems/search-insert-position) | Easy | 42.3%
 53 | [Maximum Subarray](src/main/kotlin/solution/Sol_53_maximum_subarray.kt) | [53. Maximum Subarray](https://leetcode.com/problems/maximum-subarray) | Easy | 49.5%
+116 | [Populating Next Right Pointers in Each Node](src/main/kotlin/solution/Sol_116_populating_next_right_pointers_in_each_node.kt) | [116. Populating Next Right Pointers in Each Node](https://leetcode.com/problems/populating-next-right-pointers-in-each-node) | Medium | 57.0%
 167 | [Two Sum II - Input Array Is Sorted](src/main/kotlin/solution/Sol_167_two_sum_ii_input_array_is_sorted.kt) | [167. Two Sum II - Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted) | Medium | 58.7%
-189 | [Rotate Array](src/main/kotlin/solution/Sol_189_rotate-array.kt) | [189. Rotate Array](https://leetcode.com/problems/rotate-array) | Medium | 38.6%
+189 | [Rotate Array](src/main/kotlin/solution/Sol_189_rotate_array.kt) | [189. Rotate Array](https://leetcode.com/problems/rotate-array) | Medium | 38.6%
 217 | [Contains Duplicate](src/main/kotlin/solution/Sol_217_contains_duplicate.kt) | [217. Contains Duplicate](https://leetcode.com/problems/contains-duplicate) | Easy | 60.8%
 234 | [Palindrome Linked List](src/main/kotlin/solution/Sol_234_palindrome_linked_list.kt) | [234. Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list) | Easy | 46.6%
 278 | [First Bad Version](src/main/kotlin/solution/Sol_278_first_bad_version.kt) | [278. First Bad Version](https://leetcode.com/problems/first-bad-version) | Easy | 41.6%
