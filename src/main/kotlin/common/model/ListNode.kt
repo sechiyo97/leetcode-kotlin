@@ -38,24 +38,26 @@ class ListNode(var `val`: Int) {
     override fun toString(): String {
         return this.toIntArray().convertToString()
     }
-}
 
-fun IntArray.toHeadListNode(): ListNode? {
-    var index = 0
-    var head: ListNode? = null
-    var prev: ListNode? = null
-    var cur: ListNode?
-    while (index < this.size) {
-        if (index == 0) {
-            head = ListNode(this[index])
-            prev = head
+    companion object {
+        fun fromIntArray(array: IntArray): ListNode? {
+            var index = 0
+            var head: ListNode? = null
+            var prev: ListNode? = null
+            var cur: ListNode?
+            while (index < array.size) {
+                if (index == 0) {
+                    head = ListNode(array[index])
+                    prev = head
+                }
+                else {
+                    cur = ListNode(array[index])
+                    prev?.next = cur
+                    prev = prev?.next
+                }
+                index++
+            }
+            return head
         }
-        else {
-            cur = ListNode(this[index])
-            prev?.next = cur
-            prev = prev?.next
-        }
-        index++
     }
-    return head
 }
