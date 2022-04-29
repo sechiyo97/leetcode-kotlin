@@ -6,7 +6,7 @@ fun IntArray.swap(first: Int, second: Int) { this[first] = this[second].also { t
 
 fun String.toIntArray(): IntArray {
     val exceptParenthesis = this.removePrefix("[").removeSuffix("]")
-    return exceptParenthesis.split(",").map { it.trim().toInt() }.toIntArray()
+    return exceptParenthesis.split(",").map { it.trim().toIntOrNull() }.filterNotNull().toIntArray()
 }
 fun String.toNullableIntArray(): Array<Int?> {
     val exceptParenthesis = this.removePrefix("[").removeSuffix("]")
