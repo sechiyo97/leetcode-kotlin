@@ -36,14 +36,6 @@ class Node(var `val`: Int) {
         }
         return result.map { it?.`val` }.toTypedArray()
     }
-    private fun fillNodeArray(node: Node?, curIndex: Int, targetArray: Array<Node?>) {
-        node?:return
-        targetArray[curIndex] = node
-        val nextLeftIndex = curIndex + (curIndex + 1)
-        val nextRightIndex = curIndex + (curIndex + 2)
-        fillNodeArray(node.left, nextLeftIndex, targetArray)
-        fillNodeArray(node.right, nextRightIndex, targetArray)
-    }
 
     override fun equals(other: Any?): Boolean {
         return if (other is Node) {
