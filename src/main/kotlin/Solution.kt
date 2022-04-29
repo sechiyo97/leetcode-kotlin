@@ -32,6 +32,8 @@ sealed class Solution<InputType, OutputType, GivenResultType> {
     abstract fun getResultForInputString(inputString: String): OutputType
     abstract fun checkTestCaseSuccess(inputString: String, expected: OutputType?): TestResult<OutputType>
 
+    open fun checkEquals(result: OutputType, expected: OutputType?) = result.checkContentEquals(expected)
+
     // no need to implement
     private fun runTestsForCases(testCases: Map<String, OutputType>) {
         var passCases = 0
@@ -74,7 +76,7 @@ sealed class Solution<InputType, OutputType, GivenResultType> {
         override fun checkTestCaseSuccess(inputString: String, expected: OutputType?): TestResult<OutputType> {
             val input = inputStringToInputType(inputString)
             val result = algorithm(input)
-            val pass = result.checkContentEquals(expected)
+            val pass = checkEquals(result, expected)
             return if (pass) TestResult.Success(result) else TestResult.Fail(result, expected)
         }
     }
@@ -92,7 +94,7 @@ sealed class Solution<InputType, OutputType, GivenResultType> {
             val input = inputStringToInputType(inputString)
             algorithm(input)
             val result = getTargetArrayFromInput(input)
-            val pass = result.checkContentEquals(expected)
+            val pass = checkEquals(result, expected)
             return if (pass) TestResult.Success(result) else TestResult.Fail(result, expected)
         }
     }
