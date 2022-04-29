@@ -56,7 +56,7 @@ class Sol_542_01_matrix: Solution.General<Array<IntArray>, Array<IntArray>>() {
         if (this[fill.row][fill.col] != -1) return false
         return true
     }
-    data class Fill(val row: Int, val col: Int, val fill: Int)
+    private data class Fill(val row: Int, val col: Int, val fill: Int)
 
     override fun inputStringToInputType(input: String): Array<IntArray> {
         return input.to2DIntArray()
