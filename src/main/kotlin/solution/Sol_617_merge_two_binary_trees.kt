@@ -2,20 +2,17 @@ package solution
 
 import Solution
 import common.model.TreeNode
-import common.model.toHeadListNode
-import common.model.toRootTreeNode
-import common.toIntArray
 import common.toNullableIntArray
 
 class Sol_617_merge_two_binary_trees: Solution.General<Sol_617_merge_two_binary_trees.Params, TreeNode?>() {
     data class Params(val root1: TreeNode?, val root2: TreeNode?)
 
     override val givenTestCases: Map<String, TreeNode?> = mapOf(
-        "[1,3,2,5] [2,1,3,null,4,null,7]" to "[3,4,5,5,4,null,7]".toNullableIntArray().toRootTreeNode(),
-        "[1] [1,2]" to "[2,2]".toNullableIntArray().toRootTreeNode()
+        "[1,3,2,5] [2,1,3,null,4,null,7]" to TreeNode.fromNullableIntArray(arrayOf(3,4,5,5,4,null,7)),
+        "[1] [1,2]" to TreeNode.fromNullableIntArray(arrayOf(2,2))
     )
     override val customTestCases: Map<String, TreeNode?> = mapOf(
-        "[] [1]" to "[1]".toNullableIntArray().toRootTreeNode()
+        "[] [1]" to TreeNode.fromNullableIntArray(arrayOf(1))
     )
 
     override fun algorithm(input: Params): TreeNode? {
@@ -44,8 +41,8 @@ class Sol_617_merge_two_binary_trees: Solution.General<Sol_617_merge_two_binary_
 
     override fun inputStringToInputType(input: String): Params {
         val split = input.split(" ")
-        val root1 = split[0].toNullableIntArray().toRootTreeNode()
-        val root2 = split[1].toNullableIntArray().toRootTreeNode()
+        val root1 = TreeNode.fromNullableIntArray(split[0].toNullableIntArray())
+        val root2 = TreeNode.fromNullableIntArray(split[1].toNullableIntArray())
         return Params(root1, root2)
     }
 }

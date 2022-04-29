@@ -4,7 +4,7 @@ import Solution
 import common.swap
 import common.toIntArray
 
-class `Sol_189_rotate-array`: Solution.InPlaceArray<`Sol_189_rotate-array`.Params, IntArray>(){
+class Sol_189_rotate_array: Solution.InPlaceArray<Sol_189_rotate_array.Params, IntArray>(){
     class Params(val nums: IntArray, val k: Int)
 
     override val givenTestCases: Map<String, IntArray> = mapOf(

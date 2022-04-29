@@ -2,13 +2,12 @@ package solution
 
 import Solution
 import common.model.ListNode
-import common.model.toHeadListNode
 import common.toIntArray
 
 class Sol_876_middle_of_the_linked_list: Solution.General<ListNode?, ListNode?>(){
     override val givenTestCases: Map<String, ListNode?> = mapOf(
-        "[1,2,3,4,5]" to intArrayOf(3,4,5).toHeadListNode(),
-        "[1,2,3,4,5,6]" to intArrayOf(4,5,6).toHeadListNode()
+        "[1,2,3,4,5]" to ListNode.fromIntArray(intArrayOf(3,4,5)),
+        "[1,2,3,4,5,6]" to ListNode.fromIntArray(intArrayOf(4,5,6))
     )
 
     override fun algorithm(input: ListNode?): ListNode? {
