@@ -36,8 +36,8 @@ class TreeNode(var `val`: Int) {
     override fun equals(other: Any?): Boolean {
         return if (other is TreeNode) {
             val leftCompare = this.left?.equals(other.left) ?: (other.left == null)
-            val rightCompare = this.right?.equals(this.right) ?: (other.right == null)
-            leftCompare && rightCompare
+            val rightCompare = this.right?.equals(other.right) ?: (other.right == null)
+            this.`val` == other.`val` && leftCompare && rightCompare
         } else false
     }
 

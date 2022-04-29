@@ -40,9 +40,9 @@ class Node(var `val`: Int) {
     override fun equals(other: Any?): Boolean {
         return if (other is Node) {
             val leftCompare = this.left?.equals(other.left) ?: (other.left == null)
-            val rightCompare = this.right?.equals(this.right) ?: (other.right == null)
-            val nextCompare = this.next?.equals(this.next) ?: (other.next == null)
-            leftCompare && rightCompare && nextCompare
+            val rightCompare = this.right?.equals(other.right) ?: (other.right == null)
+            val nextCompare = this.next?.equals(other.next) ?: (other.next == null)
+            this.`val` == other.`val` && leftCompare && rightCompare && nextCompare
         } else false
     }
 
