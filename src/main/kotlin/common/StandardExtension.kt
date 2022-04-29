@@ -25,7 +25,7 @@ fun <Type> Type.checkContentEquals(other: Type): Boolean {
         is CharArray -> this.contentEquals(other as CharArray)
         is LongArray -> this.contentEquals(other as LongArray)
         is ShortArray -> this.contentEquals(other as ShortArray)
-        is Array<*> -> this.indices.map { this[it].checkContentEquals((other as Array<*>)[it]) }.all { it }
+        is Array<*> -> this.size == (other as Array<*>).size && this.indices.map { this[it].checkContentEquals(other[it]) }.all { it }
         else -> this == other
     }
 }
