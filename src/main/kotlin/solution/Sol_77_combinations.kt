@@ -37,7 +37,6 @@ class Sol_77_combinations : Solution.General<Sol_77_combinations.Params, List<Li
             .map { it.sortedBy { value -> value }.toIntArray() }
             .filterNot { it.isEmpty() }
             .sortedWith (compareBy({ it[0] }, { it.sum() }))
-            .sortedBy { it.sum() }
             .toTypedArray()
         val sortedExpected = expected
             ?.map { it.sortedBy { value -> value }.toIntArray() }
