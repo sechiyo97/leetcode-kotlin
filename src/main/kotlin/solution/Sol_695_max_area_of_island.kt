@@ -2,21 +2,9 @@ package solution
 
 import common.to2DIntArray
 
+// https://leetcode.com/problems/max-area-of-island/
 class Sol_695_max_area_of_island: Solution.General<Array<IntArray>, Int>() {
-    override val givenTestCases: Map<String, Int> = mapOf(
-        "[[0,0,1,0,0,0,0,1,0,0,0,0,0],[0,0,0,0,0,0,0,1,1,1,0,0,0]," +
-        "[0,1,1,0,1,0,0,0,0,0,0,0,0],[0,1,0,0,1,1,0,0,1,0,1,0,0]," +
-        "[0,1,0,0,1,1,0,0,1,1,1,0,0],[0,0,0,0,0,0,0,0,0,0,1,0,0]," +
-        "[0,0,0,0,0,0,0,1,1,1,0,0,0],[0,0,0,0,0,0,0,1,1,0,0,0,0]]" to 6,
-        "[[0,0,0,0,0,0,0,0]]" to 0
-    )
-    override val customTestCases: Map<String, Int> = mapOf(
-        "[[1,1,0,0,0],[1,1,0,0,0],[0,0,0,1,1],[0,0,0,1,1]]" to 4
-    )
-
-    override fun algorithm(input: Array<IntArray>): Int {
-        val grid = input
-
+    fun maxAreaOfIsland(grid: Array<IntArray>): Int {
         var maxCount = 0
         for(i in grid.indices) {
             for (j in grid[0].indices) {
@@ -47,6 +35,18 @@ class Sol_695_max_area_of_island: Solution.General<Array<IntArray>, Int>() {
         return count
     }
 
+    override val givenTestCases: Map<String, Int> = mapOf(
+        "[[0,0,1,0,0,0,0,1,0,0,0,0,0],[0,0,0,0,0,0,0,1,1,1,0,0,0]," +
+        "[0,1,1,0,1,0,0,0,0,0,0,0,0],[0,1,0,0,1,1,0,0,1,0,1,0,0]," +
+        "[0,1,0,0,1,1,0,0,1,1,1,0,0],[0,0,0,0,0,0,0,0,0,0,1,0,0]," +
+        "[0,0,0,0,0,0,0,1,1,1,0,0,0],[0,0,0,0,0,0,0,1,1,0,0,0,0]]" to 6,
+        "[[0,0,0,0,0,0,0,0]]" to 0
+    )
+    override val customTestCases: Map<String, Int> = mapOf(
+        "[[1,1,0,0,0],[1,1,0,0,0],[0,0,0,1,1],[0,0,0,1,1]]" to 4
+    )
+
+    override fun algorithm(input: Array<IntArray>): Int = maxAreaOfIsland(input)
     override fun inputStringToInputType(input: String): Array<IntArray> {
         return input.to2DIntArray()
     }

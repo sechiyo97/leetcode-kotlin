@@ -3,18 +3,9 @@ package solution
 import Solution
 import common.toIntArray
 
+// https://leetcode.com/problems/squares-of-a-sorted-array/
 class Sol_977_squares_of_a_sorted_array: Solution.General<IntArray, IntArray>() {
-    override val givenTestCases: Map<String, IntArray> = mapOf(
-        "[-4,-1,0,3,10]" to intArrayOf(0,1,9,16,100),
-        "[-7,-3,2,3,11]" to intArrayOf(4,9,9,49,121)
-    )
-    override val customTestCases: Map<String, IntArray> = mapOf(
-        "[-1]" to intArrayOf(1)
-    )
-
-    override fun algorithm(input: IntArray): IntArray {
-        val nums = input
-
+    fun sortedSquares(nums: IntArray): IntArray {
         val n = nums.size
         val result = IntArray(n)
         var writeIndex = 0
@@ -53,6 +44,15 @@ class Sol_977_squares_of_a_sorted_array: Solution.General<IntArray, IntArray>() 
         return result
     }
 
+    override val givenTestCases: Map<String, IntArray> = mapOf(
+        "[-4,-1,0,3,10]" to intArrayOf(0,1,9,16,100),
+        "[-7,-3,2,3,11]" to intArrayOf(4,9,9,49,121)
+    )
+    override val customTestCases: Map<String, IntArray> = mapOf(
+        "[-1]" to intArrayOf(1)
+    )
+
+    override fun algorithm(input: IntArray): IntArray = sortedSquares(input)
     override fun inputStringToInputType(input: String): IntArray {
         return input.toIntArray()
     }

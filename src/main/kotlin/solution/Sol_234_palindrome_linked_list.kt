@@ -4,17 +4,10 @@ import Solution
 import common.model.ListNode
 import common.toIntArray
 
+// https://leetcode.com/problems/palindrome-linked-list/
 class Sol_234_palindrome_linked_list: Solution.General<ListNode?, Boolean>(){
-    override val givenTestCases: Map<String, Boolean> = mapOf(
-        "[1,2,2,1]" to true,
-        "[1,2]" to false
-    )
-    override val customTestCases: Map<String, Boolean> = mapOf(
-        "[1,2,3,2,3,2,1]" to true
-    )
-
-    override fun algorithm(input: ListNode?): Boolean {
-        var currentNode: ListNode? = input
+    fun isPalindrome(head: ListNode?): Boolean {
+        var currentNode: ListNode? = head
         val list = mutableListOf<Int>()
         var size = 0
         while (currentNode != null) {
@@ -35,6 +28,15 @@ class Sol_234_palindrome_linked_list: Solution.General<ListNode?, Boolean>(){
         return true
     }
 
+    override val givenTestCases: Map<String, Boolean> = mapOf(
+        "[1,2,2,1]" to true,
+        "[1,2]" to false
+    )
+    override val customTestCases: Map<String, Boolean> = mapOf(
+        "[1,2,3,2,3,2,1]" to true
+    )
+
+    override fun algorithm(input: ListNode?): Boolean = isPalindrome(input)
     override fun inputStringToInputType(input: String): ListNode? {
         val heads = input.toIntArray()
 
@@ -48,7 +50,6 @@ class Sol_234_palindrome_linked_list: Solution.General<ListNode?, Boolean>(){
         }
         return headNode
     }
-
 }
 
 

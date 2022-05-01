@@ -4,15 +4,9 @@ import Solution
 import common.model.ListNode
 import common.toIntArray
 
+// https://leetcode.com/problems/middle-of-the-linked-list/
 class Sol_876_middle_of_the_linked_list: Solution.General<ListNode?, ListNode?>(){
-    override val givenTestCases: Map<String, ListNode?> = mapOf(
-        "[1,2,3,4,5]" to ListNode.fromIntArray(intArrayOf(3,4,5)),
-        "[1,2,3,4,5,6]" to ListNode.fromIntArray(intArrayOf(4,5,6))
-    )
-
-    override fun algorithm(input: ListNode?): ListNode? {
-        val head = input
-
+    fun middleNode(head: ListNode?): ListNode? {
         var currentNode: ListNode? = head
         val list = mutableListOf<ListNode>()
         var size = 0
@@ -24,6 +18,12 @@ class Sol_876_middle_of_the_linked_list: Solution.General<ListNode?, ListNode?>(
         return list[size/2]
     }
 
+    override val givenTestCases: Map<String, ListNode?> = mapOf(
+        "[1,2,3,4,5]" to ListNode.fromIntArray(intArrayOf(3,4,5)),
+        "[1,2,3,4,5,6]" to ListNode.fromIntArray(intArrayOf(4,5,6))
+    )
+
+    override fun algorithm(input: ListNode?): ListNode? = middleNode(input)
     override fun inputStringToInputType(input: String): ListNode? {
         val heads = input.toIntArray()
 
@@ -37,7 +37,6 @@ class Sol_876_middle_of_the_linked_list: Solution.General<ListNode?, ListNode?>(
         }
         return headNode
     }
-
 }
 
 

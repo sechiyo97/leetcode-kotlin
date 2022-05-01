@@ -7,7 +7,10 @@ import Solution
  * and returns String with str repeated n times
  **/
 class SampleSolution_General_MultipleParams: Solution.General<SampleSolution_General_MultipleParams.Params, String>() {
-    class Params(val n: Int, val str: String)
+    fun sampleFunction(sampleParam1: Int, sampleParam2: String): String {
+        // leetcode solution
+        return sampleParam2.repeat(sampleParam1)
+    }
 
     override val givenTestCases: Map<String, String> = mapOf(
         "1 a" to "a",
@@ -19,17 +22,10 @@ class SampleSolution_General_MultipleParams: Solution.General<SampleSolution_Gen
         "10 k" to "kkkkkkkkkk"
     )
 
-    override fun algorithm(input: Params): String {
-        // transform into input params of the actual answer sheet
-        val n = input.n
-        val str = input.str
-
-        // from here can be pasted into the actual answer sheet
-        return str.repeat(n)
-    }
-
+    override fun algorithm(input: Params): String = sampleFunction(input.sampleParam1, input.sampleParam2)
     override fun inputStringToInputType(input: String): Params {
         val split = input.split(" ")
         return Params(split[0].toInt(), split[1])
     }
+    class Params(val sampleParam1: Int, val sampleParam2: String)
 }

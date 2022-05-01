@@ -2,8 +2,23 @@ package solution
 
 import Solution
 
+// https://leetcode.com/problems/first-bad-version/
 class Sol_278_first_bad_version: Solution.General<Sol_278_first_bad_version.Params, Int>() {
-    class Params(val n: Int, val bad: Int)
+    fun firstBadVersion(n: Int, bad: Int) : Int {
+        val versions = Versions(n, bad)
+
+        var min = 0
+        var max = n-1
+        var mid = (min/2.0 + max/2.0).toInt()
+        while (min < max) {
+            if (versions.isBadVersion(mid+1))
+                max = mid
+            else
+                min = mid + 1
+            mid = (min/2.0 + max/2.0).toInt()
+        }
+        return mid+1
+    }
 
     override val givenTestCases: Map<String, Int> = mapOf(
         "5 4" to 4,
@@ -20,27 +35,10 @@ class Sol_278_first_bad_version: Solution.General<Sol_278_first_bad_version.Para
         fun isBadVersion(version: Int) = version >= firstBadVersion
     }
 
-    override fun algorithm(input: Params): Int {
-        val n = input.n
-        val bad = input.bad
-
-        val versions = Versions(n, bad)
-
-        var min = 0
-        var max = n-1
-        var mid = (min/2.0 + max/2.0).toInt()
-        while (min < max) {
-            if (versions.isBadVersion(mid+1))
-                max = mid
-            else
-                min = mid + 1
-            mid = (min/2.0 + max/2.0).toInt()
-        }
-        return mid+1
-    }
-
     override fun inputStringToInputType(input: String): Params {
         val split = input.split(" ")
         return Params(split[0].toInt(), split[1].toInt())
     }
+    override fun algorithm(input: Params): Int = firstBadVersion(input.n, input.bad)
+    class Params(val n: Int, val bad: Int)
 }

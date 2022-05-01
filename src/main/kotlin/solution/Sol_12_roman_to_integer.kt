@@ -1,17 +1,11 @@
 package solution
 
+// https://leetcode.com/problems/roman-to-integer/
 class Sol_12_roman_to_integer : Solution.General<String, Int>() {
-    override val givenTestCases = mapOf(
-        "III" to 3,
-        "IV" to 4,
-        "LVIII" to 58,
-        "MCMXCIV" to 1994
-    )
-
-    override fun algorithm(input: String): Int {
+    fun romanToInt(s: String): Int {
         var result = 0
         var lastRomanIntValue = 0
-        input.forEach { char ->
+        s.forEach { char ->
             val currentRomanIntValue = romanMap[char] ?: 0
             if (currentRomanIntValue > lastRomanIntValue)
                 lastRomanIntValue = currentRomanIntValue - lastRomanIntValue
@@ -23,10 +17,6 @@ class Sol_12_roman_to_integer : Solution.General<String, Int>() {
         return result + lastRomanIntValue
     }
 
-    override fun inputStringToInputType(input: String): String {
-        return input
-    }
-
     private val romanMap = mapOf(
         'I' to 1,
         'V' to 5,
@@ -36,4 +26,16 @@ class Sol_12_roman_to_integer : Solution.General<String, Int>() {
         'D' to 500,
         'M' to 1000
     )
+
+    override val givenTestCases = mapOf(
+        "III" to 3,
+        "IV" to 4,
+        "LVIII" to 58,
+        "MCMXCIV" to 1994
+    )
+
+    override fun algorithm(input: String): Int = romanToInt(input)
+    override fun inputStringToInputType(input: String): String {
+        return input
+    }
 }
