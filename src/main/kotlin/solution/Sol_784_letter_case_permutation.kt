@@ -3,7 +3,33 @@ package solution
 // https://leetcode.com/problems/letter-case-permutation/
 class Sol_784_letter_case_permutation: Solution.General<String, List<String>>() {
     fun letterCasePermutation(s: String): List<String> {
-        return listOf("3Z4","3z4")
+        if (s.isEmpty()) return listOf("")
+
+        val subString = s.substring(1)
+        if (s[0].isLetter().not()) return letterCasePermutation(subString).map { s[0] + it }
+
+        val lower = s[0].toLower()
+        val upper = s[0].toUpper()
+
+        val lowerResult = letterCasePermutation(subString).map { lower + it }
+        val upperResult = letterCasePermutation(subString).map { upper + it }
+
+        val result = mutableListOf<String>().apply {
+            addAll(lowerResult)
+            addAll(upperResult)
+        }
+
+        return result
+    }
+
+    private fun Char.toLower(): Char {
+        return if (this in 'A'..'Z') this-('A'-'a')
+        else this
+    }
+
+    private fun Char.toUpper(): Char {
+        return if (this in 'a'..'z') this+('A'-'a')
+        else this
     }
 
     override val givenTestCases: Map<String, List<String>> = mapOf(
