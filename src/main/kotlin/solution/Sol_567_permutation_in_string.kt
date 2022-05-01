@@ -2,21 +2,9 @@ package solution
 
 import Solution
 
+// https://leetcode.com/problems/permutation-in-string/
 class Sol_567_permutation_in_string: Solution.General<Sol_567_permutation_in_string.Params, Boolean>() {
-    data class Params(val s1: String, val s2: String)
-    override val givenTestCases: Map<String, Boolean> = mapOf(
-        "ab eidbaooo" to true,
-        "ab eidboaoo" to false
-    )
-    override val customTestCases: Map<String, Boolean> = mapOf(
-        "adc dcda" to true,
-        "ab a" to false
-    )
-
-    override fun algorithm(input: Params): Boolean {
-        val s1 = input.s1
-        val s2 = input.s2
-
+    fun checkInclusion(s1: String, s2: String): Boolean {
         if (s1.length > s2.length) return false
 
         val alphabets = IntArray(26)
@@ -49,10 +37,20 @@ class Sol_567_permutation_in_string: Solution.General<Sol_567_permutation_in_str
         return false
     }
 
+    override val givenTestCases: Map<String, Boolean> = mapOf(
+        "ab eidbaooo" to true,
+        "ab eidboaoo" to false
+    )
+    override val customTestCases: Map<String, Boolean> = mapOf(
+        "adc dcda" to true,
+        "ab a" to false
+    )
+
+    override fun algorithm(input: Params): Boolean = checkInclusion(input.s1, input.s2)
     override fun inputStringToInputType(input: String): Params {
         val split = input.split(" ")
         return Params(split[0], split[1])
     }
-
+    data class Params(val s1: String, val s2: String)
 }
 

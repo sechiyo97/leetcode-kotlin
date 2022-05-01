@@ -1,19 +1,8 @@
 package solution
 
+// https://leetcode.com/problems/longest-substring-without-repeating-characters/
 class Sol_3_longest_substring_without_repeating_characters : Solution.General<String, Int>() {
-    override val givenTestCases = mapOf(
-        "abcabcbb" to 3,
-        "bbbbb" to 1,
-        "pwwkew" to 3
-    )
-    override val customTestCases: Map<String, Int> = mapOf(
-        " " to 1,
-        "dvdf" to 3
-    )
-
-    override fun algorithm(input: String): Int {
-        val s = input
-
+    fun lengthOfLongestSubstring(s: String): Int {
         val idxArr = IntArray(256) { -1 }
 
         var left=0
@@ -36,6 +25,17 @@ class Sol_3_longest_substring_without_repeating_characters : Solution.General<St
         return maxLen.coerceAtLeast(len)
     }
 
+    override val givenTestCases = mapOf(
+        "abcabcbb" to 3,
+        "bbbbb" to 1,
+        "pwwkew" to 3
+    )
+    override val customTestCases: Map<String, Int> = mapOf(
+        " " to 1,
+        "dvdf" to 3
+    )
+
+    override fun algorithm(input: String): Int = lengthOfLongestSubstring(input)
     override fun inputStringToInputType(input: String): String {
         return input
     }

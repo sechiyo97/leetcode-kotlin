@@ -2,24 +2,9 @@ package solution
 
 import common.to2DIntArray
 
+// https://leetcode.com/problems/flood-fill/
 class Sol_733_flood_fill: Solution.General<Sol_733_flood_fill.Params, Array<IntArray>>() {
-    data class Params(val image: Array<IntArray>, val sr: Int, val sc: Int, val newColor: Int)
-
-    override val givenTestCases: Map<String, Array<IntArray>> = mapOf(
-        "[[1,1,1],[1,1,0],[1,0,1]] 1 1 2" to arrayOf(intArrayOf(2,2,2), intArrayOf(2,2,0), intArrayOf(2,0,1)),
-        "[[0,0,0],[0,0,0]] 0 0 2" to arrayOf(intArrayOf(2,2,2), intArrayOf(2,2,2))
-    )
-    override val customTestCases: Map<String, Array<IntArray>> = mapOf(
-        "[[0,0,0],[0,1,0]] 1 1 2" to arrayOf(intArrayOf(0,0,0), intArrayOf(0,2,0)),
-        "[[0,0,0],[0,1,1]] 1 1 1" to arrayOf(intArrayOf(0,0,0), intArrayOf(0,1,1))
-    )
-
-    override fun algorithm(input: Params): Array<IntArray> {
-        val image = input.image
-        val sr = input.sr
-        val sc = input.sc
-        val newColor = input.newColor
-
+    fun floodFill(image: Array<IntArray>, sr: Int, sc: Int, newColor: Int): Array<IntArray> {
         val orgColor = image[sr][sc]
         image[sr][sc] = newColor
         image.floodFill4Direction(sr, sc, orgColor, newColor)
@@ -46,6 +31,16 @@ class Sol_733_flood_fill: Solution.General<Sol_733_flood_fill.Params, Array<IntA
         }
     }
 
+    override val givenTestCases: Map<String, Array<IntArray>> = mapOf(
+        "[[1,1,1],[1,1,0],[1,0,1]] 1 1 2" to arrayOf(intArrayOf(2,2,2), intArrayOf(2,2,0), intArrayOf(2,0,1)),
+        "[[0,0,0],[0,0,0]] 0 0 2" to arrayOf(intArrayOf(2,2,2), intArrayOf(2,2,2))
+    )
+    override val customTestCases: Map<String, Array<IntArray>> = mapOf(
+        "[[0,0,0],[0,1,0]] 1 1 2" to arrayOf(intArrayOf(0,0,0), intArrayOf(0,2,0)),
+        "[[0,0,0],[0,1,1]] 1 1 1" to arrayOf(intArrayOf(0,0,0), intArrayOf(0,1,1))
+    )
+
+    override fun algorithm(input: Params): Array<IntArray> = floodFill(input.image, input.sr, input.sc, input.newColor)
     override fun inputStringToInputType(input: String): Params {
         val split = input.split(" ")
         val image = split[0].to2DIntArray()
@@ -54,4 +49,5 @@ class Sol_733_flood_fill: Solution.General<Sol_733_flood_fill.Params, Array<IntA
         val newColor = split[3].toInt()
         return Params(image, sr, sc, newColor)
     }
+    class Params(val image: Array<IntArray>, val sr: Int, val sc: Int, val newColor: Int)
 }

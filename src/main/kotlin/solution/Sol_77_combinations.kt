@@ -5,18 +5,9 @@ import common.checkContentEquals
 import common.convertToString
 import common.to2DIntArray
 
+// https://leetcode.com/problems/combinations/
 class Sol_77_combinations : Solution.General<Sol_77_combinations.Params, List<List<Int>>>() {
-    data class Params(val n: Int, val k: Int)
-
-    override val givenTestCases: Map<String, List<List<Int>>> = mapOf(
-        "4 2" to "[[2,4],[3,4],[2,3],[1,2],[1,3],[1,4]]".to2DIntArray().map { it.map { value -> value } },
-        "1 1" to "[[1]]".to2DIntArray().map { it.map { value -> value } }
-    )
-
-    override fun algorithm(input: Params): List<List<Int>> {
-        val n = input.n
-        val k = input.k
-
+    fun combine(n: Int, k: Int): List<List<Int>> {
         return getSubLists(0, n, k)
     }
 
@@ -32,6 +23,18 @@ class Sol_77_combinations : Solution.General<Sol_77_combinations.Params, List<Li
         return results
     }
 
+    override val givenTestCases: Map<String, List<List<Int>>> = mapOf(
+        "4 2" to "[[2,4],[3,4],[2,3],[1,2],[1,3],[1,4]]".to2DIntArray().map { it.map { value -> value } },
+        "1 1" to "[[1]]".to2DIntArray().map { it.map { value -> value } }
+    )
+
+    override fun algorithm(input: Params): List<List<Int>> = combine(input.n, input.k)
+    override fun inputStringToInputType(input: String): Params {
+        val split = input.split(" ")
+        return Params(split[0].toInt(), split[1].toInt())
+    }
+    class Params(val n: Int, val k: Int)
+
     override fun checkEquals(result: List<List<Int>>, expected: List<List<Int>>?): Boolean {
         val sortedResult = result
             .map { it.sortedBy { value -> value }.toIntArray() }
@@ -44,10 +47,5 @@ class Sol_77_combinations : Solution.General<Sol_77_combinations.Params, List<Li
             ?.sortedWith (compareBy({ it[0] }, { it.sum() }))
             ?.toTypedArray()
         return sortedResult.checkContentEquals(sortedExpected)
-    }
-
-    override fun inputStringToInputType(input: String): Params {
-        val split = input.split(" ")
-        return Params(split[0].toInt(), split[1].toInt())
     }
 }

@@ -4,18 +4,9 @@ import common.to2DIntArray
 import java.util.LinkedList
 import java.util.Queue
 
+// https://leetcode.com/problems/01-matrix/
 class Sol_542_01_matrix: Solution.General<Array<IntArray>, Array<IntArray>>() {
-    override val givenTestCases: Map<String, Array<IntArray>> = mapOf(
-        "[[0,0,0],[0,1,0],[0,0,0]]" to "[[0,0,0],[0,1,0],[0,0,0]]".to2DIntArray(),
-        "[[0,0,0],[0,1,0],[1,1,1]]" to "[[0,0,0],[0,1,0],[1,2,1]]".to2DIntArray()
-    )
-    override val customTestCases: Map<String, Array<IntArray>> = mapOf(
-        "[[0,1,0],[0,1,0],[0,1,0],[0,1,0],[0,1,0]]" to  "[[0,1,0],[0,1,0],[0,1,0],[0,1,0],[0,1,0]]".to2DIntArray()
-    )
-
-    override fun algorithm(input: Array<IntArray>): Array<IntArray> {
-        val mat = input
-
+    fun updateMatrix(mat: Array<IntArray>): Array<IntArray> {
         val queue: Queue<Fill> = LinkedList()
         for(row in mat.indices) {
             for (col in mat[0].indices) {
@@ -35,14 +26,14 @@ class Sol_542_01_matrix: Solution.General<Array<IntArray>, Array<IntArray>>() {
 
             if (mat[row][col] == -1) {
                 mat[row][col] = fill
-                val leftFill = Fill(row, col - 1, fill + 1)
-                val rightFill = Fill(row, col + 1, fill + 1)
-                val topFill = Fill(row - 1, col, fill + 1)
-                val bottomFill = Fill(row + 1, col, fill + 1)
-                if (mat.hasAvailableEmptyCellFor(leftFill)) queue.offer(leftFill)
-                if (mat.hasAvailableEmptyCellFor(rightFill)) queue.offer(rightFill)
-                if (mat.hasAvailableEmptyCellFor(topFill)) queue.offer(topFill)
-                if (mat.hasAvailableEmptyCellFor(bottomFill)) queue.offer(bottomFill)
+                val leftFill = Fill(row, col-1, fill+1)
+                val rightFill = Fill(row, col+1, fill+1)
+                val topFill = Fill(row-1, col, fill+1)
+                val bottomFill = Fill(row+1, col, fill+1)
+                if(mat.hasAvailableEmptyCellFor(leftFill)) queue.offer(leftFill)
+                if(mat.hasAvailableEmptyCellFor(rightFill)) queue.offer(rightFill)
+                if(mat.hasAvailableEmptyCellFor(topFill)) queue.offer(topFill)
+                if(mat.hasAvailableEmptyCellFor(bottomFill)) queue.offer(bottomFill)
             }
         }
         return mat
@@ -56,8 +47,18 @@ class Sol_542_01_matrix: Solution.General<Array<IntArray>, Array<IntArray>>() {
         if (this[fill.row][fill.col] != -1) return false
         return true
     }
+
     private data class Fill(val row: Int, val col: Int, val fill: Int)
 
+    override val givenTestCases: Map<String, Array<IntArray>> = mapOf(
+        "[[0,0,0],[0,1,0],[0,0,0]]" to "[[0,0,0],[0,1,0],[0,0,0]]".to2DIntArray(),
+        "[[0,0,0],[0,1,0],[1,1,1]]" to "[[0,0,0],[0,1,0],[1,2,1]]".to2DIntArray()
+    )
+    override val customTestCases: Map<String, Array<IntArray>> = mapOf(
+        "[[0,1,0],[0,1,0],[0,1,0],[0,1,0],[0,1,0]]" to  "[[0,1,0],[0,1,0],[0,1,0],[0,1,0],[0,1,0]]".to2DIntArray()
+    )
+
+    override fun algorithm(input: Array<IntArray>): Array<IntArray> = updateMatrix(input)
     override fun inputStringToInputType(input: String): Array<IntArray> {
         return input.to2DIntArray()
     }

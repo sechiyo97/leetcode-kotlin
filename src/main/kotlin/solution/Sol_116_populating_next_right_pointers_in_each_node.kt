@@ -3,17 +3,9 @@ package solution
 import common.model.Node
 import common.toIntArray
 
+// https://leetcode.com/problems/populating-next-right-pointers-in-each-node/
 class Sol_116_populating_next_right_pointers_in_each_node: Solution.General<Node?, Node?>() {
-    override val givenTestCases: Map<String, Node?> = mapOf(
-        "[1,2,3,4,5,6,7]" to Node.fromIntArray(intArrayOf(1,2,3,4,5,6,7))
-    )
-    override val customTestCases: Map<String, Node?> = mapOf(
-        "[-1,0,1,2,3,4,5,6,7,8,9,10,11,12,13]" to Node.fromIntArray(intArrayOf(-1,0,1,2,3,4,5,6,7,8,9,10,11,12,13))
-    )
-
-    override fun algorithm(input: Node?): Node? {
-        val root = input
-
+    fun connect(root: Node?): Node? {
         val totalDepth = root?.totalDepth ?: 0
         val nodeArray = createNodeArray(root, totalDepth)
         val lastNodeIndices = IntArray(totalDepth)
@@ -45,13 +37,13 @@ class Sol_116_populating_next_right_pointers_in_each_node: Solution.General<Node
         fillNodeArray(node.left, nextLeftIndex, targetArray)
         fillNodeArray(node.right, nextRightIndex, targetArray)
     }
+
     private fun pow(value: Int, times: Int): Int {
         var result = 1
         for (i in 0 until times) result*=value
         return result
     }
 
-    // though defined in Node.kt, added in solution class for reference
     private val Node.totalDepth get(): Int {
         val leftDepth = left?.totalDepth ?: 0
         val rightDepth = right?.totalDepth ?: 0
@@ -59,6 +51,14 @@ class Sol_116_populating_next_right_pointers_in_each_node: Solution.General<Node
         return 1 + maxDepth
     }
 
+    override val givenTestCases: Map<String, Node?> = mapOf(
+        "[1,2,3,4,5,6,7]" to Node.fromIntArray(intArrayOf(1,2,3,4,5,6,7))
+    )
+    override val customTestCases: Map<String, Node?> = mapOf(
+        "[-1,0,1,2,3,4,5,6,7,8,9,10,11,12,13]" to Node.fromIntArray(intArrayOf(-1,0,1,2,3,4,5,6,7,8,9,10,11,12,13))
+    )
+
+    override fun algorithm(input: Node?): Node? = connect(input)
     override fun inputStringToInputType(input: String): Node? {
         return Node.fromIntArray(input.toIntArray())
     }
