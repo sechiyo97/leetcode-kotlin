@@ -4,6 +4,7 @@ import leetcode
 import time
 
 solution_file_dir = "../src/main/kotlin/solution/"
+solution_file_dir_from_root = "src/main/kotlin/solution/"
 readme_file_path = "../README.md"
 data_file_path = "data-problems"
 
@@ -94,8 +95,8 @@ class Problem:
         return "https://leetcode.com/problems/" + self.problem_ref_name
         
     def get_solution_path(self):
-        return solution_file_dir + self.solution_file_name
-        
+        return solution_file_dir_from_root + self.solution_file_name
+    
     def to_read_me_line(self):
         return str(self.problem_number) +\
             " | " + "["+self.title+"]("+self.get_solution_path()+")" +\
