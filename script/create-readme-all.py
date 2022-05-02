@@ -3,7 +3,7 @@ from os.path import isfile, join
 import leetcode
 import time
 
-solution_file_dir = "src/main/kotlin/solution/"
+solution_file_dir = "../src/main/kotlin/solution/"
 
 leetcode_api_instance = leetcode.DefaultApi(leetcode.ApiClient(leetcode.Configuration()))
 leetcode_query_get_question_info = """
@@ -111,7 +111,7 @@ for solution_file in solution_files:
     
 problems.sort(key=lambda solution: int(solution.problem_number))
 
-readme = open("README.md", "w")
+readme = open("../README.md", "w")
 readme.write(title_project + "\n" + desc_project + "\n\n")
 readme.write(title_problem_solved + "\n")
 readme.write(table_header_total + "\n" + get_table_content_string_total(problems) + "\n\n")
