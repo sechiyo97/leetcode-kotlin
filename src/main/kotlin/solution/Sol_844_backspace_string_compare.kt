@@ -2,7 +2,7 @@ package solution
 
 import Solution
 
-
+// https://leetcode.com/problems/backspace-string-compare/
 class Sol_844_backspace_string_compare: Solution.General<Sol_844_backspace_string_compare.Params, Boolean>() {
     fun backspaceCompare(s: String, t: String): Boolean {
         var sIdx = s.length
