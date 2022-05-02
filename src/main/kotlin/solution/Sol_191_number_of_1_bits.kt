@@ -26,13 +26,14 @@ class Sol_191_number_of_1_bits: Solution.General<Int, Int>() {
 
     override val givenTestCases: Map<String, Int> = mapOf(
         "00000000000000000000000000001011" to 3,
-        "00000000000000000000000010000000" to 1,
+        "00000000000000000000000010000000" to 1
+    )
+    override val customTestCases: Map<String, Int> = mapOf(
         "11111111111111111111111111111101" to 31,
         "00000000000000000000000000000000" to 0,
         "10000000000000000000000000000000" to 1,
         "11111111111111111111111111111111" to 32,
-        "10101010101010101010101010101010" to 16,
-        "11111111111111111111111111111110" to 31
+        "10101010101010101010101010101010" to 16
     )
 
     override fun inputStringToInputType(input: String): Int = input.toUInt(2).toInt()
