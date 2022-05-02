@@ -1,7 +1,7 @@
 package solution
 
+import Solution
 import common.toIntArray
-import kotlin.math.exp
 
 // https://leetcode.com/problems/sort-array-by-parity/
 class Sol_905_sort_array_by_parity: Solution.General<IntArray, IntArray>() {
