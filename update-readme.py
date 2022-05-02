@@ -1,6 +1,7 @@
 from os import listdir
 from os.path import isfile, join
 import leetcode
+import time
 
 solution_file_dir = "src/main/kotlin/solution/"
 
@@ -58,17 +59,27 @@ class Problem:
         self.__update_info()
 
     def __update_info(self):
-        graphql_request = leetcode.GraphqlQuery(
-            query=leetcode_query_get_question_info,
-            variables=leetcode.GraphqlQueryGetQuestionDetailVariables(title_slug=self.problem_ref_name),
-            operation_name="getQuestionDetail"
-        )
+        not_success = True
+        try_count = 0
+        while not_success and try_count<30:
+            try:
+                try_count += 1
+                print("trying to get problem info (try " + str(try_count) + "): " + self.problem_ref_name)
+                graphql_request = leetcode.GraphqlQuery(
+                    query=leetcode_query_get_question_info,
+                    variables=leetcode.GraphqlQueryGetQuestionDetailVariables(title_slug=self.problem_ref_name),
+                    operation_name="getQuestionDetail"
+                )
 
-        info = leetcode_api_instance.graphql_post(body=graphql_request)
-        question = info.data.question
-        self.title = question.title
-        self.difficulty = question.difficulty
-        self.acRate = eval(question.stats)['acRate']
+                info = leetcode_api_instance.graphql_post(body=graphql_request)
+                question = info.data.question
+                self.title = question.title
+                self.difficulty = question.difficulty
+                self.acRate = eval(question.stats)['acRate']
+                not_success = False
+            except Exception as e:
+                print("*** Exception occured: " + str(e))
+                time.sleep(1)
 
     def get_leet_code_link_title(self):
         return self.problem_number + ". " + self.title
