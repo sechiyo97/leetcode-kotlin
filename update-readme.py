@@ -78,8 +78,9 @@ class Problem:
                 self.acRate = eval(question.stats)['acRate']
                 not_success = False
             except Exception as e:
+                if (try_count >= 30): raise e
                 print("*** Exception occured: " + str(e))
-                time.sleep(1)
+                time.sleep(0.3)
 
     def get_leet_code_link_title(self):
         return self.problem_number + ". " + self.title
