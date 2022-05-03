@@ -4,16 +4,15 @@ LeetCode Algorithm Practice
 ## Problem Solved
 Total |
 ------------- |
-47 |
+46 |
 
 Easy | Medium | Hard
 ------------- | ------------- | -------------
-29 | 18 | 0
+28 | 18 | 0
 
 \# | Problem(Solution) | LeetCode Link | Difficulty | Accepted Rate
 ------------- | ------------- | ------------- | ------------- | -------------
 3 | [Longest Substring Without Repeating Characters](src/main/kotlin/solution/Sol_3_longest_substring_without_repeating_characters.kt) | [3. Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters) | Medium | 33.0%
-12 | [Roman to Integer](src/main/kotlin/solution/Sol_12_roman_to_integer.kt) | [12. Roman to Integer](https://leetcode.com/problems/roman-to-integer) | Easy | 57.9%
 13 | [Roman to Integer](src/main/kotlin/solution/Sol_13_roman_to_integer.kt) | [13. Roman to Integer](https://leetcode.com/problems/roman-to-integer) | Easy | 57.9%
 19 | [Remove Nth Node From End of List](src/main/kotlin/solution/Sol_19_remove_nth_node_from_end_of_list.kt) | [19. Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list) | Medium | 38.3%
 21 | [Merge Two Sorted Lists](src/main/kotlin/solution/Sol_21_merge_two_sorted_lists.kt) | [21. Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists) | Easy | 60.3%
@@ -53,7 +52,7 @@ Easy | Medium | Hard
 784 | [Letter Case Permutation](src/main/kotlin/solution/Sol_784_letter_case_permutation.kt) | [784. Letter Case Permutation](https://leetcode.com/problems/letter-case-permutation) | Medium | 72.4%
 844 | [Backspace String Compare](src/main/kotlin/solution/Sol_844_backspace_string_compare.kt) | [844. Backspace String Compare](https://leetcode.com/problems/backspace-string-compare) | Easy | 48.0%
 876 | [Middle of the Linked List](src/main/kotlin/solution/Sol_876_middle_of_the_linked_list.kt) | [876. Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list) | Easy | 72.6%
-905 | [Sort Array By Parity](src/main/kotlin/solution/Sol_905_sort_array_by_parity.kt) | [905. Sort Array By Parity](https://leetcode.com/problems/sort-array-by-parity) | Easy | 75.4%
+905 | [Sort Array By Parity](src/main/kotlin/solution/Sol_905_sort_array_by_parity.kt) | [905. Sort Array By Parity](https://leetcode.com/problems/sort-array-by-parity) | Easy | 75.7%
 977 | [Squares of a Sorted Array](src/main/kotlin/solution/Sol_977_squares_of_a_sorted_array.kt) | [977. Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array) | Easy | 71.6%
 994 | [Rotting Oranges](src/main/kotlin/solution/Sol_994_rotting_oranges.kt) | [994. Rotting Oranges](https://leetcode.com/problems/rotting-oranges) | Medium | 51.7%
 1337 | [The K Weakest Rows in a Matrix](src/main/kotlin/solution/Sol_1337_the_k_weakest_rows_in_a_matrix.kt) | [1337. The K Weakest Rows in a Matrix](https://leetcode.com/problems/the-k-weakest-rows-in-a-matrix) | Easy | 74.3%
