@@ -107,6 +107,12 @@ class Problem:
 
 solution_files = [f for f in listdir(solution_file_dir) if f[0:3]=="Sol"]
 
+# sort solutions
+solutions = list()
+for solution_file in solution_files:
+    solutions.append([int(solution_file.split('_')[1]), solution_file])
+solutions.sort()
+
 problems = []
 
 data_file = open(data_file_path, 'a')
@@ -119,6 +125,12 @@ for line in data_file.readlines():
     split = line.split(',')
         
     problem_num = int(split[0])
+
+    # remove if not in solutions
+    if problem_num not in [solution[0] for solution in solutions]:
+        print("not in solutions...")
+        continue 
+    
     problem_ref = split[1]
     problem_name = problem_ref.replace('-', '_')
     problem_title = split[2]
@@ -134,12 +146,17 @@ for line in data_file.readlines():
     problems.append(problem)
 data_file.close()
 
-# add new data
-for solution_file in solution_files:
-    split = solution_file.split(".")[0].split("_")
+# add new data in solutions
+for solution in solutions:
+    split = solution[1].split(".")[0].split("_")
     problem_number = split[1]
     problem_ref_name = "-".join(split[2:])
-    if int(problem_number) in [int(problem.problem_number) for problem in problems]: continue
+    
+    # remove if already in problems
+    if int(problem_number) in [int(problem.problem_number) for problem in problems]:
+        print("already in problems...")
+        continue
+    
     problem = Problem(problem_number, problem_ref_name, solution_file, True)
     problems.append(problem)
 
