@@ -1,4 +1,4 @@
-package solution.sample
+package solution
 
 import Solution
 import common.toIntArray
