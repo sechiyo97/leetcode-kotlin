@@ -96,7 +96,7 @@ class Problem:
         
     def get_solution_path(self):
         return solution_file_dir_from_root + self.solution_file_name
-        
+    
     def to_read_me_line(self):
         return str(self.problem_number) +\
             " | " + "["+self.title+"]("+self.get_solution_path()+")" +\

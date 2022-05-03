@@ -24,6 +24,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install python-leetcode
     - name: Run update-readme.py
+      working-directory: script
       run: |
         python update-readme.py
     - name: Commit changes

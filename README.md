@@ -4,11 +4,11 @@ LeetCode Algorithm Practice
 ## Problem Solved
 Total |
 ------------- |
-40 |
+42 |
 
 Easy | Medium | Hard
 ------------- | ------------- | -------------
-26 | 14 | 0
+28 | 14 | 0
 
 \# | Problem(Solution) | LeetCode Link | Difficulty | Accepted Rate
 ------------- | ------------- | ------------- | ------------- | -------------
@@ -23,8 +23,10 @@ Easy | Medium | Hard
 77 | [Combinations](src/main/kotlin/solution/Sol_77_combinations.kt) | [77. Combinations](https://leetcode.com/problems/combinations) | Medium | 63.9%
 116 | [Populating Next Right Pointers in Each Node](src/main/kotlin/solution/Sol_116_populating_next_right_pointers_in_each_node.kt) | [116. Populating Next Right Pointers in Each Node](https://leetcode.com/problems/populating-next-right-pointers-in-each-node) | Medium | 57.0%
 120 | [Triangle](src/main/kotlin/solution/Sol_120_triangle.kt) | [120. Triangle](https://leetcode.com/problems/triangle) | Medium | 50.8%
+136 | [Single Number](src/main/kotlin/solution/Sol_136_single_number.kt) | [136. Single Number](https://leetcode.com/problems/single-number) | Easy | 69.4%
 167 | [Two Sum II - Input Array Is Sorted](src/main/kotlin/solution/Sol_167_two_sum_ii_input_array_is_sorted.kt) | [167. Two Sum II - Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted) | Medium | 58.7%
 189 | [Rotate Array](src/main/kotlin/solution/Sol_189_rotate_array.kt) | [189. Rotate Array](https://leetcode.com/problems/rotate-array) | Medium | 38.6%
+190 | [Reverse Bits](src/main/kotlin/solution/Sol_190_reverse_bits.kt) | [190. Reverse Bits](https://leetcode.com/problems/reverse-bits) | Easy | 48.9%
 191 | [Number of 1 Bits](src/main/kotlin/solution/Sol_191_number_of_1_bits.kt) | [191. Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits) | Easy | 60.5%
 198 | [House Robber](src/main/kotlin/solution/Sol_198_house_robber.kt) | [198. House Robber](https://leetcode.com/problems/house-robber) | Medium | 47.2%
 206 | [Reverse Linked List](src/main/kotlin/solution/Sol_206_reverse_linked_list.kt) | [206. Reverse Linked List](https://leetcode.com/problems/reverse-linked-list) | Easy | 70.3%
@@ -46,7 +48,7 @@ Easy | Medium | Hard
 784 | [Letter Case Permutation](src/main/kotlin/solution/Sol_784_letter_case_permutation.kt) | [784. Letter Case Permutation](https://leetcode.com/problems/letter-case-permutation) | Medium | 72.4%
 844 | [Backspace String Compare](src/main/kotlin/solution/Sol_844_backspace_string_compare.kt) | [844. Backspace String Compare](https://leetcode.com/problems/backspace-string-compare) | Easy | 48.0%
 876 | [Middle of the Linked List](src/main/kotlin/solution/Sol_876_middle_of_the_linked_list.kt) | [876. Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list) | Easy | 72.6%
-905 | [Sort Array By Parity](src/main/kotlin/solution/Sol_905_sort_array_by_parity.kt) | [905. Sort Array By Parity](https://leetcode.com/problems/sort-array-by-parity) | Easy | 75.3%
+905 | [Sort Array By Parity](src/main/kotlin/solution/Sol_905_sort_array_by_parity.kt) | [905. Sort Array By Parity](https://leetcode.com/problems/sort-array-by-parity) | Easy | 75.4%
 977 | [Squares of a Sorted Array](src/main/kotlin/solution/Sol_977_squares_of_a_sorted_array.kt) | [977. Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array) | Easy | 71.6%
 994 | [Rotting Oranges](src/main/kotlin/solution/Sol_994_rotting_oranges.kt) | [994. Rotting Oranges](https://leetcode.com/problems/rotting-oranges) | Medium | 51.7%
 1337 | [The K Weakest Rows in a Matrix](src/main/kotlin/solution/Sol_1337_the_k_weakest_rows_in_a_matrix.kt) | [1337. The K Weakest Rows in a Matrix](https://leetcode.com/problems/the-k-weakest-rows-in-a-matrix) | Easy | 74.3%
