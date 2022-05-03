@@ -4,11 +4,11 @@ LeetCode Algorithm Practice
 ## Problem Solved
 Total |
 ------------- |
-42 |
+45 |
 
 Easy | Medium | Hard
 ------------- | ------------- | -------------
-28 | 14 | 0
+28 | 17 | 0
 
 \# | Problem(Solution) | LeetCode Link | Difficulty | Accepted Rate
 ------------- | ------------- | ------------- | ------------- | -------------
@@ -16,10 +16,13 @@ Easy | Medium | Hard
 12 | [Roman to Integer](src/main/kotlin/solution/Sol_12_roman_to_integer.kt) | [12. Roman to Integer](https://leetcode.com/problems/roman-to-integer) | Easy | 57.9%
 19 | [Remove Nth Node From End of List](src/main/kotlin/solution/Sol_19_remove_nth_node_from_end_of_list.kt) | [19. Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list) | Medium | 38.3%
 21 | [Merge Two Sorted Lists](src/main/kotlin/solution/Sol_21_merge_two_sorted_lists.kt) | [21. Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists) | Easy | 60.3%
+33 | [Search in Rotated Sorted Array](src/main/kotlin/solution/Sol_33_search_in_rotated_sorted_array.kt) | [33. Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array) | Medium | 37.8%
+34 | [Find First and Last Position of Element in Sorted Array](src/main/kotlin/solution/Sol_34_find_first_and_last_position_of_element_in_sorted_array.kt) | [34. Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array) | Medium | 40.0%
 35 | [Search Insert Position](src/main/kotlin/solution/Sol_35_search_insert_position.kt) | [35. Search Insert Position](https://leetcode.com/problems/search-insert-position) | Easy | 42.3%
 46 | [Permutations](src/main/kotlin/solution/Sol_46_permutations.kt) | [46. Permutations](https://leetcode.com/problems/permutations) | Medium | 72.3%
 53 | [Maximum Subarray](src/main/kotlin/solution/Sol_53_maximum_subarray.kt) | [53. Maximum Subarray](https://leetcode.com/problems/maximum-subarray) | Easy | 49.5%
 70 | [Climbing Stairs](src/main/kotlin/solution/Sol_70_climbing_stairs.kt) | [70. Climbing Stairs](https://leetcode.com/problems/climbing-stairs) | Easy | 51.0%
+74 | [Search a 2D Matrix](src/main/kotlin/solution/Sol_74_search_a_2d_matrix.kt) | [74. Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix) | Medium | 44.4%
 77 | [Combinations](src/main/kotlin/solution/Sol_77_combinations.kt) | [77. Combinations](https://leetcode.com/problems/combinations) | Medium | 63.9%
 116 | [Populating Next Right Pointers in Each Node](src/main/kotlin/solution/Sol_116_populating_next_right_pointers_in_each_node.kt) | [116. Populating Next Right Pointers in Each Node](https://leetcode.com/problems/populating-next-right-pointers-in-each-node) | Medium | 57.0%
 120 | [Triangle](src/main/kotlin/solution/Sol_120_triangle.kt) | [120. Triangle](https://leetcode.com/problems/triangle) | Medium | 50.8%

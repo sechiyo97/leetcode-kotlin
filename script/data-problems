@@ -2,10 +2,13 @@
 12,roman-to-integer,Roman to Integer,Easy,57.9%
 19,remove-nth-node-from-end-of-list,Remove Nth Node From End of List,Medium,38.3%
 21,merge-two-sorted-lists,Merge Two Sorted Lists,Easy,60.3%
+33,search-in-rotated-sorted-array,Search in Rotated Sorted Array,Medium,37.8%
+34,find-first-and-last-position-of-element-in-sorted-array,Find First and Last Position of Element in Sorted Array,Medium,40.0%
 35,search-insert-position,Search Insert Position,Easy,42.3%
 46,permutations,Permutations,Medium,72.3%
 53,maximum-subarray,Maximum Subarray,Easy,49.5%
 70,climbing-stairs,Climbing Stairs,Easy,51.0%
+74,search-a-2d-matrix,Search a 2D Matrix,Medium,44.4%
 77,combinations,Combinations,Medium,63.9%
 116,populating-next-right-pointers-in-each-node,Populating Next Right Pointers in Each Node,Medium,57.0%
 120,triangle,Triangle,Medium,50.8%
