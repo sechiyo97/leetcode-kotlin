@@ -1,7 +1,7 @@
 package solution
 
 // https://leetcode.com/problems/roman-to-integer/
-class Sol_12_roman_to_integer : Solution.General<String, Int>() {
+class Sol_13_roman_to_integer : Solution.General<String, Int>() {
     fun romanToInt(s: String): Int {
         var result = 0
         var lastRomanIntValue = 0

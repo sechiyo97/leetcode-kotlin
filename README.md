@@ -4,22 +4,25 @@ LeetCode Algorithm Practice
 ## Problem Solved
 Total |
 ------------- |
-42 |
+46 |
 
 Easy | Medium | Hard
 ------------- | ------------- | -------------
-28 | 14 | 0
+28 | 18 | 0
 
 \# | Problem(Solution) | LeetCode Link | Difficulty | Accepted Rate
 ------------- | ------------- | ------------- | ------------- | -------------
 3 | [Longest Substring Without Repeating Characters](src/main/kotlin/solution/Sol_3_longest_substring_without_repeating_characters.kt) | [3. Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters) | Medium | 33.0%
-12 | [Roman to Integer](src/main/kotlin/solution/Sol_12_roman_to_integer.kt) | [12. Roman to Integer](https://leetcode.com/problems/roman-to-integer) | Easy | 57.9%
+13 | [Roman to Integer](src/main/kotlin/solution/Sol_13_roman_to_integer.kt) | [13. Roman to Integer](https://leetcode.com/problems/roman-to-integer) | Easy | 57.9%
 19 | [Remove Nth Node From End of List](src/main/kotlin/solution/Sol_19_remove_nth_node_from_end_of_list.kt) | [19. Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list) | Medium | 38.3%
 21 | [Merge Two Sorted Lists](src/main/kotlin/solution/Sol_21_merge_two_sorted_lists.kt) | [21. Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists) | Easy | 60.3%
+33 | [Search in Rotated Sorted Array](src/main/kotlin/solution/Sol_33_search_in_rotated_sorted_array.kt) | [33. Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array) | Medium | 37.8%
+34 | [Find First and Last Position of Element in Sorted Array](src/main/kotlin/solution/Sol_34_find_first_and_last_position_of_element_in_sorted_array.kt) | [34. Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array) | Medium | 40.0%
 35 | [Search Insert Position](src/main/kotlin/solution/Sol_35_search_insert_position.kt) | [35. Search Insert Position](https://leetcode.com/problems/search-insert-position) | Easy | 42.3%
 46 | [Permutations](src/main/kotlin/solution/Sol_46_permutations.kt) | [46. Permutations](https://leetcode.com/problems/permutations) | Medium | 72.3%
 53 | [Maximum Subarray](src/main/kotlin/solution/Sol_53_maximum_subarray.kt) | [53. Maximum Subarray](https://leetcode.com/problems/maximum-subarray) | Easy | 49.5%
 70 | [Climbing Stairs](src/main/kotlin/solution/Sol_70_climbing_stairs.kt) | [70. Climbing Stairs](https://leetcode.com/problems/climbing-stairs) | Easy | 51.0%
+74 | [Search a 2D Matrix](src/main/kotlin/solution/Sol_74_search_a_2d_matrix.kt) | [74. Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix) | Medium | 44.4%
 77 | [Combinations](src/main/kotlin/solution/Sol_77_combinations.kt) | [77. Combinations](https://leetcode.com/problems/combinations) | Medium | 63.9%
 116 | [Populating Next Right Pointers in Each Node](src/main/kotlin/solution/Sol_116_populating_next_right_pointers_in_each_node.kt) | [116. Populating Next Right Pointers in Each Node](https://leetcode.com/problems/populating-next-right-pointers-in-each-node) | Medium | 57.0%
 120 | [Triangle](src/main/kotlin/solution/Sol_120_triangle.kt) | [120. Triangle](https://leetcode.com/problems/triangle) | Medium | 50.8%
@@ -41,6 +44,7 @@ Easy | Medium | Hard
 542 | [01 Matrix](src/main/kotlin/solution/Sol_542_01_matrix.kt) | [542. 01 Matrix](https://leetcode.com/problems/01-matrix) | Medium | 43.8%
 557 | [Reverse Words in a String III](src/main/kotlin/solution/Sol_557_reverse_words_in_a_string_iii.kt) | [557. Reverse Words in a String III](https://leetcode.com/problems/reverse-words-in-a-string-iii) | Easy | 78.7%
 567 | [Permutation in String](src/main/kotlin/solution/Sol_567_permutation_in_string.kt) | [567. Permutation in String](https://leetcode.com/problems/permutation-in-string) | Medium | 44.7%
+581 | [Shortest Unsorted Continuous Subarray](src/main/kotlin/solution/Sol_581_shortest_unsorted_continuous_subarray.kt) | [581. Shortest Unsorted Continuous Subarray](https://leetcode.com/problems/shortest-unsorted-continuous-subarray) | Medium | 35.4%
 617 | [Merge Two Binary Trees](src/main/kotlin/solution/Sol_617_merge_two_binary_trees.kt) | [617. Merge Two Binary Trees](https://leetcode.com/problems/merge-two-binary-trees) | Easy | 77.9%
 695 | [Max Area of Island](src/main/kotlin/solution/Sol_695_max_area_of_island.kt) | [695. Max Area of Island](https://leetcode.com/problems/max-area-of-island) | Medium | 69.7%
 704 | [Binary Search](src/main/kotlin/solution/Sol_704_binary_search.kt) | [704. Binary Search](https://leetcode.com/problems/binary-search) | Easy | 55.3%
@@ -48,7 +52,7 @@ Easy | Medium | Hard
 784 | [Letter Case Permutation](src/main/kotlin/solution/Sol_784_letter_case_permutation.kt) | [784. Letter Case Permutation](https://leetcode.com/problems/letter-case-permutation) | Medium | 72.4%
 844 | [Backspace String Compare](src/main/kotlin/solution/Sol_844_backspace_string_compare.kt) | [844. Backspace String Compare](https://leetcode.com/problems/backspace-string-compare) | Easy | 48.0%
 876 | [Middle of the Linked List](src/main/kotlin/solution/Sol_876_middle_of_the_linked_list.kt) | [876. Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list) | Easy | 72.6%
-905 | [Sort Array By Parity](src/main/kotlin/solution/Sol_905_sort_array_by_parity.kt) | [905. Sort Array By Parity](https://leetcode.com/problems/sort-array-by-parity) | Easy | 75.4%
+905 | [Sort Array By Parity](src/main/kotlin/solution/Sol_905_sort_array_by_parity.kt) | [905. Sort Array By Parity](https://leetcode.com/problems/sort-array-by-parity) | Easy | 75.7%
 977 | [Squares of a Sorted Array](src/main/kotlin/solution/Sol_977_squares_of_a_sorted_array.kt) | [977. Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array) | Easy | 71.6%
 994 | [Rotting Oranges](src/main/kotlin/solution/Sol_994_rotting_oranges.kt) | [994. Rotting Oranges](https://leetcode.com/problems/rotting-oranges) | Medium | 51.7%
 1337 | [The K Weakest Rows in a Matrix](src/main/kotlin/solution/Sol_1337_the_k_weakest_rows_in_a_matrix.kt) | [1337. The K Weakest Rows in a Matrix](https://leetcode.com/problems/the-k-weakest-rows-in-a-matrix) | Easy | 74.3%
