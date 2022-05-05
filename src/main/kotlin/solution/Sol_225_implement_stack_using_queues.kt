@@ -33,8 +33,6 @@ class Sol_225_implement_stack_using_queues {
         fun empty(): Boolean = queue.isEmpty()
     }
 
-
-
     /**
      * Solution 1
      * two queues
