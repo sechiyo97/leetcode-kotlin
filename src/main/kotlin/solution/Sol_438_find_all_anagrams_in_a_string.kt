@@ -42,9 +42,12 @@ class Sol_438_find_all_anagrams_in_a_string: Solution.General<Sol_438_find_all_a
     override val givenTestCases: Map<String, List<Int>> = mapOf(
         "cbaebabacd abc" to listOf(0,6),
         "abab ab" to listOf(0,1,2),
+    )
 
+    override val customTestCases: Map<String, List<Int>> = mapOf(
         "abacbabc abc" to listOf(1,2,3,5)
     )
+    
     override fun inputStringToInputType(input: String): Params {
         val split = input.split(" ")
         return Params(split[0], split[1])
