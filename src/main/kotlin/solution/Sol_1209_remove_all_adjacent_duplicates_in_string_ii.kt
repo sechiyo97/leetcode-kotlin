@@ -3,6 +3,7 @@ package solution
 import Solution
 import java.util.*
 
+// https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii
 class Sol_1209_remove_all_adjacent_duplicates_in_string_ii: Solution.General<Sol_1209_remove_all_adjacent_duplicates_in_string_ii.Params, String>() {
     fun removeDuplicates(s: String, k: Int): String {
         val ssb = StringBuilder()
