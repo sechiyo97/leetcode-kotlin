@@ -47,8 +47,9 @@ class Sol_1679_max_number_of_k_sum_pairs: Solution.General<Sol_1679_max_number_o
 
     override val givenTestCases: Map<String, Int> = mapOf(
         "[1,2,3,4] 5" to 2,
-        "[3,1,3,4,3] 6" to 1,
-
+        "[3,1,3,4,3] 6" to 1
+    )
+    override val customTestCases: Map<String, Int> = mapOf(
         "[2,5,4,4,1,3,4,4,1,4,4,1,2,1,2,2,3,2,4,2] 3" to 4
     )
 
