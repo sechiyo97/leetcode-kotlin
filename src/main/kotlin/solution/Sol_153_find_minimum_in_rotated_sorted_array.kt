@@ -3,7 +3,8 @@ package solution
 import Solution
 import common.toIntArray
 
-class Sol_153_find_minimum_in_rotated_soted_array: Solution.General<IntArray, Int>() {
+// https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/
+class Sol_153_find_minimum_in_rotated_sorted_array: Solution.General<IntArray, Int>() {
     fun findMin(nums: IntArray): Int {
         var left = 0
         var right = nums.size-1
