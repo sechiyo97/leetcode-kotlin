@@ -1,8 +1,24 @@
 package solution
 
+import Solution
+import java.util.*
+
 class Sol_1209_remove_all_adjacent_duplicates_in_string_ii: Solution.General<Sol_1209_remove_all_adjacent_duplicates_in_string_ii.Params, String>() {
     fun removeDuplicates(s: String, k: Int): String {
-        return "aa"
+        val ssb = StringBuilder()
+        val countStack: Stack<Int> = Stack<Int>()
+        s.forEach { ch ->
+            val isSameChar = countStack.isNotEmpty() && ssb[ssb.length-1] == ch
+            countStack.push(if (isSameChar.not()) 1 else countStack.peek()+1)
+            ssb.append(ch)
+            if (countStack.peek() == k) {
+                for (i in 0 until k) {
+                    ssb.delete(ssb.length-1, ssb.length)
+                    countStack.pop()
+                }
+            }
+        }
+        return ssb.toString()
     }
 
     override val givenTestCases: Map<String, String> = mapOf(
