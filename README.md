@@ -4,18 +4,20 @@ LeetCode Algorithm Practice
 ## Problem Solved
 Total |
 ------------- |
-55 |
+58 |
 
 Easy | Medium | Hard
 ------------- | ------------- | -------------
-29 | 26 | 0
+30 | 28 | 0
 
 \# | Problem(Solution) | LeetCode Link | Difficulty | Accepted Rate
 ------------- | ------------- | ------------- | ------------- | -------------
+1 | [Two Sum](src/main/kotlin/solution/Sol_136_single_number.kt) | [1. Two Sum](https://leetcode.com/problems/two-sum) | Easy | 48.6%
+2 | [Add Two Numbers](src/main/kotlin/solution/Sol_136_single_number.kt) | [2. Add Two Numbers](https://leetcode.com/problems/add-two-numbers) | Medium | 38.6%
 3 | [Longest Substring Without Repeating Characters](src/main/kotlin/solution/Sol_3_longest_substring_without_repeating_characters.kt) | [3. Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters) | Medium | 33.0%
-11 | [Container With Most Water](src/main/kotlin/solution/Sol_136_single_number.kt) | [11. Container With Most Water](https://leetcode.com/problems/container-with-most-water) | Medium | 53.9%
+11 | [Container With Most Water](src/main/kotlin/solution/Sol_11_container_with_most_water.kt) | [11. Container With Most Water](https://leetcode.com/problems/container-with-most-water) | Medium | 53.9%
 13 | [Roman to Integer](src/main/kotlin/solution/Sol_13_roman_to_integer.kt) | [13. Roman to Integer](https://leetcode.com/problems/roman-to-integer) | Easy | 57.9%
-15 | [3Sum](src/main/kotlin/solution/Sol_136_single_number.kt) | [15. 3Sum](https://leetcode.com/problems/3sum) | Medium | 31.1%
+15 | [3Sum](src/main/kotlin/solution/Sol_15_3sum.kt) | [15. 3Sum](https://leetcode.com/problems/3sum) | Medium | 31.1%
 19 | [Remove Nth Node From End of List](src/main/kotlin/solution/Sol_19_remove_nth_node_from_end_of_list.kt) | [19. Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list) | Medium | 38.3%
 21 | [Merge Two Sorted Lists](src/main/kotlin/solution/Sol_21_merge_two_sorted_lists.kt) | [21. Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists) | Easy | 60.3%
 33 | [Search in Rotated Sorted Array](src/main/kotlin/solution/Sol_33_search_in_rotated_sorted_array.kt) | [33. Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array) | Medium | 37.8%
@@ -26,7 +28,7 @@ Easy | Medium | Hard
 70 | [Climbing Stairs](src/main/kotlin/solution/Sol_70_climbing_stairs.kt) | [70. Climbing Stairs](https://leetcode.com/problems/climbing-stairs) | Easy | 51.0%
 74 | [Search a 2D Matrix](src/main/kotlin/solution/Sol_74_search_a_2d_matrix.kt) | [74. Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix) | Medium | 44.4%
 77 | [Combinations](src/main/kotlin/solution/Sol_77_combinations.kt) | [77. Combinations](https://leetcode.com/problems/combinations) | Medium | 63.9%
-82 | [Remove Duplicates from Sorted List II](src/main/kotlin/solution/Sol_136_single_number.kt) | [82. Remove Duplicates from Sorted List II](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii) | Medium | 44.3%
+82 | [Remove Duplicates from Sorted List II](src/main/kotlin/solution/Sol_82_remove_duplicates_from_sorted_list_ii.kt) | [82. Remove Duplicates from Sorted List II](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii) | Medium | 44.3%
 116 | [Populating Next Right Pointers in Each Node](src/main/kotlin/solution/Sol_116_populating_next_right_pointers_in_each_node.kt) | [116. Populating Next Right Pointers in Each Node](https://leetcode.com/problems/populating-next-right-pointers-in-each-node) | Medium | 57.0%
 120 | [Triangle](src/main/kotlin/solution/Sol_120_triangle.kt) | [120. Triangle](https://leetcode.com/problems/triangle) | Medium | 50.8%
 136 | [Single Number](src/main/kotlin/solution/Sol_136_single_number.kt) | [136. Single Number](https://leetcode.com/problems/single-number) | Easy | 69.4%
@@ -47,6 +49,7 @@ Easy | Medium | Hard
 344 | [Reverse String](src/main/kotlin/solution/Sol_344_reverse_string.kt) | [344. Reverse String](https://leetcode.com/problems/reverse-string) | Easy | 74.9%
 383 | [Ransom Note](src/main/kotlin/solution/Sol_383_ransom_note.kt) | [383. Ransom Note](https://leetcode.com/problems/ransom-note) | Easy | 55.8%
 412 | [Fizz Buzz](src/main/kotlin/solution/Sol_412_fizz_buzz.kt) | [412. Fizz Buzz](https://leetcode.com/problems/fizz-buzz) | Easy | 66.7%
+438 | [Find All Anagrams in a String](src/main/kotlin/solution/Sol_136_single_number.kt) | [438. Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string) | Medium | 48.3%
 542 | [01 Matrix](src/main/kotlin/solution/Sol_542_01_matrix.kt) | [542. 01 Matrix](https://leetcode.com/problems/01-matrix) | Medium | 43.8%
 557 | [Reverse Words in a String III](src/main/kotlin/solution/Sol_557_reverse_words_in_a_string_iii.kt) | [557. Reverse Words in a String III](https://leetcode.com/problems/reverse-words-in-a-string-iii) | Easy | 78.7%
 567 | [Permutation in String](src/main/kotlin/solution/Sol_567_permutation_in_string.kt) | [567. Permutation in String](https://leetcode.com/problems/permutation-in-string) | Medium | 44.7%
@@ -60,7 +63,7 @@ Easy | Medium | Hard
 876 | [Middle of the Linked List](src/main/kotlin/solution/Sol_876_middle_of_the_linked_list.kt) | [876. Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list) | Easy | 72.6%
 905 | [Sort Array By Parity](src/main/kotlin/solution/Sol_905_sort_array_by_parity.kt) | [905. Sort Array By Parity](https://leetcode.com/problems/sort-array-by-parity) | Easy | 75.7%
 977 | [Squares of a Sorted Array](src/main/kotlin/solution/Sol_977_squares_of_a_sorted_array.kt) | [977. Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array) | Easy | 71.6%
-986 | [Interval List Intersections](src/main/kotlin/solution/Sol_136_single_number.kt) | [986. Interval List Intersections](https://leetcode.com/problems/interval-list-intersections) | Medium | 71.1%
+986 | [Interval List Intersections](src/main/kotlin/solution/Sol_986_interval_list_intersections.kt) | [986. Interval List Intersections](https://leetcode.com/problems/interval-list-intersections) | Medium | 71.1%
 994 | [Rotting Oranges](src/main/kotlin/solution/Sol_994_rotting_oranges.kt) | [994. Rotting Oranges](https://leetcode.com/problems/rotting-oranges) | Medium | 51.7%
 1209 | [Remove All Adjacent Duplicates in String II](src/main/kotlin/solution/Sol_1209_remove_all_adjacent_duplicates_in_string_ii.kt) | [1209. Remove All Adjacent Duplicates in String II](https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii) | Medium | 56.2%
 1337 | [The K Weakest Rows in a Matrix](src/main/kotlin/solution/Sol_1337_the_k_weakest_rows_in_a_matrix.kt) | [1337. The K Weakest Rows in a Matrix](https://leetcode.com/problems/the-k-weakest-rows-in-a-matrix) | Easy | 74.3%
