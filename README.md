@@ -4,11 +4,11 @@ LeetCode Algorithm Practice
 ## Problem Solved
 Total |
 ------------- |
-46 |
+51 |
 
 Easy | Medium | Hard
 ------------- | ------------- | -------------
-28 | 18 | 0
+29 | 22 | 0
 
 \# | Problem(Solution) | LeetCode Link | Difficulty | Accepted Rate
 ------------- | ------------- | ------------- | ------------- | -------------
@@ -27,6 +27,8 @@ Easy | Medium | Hard
 116 | [Populating Next Right Pointers in Each Node](src/main/kotlin/solution/Sol_116_populating_next_right_pointers_in_each_node.kt) | [116. Populating Next Right Pointers in Each Node](https://leetcode.com/problems/populating-next-right-pointers-in-each-node) | Medium | 57.0%
 120 | [Triangle](src/main/kotlin/solution/Sol_120_triangle.kt) | [120. Triangle](https://leetcode.com/problems/triangle) | Medium | 50.8%
 136 | [Single Number](src/main/kotlin/solution/Sol_136_single_number.kt) | [136. Single Number](https://leetcode.com/problems/single-number) | Easy | 69.4%
+153 | [Find Minimum in Rotated Sorted Array](src/main/kotlin/solution/Sol_136_single_number.kt) | [153. Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array) | Medium | 47.9%
+162 | [Find Peak Element](src/main/kotlin/solution/Sol_136_single_number.kt) | [162. Find Peak Element](https://leetcode.com/problems/find-peak-element) | Medium | 46.0%
 167 | [Two Sum II - Input Array Is Sorted](src/main/kotlin/solution/Sol_167_two_sum_ii_input_array_is_sorted.kt) | [167. Two Sum II - Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted) | Medium | 58.7%
 189 | [Rotate Array](src/main/kotlin/solution/Sol_189_rotate_array.kt) | [189. Rotate Array](https://leetcode.com/problems/rotate-array) | Medium | 38.6%
 190 | [Reverse Bits](src/main/kotlin/solution/Sol_190_reverse_bits.kt) | [190. Reverse Bits](https://leetcode.com/problems/reverse-bits) | Easy | 48.9%
@@ -34,6 +36,7 @@ Easy | Medium | Hard
 198 | [House Robber](src/main/kotlin/solution/Sol_198_house_robber.kt) | [198. House Robber](https://leetcode.com/problems/house-robber) | Medium | 47.2%
 206 | [Reverse Linked List](src/main/kotlin/solution/Sol_206_reverse_linked_list.kt) | [206. Reverse Linked List](https://leetcode.com/problems/reverse-linked-list) | Easy | 70.3%
 217 | [Contains Duplicate](src/main/kotlin/solution/Sol_217_contains_duplicate.kt) | [217. Contains Duplicate](https://leetcode.com/problems/contains-duplicate) | Easy | 60.8%
+225 | [Implement Stack using Queues](src/main/kotlin/solution/Sol_136_single_number.kt) | [225. Implement Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues) | Easy | 55.1%
 231 | [Power of Two](src/main/kotlin/solution/Sol_231_power_of_two.kt) | [231. Power of Two](https://leetcode.com/problems/power-of-two) | Easy | 45.0%
 234 | [Palindrome Linked List](src/main/kotlin/solution/Sol_234_palindrome_linked_list.kt) | [234. Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list) | Easy | 46.6%
 278 | [First Bad Version](src/main/kotlin/solution/Sol_278_first_bad_version.kt) | [278. First Bad Version](https://leetcode.com/problems/first-bad-version) | Easy | 41.7%
@@ -55,6 +58,8 @@ Easy | Medium | Hard
 905 | [Sort Array By Parity](src/main/kotlin/solution/Sol_905_sort_array_by_parity.kt) | [905. Sort Array By Parity](https://leetcode.com/problems/sort-array-by-parity) | Easy | 75.7%
 977 | [Squares of a Sorted Array](src/main/kotlin/solution/Sol_977_squares_of_a_sorted_array.kt) | [977. Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array) | Easy | 71.6%
 994 | [Rotting Oranges](src/main/kotlin/solution/Sol_994_rotting_oranges.kt) | [994. Rotting Oranges](https://leetcode.com/problems/rotting-oranges) | Medium | 51.7%
+1209 | [Remove All Adjacent Duplicates in String II](src/main/kotlin/solution/Sol_136_single_number.kt) | [1209. Remove All Adjacent Duplicates in String II](https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii) | Medium | 56.2%
 1337 | [The K Weakest Rows in a Matrix](src/main/kotlin/solution/Sol_1337_the_k_weakest_rows_in_a_matrix.kt) | [1337. The K Weakest Rows in a Matrix](https://leetcode.com/problems/the-k-weakest-rows-in-a-matrix) | Easy | 74.3%
 1342 | [Number of Steps to Reduce a Number to Zero](src/main/kotlin/solution/Sol_1342_number_of_steps_to_reduce_a_number_to_zero.kt) | [1342. Number of Steps to Reduce a Number to Zero](https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero) | Easy | 85.6%
 1672 | [Richest Customer Wealth](src/main/kotlin/solution/Sol_1672_richest_customer_wealth.kt) | [1672. Richest Customer Wealth](https://leetcode.com/problems/richest-customer-wealth) | Easy | 89.2%
+1679 | [Max Number of K-Sum Pairs](src/main/kotlin/solution/Sol_136_single_number.kt) | [1679. Max Number of K-Sum Pairs](https://leetcode.com/problems/max-number-of-k-sum-pairs) | Medium | 57.7%

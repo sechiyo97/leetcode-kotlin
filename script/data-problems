@@ -13,6 +13,8 @@
 116,populating-next-right-pointers-in-each-node,Populating Next Right Pointers in Each Node,Medium,57.0%
 120,triangle,Triangle,Medium,50.8%
 136,single-number,Single Number,Easy,69.4%
+153,find-minimum-in-rotated-sorted-array,Find Minimum in Rotated Sorted Array,Medium,47.9%
+162,find-peak-element,Find Peak Element,Medium,46.0%
 167,two-sum-ii-input-array-is-sorted,Two Sum II - Input Array Is Sorted,Medium,58.7%
 189,rotate-array,Rotate Array,Medium,38.6%
 190,reverse-bits,Reverse Bits,Easy,48.9%
@@ -20,6 +22,7 @@
 198,house-robber,House Robber,Medium,47.2%
 206,reverse-linked-list,Reverse Linked List,Easy,70.3%
 217,contains-duplicate,Contains Duplicate,Easy,60.8%
+225,implement-stack-using-queues,Implement Stack using Queues,Easy,55.1%
 231,power-of-two,Power of Two,Easy,45.0%
 234,palindrome-linked-list,Palindrome Linked List,Easy,46.6%
 278,first-bad-version,First Bad Version,Easy,41.7%
@@ -41,6 +44,8 @@
 905,sort-array-by-parity,Sort Array By Parity,Easy,75.7%
 977,squares-of-a-sorted-array,Squares of a Sorted Array,Easy,71.6%
 994,rotting-oranges,Rotting Oranges,Medium,51.7%
+1209,remove-all-adjacent-duplicates-in-string-ii,Remove All Adjacent Duplicates in String II,Medium,56.2%
 1337,the-k-weakest-rows-in-a-matrix,The K Weakest Rows in a Matrix,Easy,74.3%
 1342,number-of-steps-to-reduce-a-number-to-zero,Number of Steps to Reduce a Number to Zero,Easy,85.6%
 1672,richest-customer-wealth,Richest Customer Wealth,Easy,89.2%
+1679,max-number-of-k-sum-pairs,Max Number of K-Sum Pairs,Medium,57.7%
