@@ -7,7 +7,20 @@ import common.toIntArray
 // https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/
 class Sol_82_remove_duplicates_from_sorted_list_ii: Solution.General<ListNode?, ListNode?>() {
     fun deleteDuplicates(head: ListNode?): ListNode? {
-        return head
+        val dummy = ListNode(-101).apply { next = head }
+        var prevNode: ListNode? = dummy
+        var curNode: ListNode? = head
+        while (curNode?.next != null) {
+            val isDuplicate = curNode.`val` == curNode.next?.`val`
+            if (isDuplicate) {
+                while (curNode?.`val` == curNode?.next?.`val`) curNode = curNode?.next
+                prevNode?.next = curNode?.next
+            } else {
+                prevNode = curNode
+            }
+            curNode = curNode?.next
+        }
+        return dummy.next
     }
 
     override val givenTestCases: Map<String, ListNode?> = mapOf(
