@@ -3,7 +3,6 @@ package solution
 import Solution
 import common.toIntArray
 
-
 // https://leetcode.com/problems/container-with-most-water/
 class Sol_11_container_with_most_water: Solution.General<IntArray, Int>() {
     fun maxArea(height: IntArray): Int {
