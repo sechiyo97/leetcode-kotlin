@@ -32,6 +32,7 @@
 234,palindrome-linked-list,Palindrome Linked List,Easy,46.6%
 278,first-bad-version,First Bad Version,Easy,41.7%
 283,move-zeroes,Move Zeroes,Easy,60.6%
+341,flatten-nested-list-iterator,Flatten Nested List Iterator,Medium,59.9%
 344,reverse-string,Reverse String,Easy,74.9%
 383,ransom-note,Ransom Note,Easy,55.8%
 412,fizz-buzz,Fizz Buzz,Easy,66.7%
@@ -43,6 +44,7 @@
 617,merge-two-binary-trees,Merge Two Binary Trees,Easy,77.9%
 695,max-area-of-island,Max Area of Island,Medium,69.7%
 704,binary-search,Binary Search,Easy,55.3%
+713,subarray-product-less-than-k,Subarray Product Less Than K,Medium,43.8%
 733,flood-fill,Flood Fill,Easy,58.2%
 784,letter-case-permutation,Letter Case Permutation,Medium,72.4%
 844,backspace-string-compare,Backspace String Compare,Easy,48.0%
