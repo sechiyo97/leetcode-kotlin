@@ -1,7 +1,8 @@
 package solution
 
+import Solution
 import common.model.Node
-import common.toIntArray
+import common.toNullableIntArray
 
 // https://leetcode.com/problems/populating-next-right-pointers-in-each-node/
 class Sol_116_populating_next_right_pointers_in_each_node: Solution.General<Node?, Node?>() {
@@ -52,14 +53,14 @@ class Sol_116_populating_next_right_pointers_in_each_node: Solution.General<Node
     }
 
     override val givenTestCases: Map<String, Node?> = mapOf(
-        "[1,2,3,4,5,6,7]" to Node.fromIntArray(intArrayOf(1,2,3,4,5,6,7))
+        "[1,2,3,4,5,6,7]" to Node.fromNullableIntArray("[1,2,3,4,5,6,7]".toNullableIntArray())?.connect()
     )
     override val customTestCases: Map<String, Node?> = mapOf(
-        "[-1,0,1,2,3,4,5,6,7,8,9,10,11,12,13]" to Node.fromIntArray(intArrayOf(-1,0,1,2,3,4,5,6,7,8,9,10,11,12,13))
+        "[-1,0,1,2,3,4,5,6,7,8,9,10,11,12,13]" to Node.fromNullableIntArray("[-1,0,1,2,3,4,5,6,7,8,9,10,11,12,13]".toNullableIntArray())?.connect()
     )
 
     override fun algorithm(input: Node?): Node? = connect(input)
     override fun inputStringToInputType(input: String): Node? {
-        return Node.fromIntArray(input.toIntArray())
+        return Node.fromNullableIntArray(input.toNullableIntArray())
     }
 }

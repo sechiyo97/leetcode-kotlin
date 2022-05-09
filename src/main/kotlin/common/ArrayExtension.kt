@@ -1,7 +1,5 @@
 package common
 
-import java.lang.StringBuilder
-
 fun IntArray.swap(first: Int, second: Int) { this[first] = this[second].also { this[second] = this[first] } }
 
 fun String.toIntArray(): IntArray {
@@ -29,4 +27,8 @@ fun String.to2DIntArray(): Array<IntArray> {
         resultArray[index] = ints
     }
     return resultArray
+}
+fun String.to2DCharArray(): Array<CharArray> {
+    val exceptParenthesis = this.removePrefix("[").removeSuffix("]")
+    return exceptParenthesis.split(',').map { it.toCharArray() }.toTypedArray()
 }
