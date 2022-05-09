@@ -4,6 +4,7 @@
 11,container-with-most-water,Container With Most Water,Medium,53.9%
 13,roman-to-integer,Roman to Integer,Easy,57.9%
 15,3sum,3Sum,Medium,31.1%
+17,letter-combinations-of-a-phone-number,Letter Combinations of a Phone Number,Medium,54.0%
 19,remove-nth-node-from-end-of-list,Remove Nth Node From End of List,Medium,38.3%
 21,merge-two-sorted-lists,Merge Two Sorted Lists,Easy,60.3%
 33,search-in-rotated-sorted-array,Search in Rotated Sorted Array,Medium,37.8%
@@ -16,6 +17,7 @@
 77,combinations,Combinations,Medium,63.9%
 82,remove-duplicates-from-sorted-list-ii,Remove Duplicates from Sorted List II,Medium,44.3%
 116,populating-next-right-pointers-in-each-node,Populating Next Right Pointers in Each Node,Medium,57.0%
+117,populating-next-right-pointers-in-each-node-ii,Populating Next Right Pointers in Each Node II,Medium,46.7%
 120,triangle,Triangle,Medium,50.8%
 136,single-number,Single Number,Easy,69.4%
 153,find-minimum-in-rotated-sorted-array,Find Minimum in Rotated Sorted Array,Medium,47.9%
@@ -25,7 +27,9 @@
 190,reverse-bits,Reverse Bits,Easy,48.9%
 191,number-of-1-bits,Number of 1 Bits,Easy,60.5%
 198,house-robber,House Robber,Medium,47.2%
+200,number-of-islands,Number of Islands,Medium,54.0%
 206,reverse-linked-list,Reverse Linked List,Easy,70.3%
+209,minimum-size-subarray-sum,Minimum Size Subarray Sum,Medium,43.4%
 217,contains-duplicate,Contains Duplicate,Easy,60.8%
 225,implement-stack-using-queues,Implement Stack using Queues,Easy,55.1%
 231,power-of-two,Power of Two,Easy,45.0%
@@ -38,8 +42,10 @@
 412,fizz-buzz,Fizz Buzz,Easy,66.7%
 438,find-all-anagrams-in-a-string,Find All Anagrams in a String,Medium,48.3%
 542,01-matrix,01 Matrix,Medium,43.8%
+547,number-of-provinces,Number of Provinces,Medium,62.6%
 557,reverse-words-in-a-string-iii,Reverse Words in a String III,Easy,78.7%
 567,permutation-in-string,Permutation in String,Medium,44.7%
+572,subtree-of-another-tree,Subtree of Another Tree,Easy,45.4%
 581,shortest-unsorted-continuous-subarray,Shortest Unsorted Continuous Subarray,Medium,35.4%
 617,merge-two-binary-trees,Merge Two Binary Trees,Easy,77.9%
 695,max-area-of-island,Max Area of Island,Medium,69.7%
