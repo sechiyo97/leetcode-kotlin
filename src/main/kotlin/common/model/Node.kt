@@ -1,11 +1,11 @@
 package common.model
 
 import common.convertToString
-import common.toIntArray
+import common.toNullableIntArray
 import kotlin.math.log2
 
 fun main() {
-    val node = Node.fromIntArray("[1,2,3,4,5,6,7]".toIntArray())
+    val node = Node.fromNullableIntArray("[1,2,3,4,5,6,7]".toNullableIntArray())
     print(node.toString())
 }
 
@@ -59,10 +59,10 @@ class Node(var `val`: Int) {
     }
 
     companion object {
-        fun fromIntArray(array: IntArray): Node? {
+        fun fromNullableIntArray(array: Array<Int?>): Node? {
             if (array.isEmpty()) return null
-            val count = array.size
-            val nodes = Array(count) { Node(array[it]) }
+            val nodes = array.filterNotNull().map { Node(it) }
+            val count = nodes.size
 
             nodes.forEachIndexed { index, node ->
                 val leftNextIndex = index + (index + 1)

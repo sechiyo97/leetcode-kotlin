@@ -28,7 +28,7 @@ class Sol_617_merge_two_binary_trees: Solution.General<Sol_617_merge_two_binary_
     }
 
     override val givenTestCases: Map<String, TreeNode?> = mapOf(
-        "[1,3,2,5] [2,1,3,null,4,null,7]" to TreeNode.fromNullableIntArray(arrayOf(3,4,5,5,4,null,7)),
+        "[1,3,2,5] [2,1,3,#,4,#,7]" to TreeNode.fromNullableIntArray(arrayOf(3,4,5,5,4,null,7)),
         "[1] [1,2]" to TreeNode.fromNullableIntArray(arrayOf(2,2))
     )
     override val customTestCases: Map<String, TreeNode?> = mapOf(
