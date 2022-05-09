@@ -53,10 +53,10 @@ class Sol_116_populating_next_right_pointers_in_each_node: Solution.General<Node
     }
 
     override val givenTestCases: Map<String, Node?> = mapOf(
-        "[1,2,3,4,5,6,7]" to Node.fromNullableIntArray("[1,2,3,4,5,6,7]".toNullableIntArray())
+        "[1,2,3,4,5,6,7]" to Node.fromNullableIntArray("[1,2,3,4,5,6,7]".toNullableIntArray())?.connect()
     )
     override val customTestCases: Map<String, Node?> = mapOf(
-        "[-1,0,1,2,3,4,5,6,7,8,9,10,11,12,13]" to Node.fromNullableIntArray("[-1,0,1,2,3,4,5,6,7,8,9,10,11,12,13]".toNullableIntArray())
+        "[-1,0,1,2,3,4,5,6,7,8,9,10,11,12,13]" to Node.fromNullableIntArray("[-1,0,1,2,3,4,5,6,7,8,9,10,11,12,13]".toNullableIntArray())?.connect()
     )
 
     override fun algorithm(input: Node?): Node? = connect(input)

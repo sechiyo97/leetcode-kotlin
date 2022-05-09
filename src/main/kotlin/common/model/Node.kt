@@ -2,7 +2,7 @@ package common.model
 
 import common.convertToString
 import common.toNullableIntArray
-import kotlin.math.log2
+import java.util.*
 
 fun main() {
     val node = Node.fromNullableIntArray("[1,2,3,4,5,6,7]".toNullableIntArray())
@@ -58,6 +58,33 @@ class Node(var `val`: Int) {
         return result
     }
 
+    fun connect(): Node? {
+        val queue = LinkedList<Pair<Int, Node?>>() // depth, node
+        queue.add(Pair(0, this))
+
+        val nodesInLine = mutableListOf<Node>()
+        while (queue.isNotEmpty()) {
+            val depthAndNode = queue.poll()
+
+            val depth = depthAndNode.first
+            val node = depthAndNode.second
+
+            if (node != null) nodesInLine.add(node)
+
+            if (node?.left != null) queue.add(Pair(depth+1, node.left))
+            if (node?.right != null)  queue.add(Pair(depth+1, node.right))
+
+            val nextNode = queue.peek()
+            if (nextNode == null || nextNode.first != depth) {
+                for (i in 0 until nodesInLine.size-1) {
+                    nodesInLine[i].next = nodesInLine[i+1]
+                }
+                nodesInLine.clear()
+            }
+        }
+        return this
+    }
+
     companion object {
         fun fromNullableIntArray(array: Array<Int?>): Node? {
             if (array.isEmpty()) return null
@@ -67,11 +94,8 @@ class Node(var `val`: Int) {
             nodes.forEachIndexed { index, node ->
                 val leftNextIndex = index + (index + 1)
                 val rightNextIndex = index + (index + 2)
-                val isLastOfRow = log2((index + 2).toDouble()).isInt()
-                val nextIndex = if (isLastOfRow) null else index+1
                 if (leftNextIndex < count) node.left = nodes[leftNextIndex]
                 if (rightNextIndex < count) node.right = nodes[rightNextIndex]
-                if (nextIndex != null && nextIndex < count) node.next = nodes[nextIndex]
             }
 
             return nodes[0]
@@ -79,4 +103,3 @@ class Node(var `val`: Int) {
     }
 }
 
-private fun Double.isInt() = this.toInt().toDouble() == this
