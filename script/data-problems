@@ -19,6 +19,7 @@
 116,populating-next-right-pointers-in-each-node,Populating Next Right Pointers in Each Node,Medium,57.0%
 117,populating-next-right-pointers-in-each-node-ii,Populating Next Right Pointers in Each Node II,Medium,46.7%
 120,triangle,Triangle,Medium,50.8%
+130,surrounded-regions,Surrounded Regions,Medium,34.1%
 136,single-number,Single Number,Easy,69.4%
 153,find-minimum-in-rotated-sorted-array,Find Minimum in Rotated Sorted Array,Medium,47.9%
 162,find-peak-element,Find Peak Element,Medium,46.0%
@@ -30,6 +31,7 @@
 200,number-of-islands,Number of Islands,Medium,54.0%
 206,reverse-linked-list,Reverse Linked List,Easy,70.3%
 209,minimum-size-subarray-sum,Minimum Size Subarray Sum,Medium,43.4%
+216,combination-sum-iii,Combination Sum III,Medium,65.9%
 217,contains-duplicate,Contains Duplicate,Easy,60.8%
 225,implement-stack-using-queues,Implement Stack using Queues,Easy,55.1%
 231,power-of-two,Power of Two,Easy,45.0%
@@ -53,14 +55,17 @@
 713,subarray-product-less-than-k,Subarray Product Less Than K,Medium,43.8%
 733,flood-fill,Flood Fill,Easy,58.2%
 784,letter-case-permutation,Letter Case Permutation,Medium,72.4%
+797,all-paths-from-source-to-target,All Paths From Source to Target,Medium,80.9%
 844,backspace-string-compare,Backspace String Compare,Easy,48.0%
 876,middle-of-the-linked-list,Middle of the Linked List,Easy,72.6%
 905,sort-array-by-parity,Sort Array By Parity,Easy,75.7%
 977,squares-of-a-sorted-array,Squares of a Sorted Array,Easy,71.6%
 986,interval-list-intersections,Interval List Intersections,Medium,71.1%
 994,rotting-oranges,Rotting Oranges,Medium,51.7%
+1091,shortest-path-in-binary-matrix,Shortest Path in Binary Matrix,Medium,42.7%
 1209,remove-all-adjacent-duplicates-in-string-ii,Remove All Adjacent Duplicates in String II,Medium,56.2%
 1337,the-k-weakest-rows-in-a-matrix,The K Weakest Rows in a Matrix,Easy,74.3%
 1342,number-of-steps-to-reduce-a-number-to-zero,Number of Steps to Reduce a Number to Zero,Easy,85.6%
+1641,count-sorted-vowel-strings,Count Sorted Vowel Strings,Medium,76.6%
 1672,richest-customer-wealth,Richest Customer Wealth,Easy,89.2%
 1679,max-number-of-k-sum-pairs,Max Number of K-Sum Pairs,Medium,57.7%
