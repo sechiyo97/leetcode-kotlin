@@ -4,11 +4,11 @@ LeetCode Algorithm Practice
 ## Problem Solved
 Total |
 ------------- |
-71 |
+76 |
 
 Easy | Medium | Hard
 ------------- | ------------- | -------------
-31 | 40 | 0
+31 | 45 | 0
 
 \# | Problem(Solution) | LeetCode Link | Difficulty | Accepted Rate
 ------------- | ------------- | ------------- | ------------- | -------------
@@ -24,16 +24,21 @@ Easy | Medium | Hard
 33 | [Search in Rotated Sorted Array](src/main/kotlin/solution/Sol_33_search_in_rotated_sorted_array.kt) | [33. Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array) | Medium | 37.8%
 34 | [Find First and Last Position of Element in Sorted Array](src/main/kotlin/solution/Sol_34_find_first_and_last_position_of_element_in_sorted_array.kt) | [34. Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array) | Medium | 40.0%
 35 | [Search Insert Position](src/main/kotlin/solution/Sol_35_search_insert_position.kt) | [35. Search Insert Position](https://leetcode.com/problems/search-insert-position) | Easy | 42.3%
+39 | [Combination Sum](src/main/kotlin/solution/Sol_1091_shortest_path_in_binary_matrix.kt) | [39. Combination Sum](https://leetcode.com/problems/combination-sum) | Medium | 65.6%
+40 | [Combination Sum II](src/main/kotlin/solution/Sol_1091_shortest_path_in_binary_matrix.kt) | [40. Combination Sum II](https://leetcode.com/problems/combination-sum-ii) | Medium | 52.4%
 46 | [Permutations](src/main/kotlin/solution/Sol_46_permutations.kt) | [46. Permutations](https://leetcode.com/problems/permutations) | Medium | 72.3%
+47 | [Permutations II](src/main/kotlin/solution/Sol_1091_shortest_path_in_binary_matrix.kt) | [47. Permutations II](https://leetcode.com/problems/permutations-ii) | Medium | 55.3%
 53 | [Maximum Subarray](src/main/kotlin/solution/Sol_53_maximum_subarray.kt) | [53. Maximum Subarray](https://leetcode.com/problems/maximum-subarray) | Easy | 49.5%
 70 | [Climbing Stairs](src/main/kotlin/solution/Sol_70_climbing_stairs.kt) | [70. Climbing Stairs](https://leetcode.com/problems/climbing-stairs) | Easy | 51.0%
 74 | [Search a 2D Matrix](src/main/kotlin/solution/Sol_74_search_a_2d_matrix.kt) | [74. Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix) | Medium | 44.4%
 77 | [Combinations](src/main/kotlin/solution/Sol_77_combinations.kt) | [77. Combinations](https://leetcode.com/problems/combinations) | Medium | 63.9%
+78 | [Subsets](src/main/kotlin/solution/Sol_1091_shortest_path_in_binary_matrix.kt) | [78. Subsets](https://leetcode.com/problems/subsets) | Medium | 71.6%
 82 | [Remove Duplicates from Sorted List II](src/main/kotlin/solution/Sol_82_remove_duplicates_from_sorted_list_ii.kt) | [82. Remove Duplicates from Sorted List II](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii) | Medium | 44.3%
+90 | [Subsets II](src/main/kotlin/solution/Sol_1091_shortest_path_in_binary_matrix.kt) | [90. Subsets II](https://leetcode.com/problems/subsets-ii) | Medium | 53.4%
 116 | [Populating Next Right Pointers in Each Node](src/main/kotlin/solution/Sol_116_populating_next_right_pointers_in_each_node.kt) | [116. Populating Next Right Pointers in Each Node](https://leetcode.com/problems/populating-next-right-pointers-in-each-node) | Medium | 57.0%
 117 | [Populating Next Right Pointers in Each Node II](src/main/kotlin/solution/Sol_117_populating_next_right_pointers_in_each_node_ii.kt) | [117. Populating Next Right Pointers in Each Node II](https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii) | Medium | 46.7%
 120 | [Triangle](src/main/kotlin/solution/Sol_120_triangle.kt) | [120. Triangle](https://leetcode.com/problems/triangle) | Medium | 50.8%
-130 | [Surrounded Regions](src/main/kotlin/solution/Sol_1091_shortest_path_in_binary_matrix.kt) | [130. Surrounded Regions](https://leetcode.com/problems/surrounded-regions) | Medium | 34.1%
+130 | [Surrounded Regions](src/main/kotlin/solution/Sol_130_surrounded_regions.kt) | [130. Surrounded Regions](https://leetcode.com/problems/surrounded-regions) | Medium | 34.1%
 136 | [Single Number](src/main/kotlin/solution/Sol_136_single_number.kt) | [136. Single Number](https://leetcode.com/problems/single-number) | Easy | 69.4%
 153 | [Find Minimum in Rotated Sorted Array](src/main/kotlin/solution/Sol_153_find_minimum_in_rotated_sorted_array.kt) | [153. Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array) | Medium | 47.9%
 162 | [Find Peak Element](src/main/kotlin/solution/Sol_162_find_peak_element.kt) | [162. Find Peak Element](https://leetcode.com/problems/find-peak-element) | Medium | 46.0%
@@ -45,7 +50,7 @@ Easy | Medium | Hard
 200 | [Number of Islands](src/main/kotlin/solution/Sol_200_number_of_islands.kt) | [200. Number of Islands](https://leetcode.com/problems/number-of-islands) | Medium | 54.0%
 206 | [Reverse Linked List](src/main/kotlin/solution/Sol_206_reverse_linked_list.kt) | [206. Reverse Linked List](https://leetcode.com/problems/reverse-linked-list) | Easy | 70.3%
 209 | [Minimum Size Subarray Sum](src/main/kotlin/solution/Sol_209_minimum_size_subarray_sum.kt) | [209. Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum) | Medium | 43.4%
-216 | [Combination Sum III](src/main/kotlin/solution/Sol_1091_shortest_path_in_binary_matrix.kt) | [216. Combination Sum III](https://leetcode.com/problems/combination-sum-iii) | Medium | 65.9%
+216 | [Combination Sum III](src/main/kotlin/solution/Sol_216_combination_sum_iii.kt) | [216. Combination Sum III](https://leetcode.com/problems/combination-sum-iii) | Medium | 65.9%
 217 | [Contains Duplicate](src/main/kotlin/solution/Sol_217_contains_duplicate.kt) | [217. Contains Duplicate](https://leetcode.com/problems/contains-duplicate) | Easy | 60.8%
 225 | [Implement Stack using Queues](src/main/kotlin/solution/Sol_225_implement_stack_using_queues.kt) | [225. Implement Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues) | Easy | 55.1%
 231 | [Power of Two](src/main/kotlin/solution/Sol_231_power_of_two.kt) | [231. Power of Two](https://leetcode.com/problems/power-of-two) | Easy | 45.0%
@@ -69,7 +74,7 @@ Easy | Medium | Hard
 713 | [Subarray Product Less Than K](src/main/kotlin/solution/Sol_713_subarray_product_less_than_k.kt) | [713. Subarray Product Less Than K](https://leetcode.com/problems/subarray-product-less-than-k) | Medium | 43.8%
 733 | [Flood Fill](src/main/kotlin/solution/Sol_733_flood_fill.kt) | [733. Flood Fill](https://leetcode.com/problems/flood-fill) | Easy | 58.2%
 784 | [Letter Case Permutation](src/main/kotlin/solution/Sol_784_letter_case_permutation.kt) | [784. Letter Case Permutation](https://leetcode.com/problems/letter-case-permutation) | Medium | 72.4%
-797 | [All Paths From Source to Target](src/main/kotlin/solution/Sol_1091_shortest_path_in_binary_matrix.kt) | [797. All Paths From Source to Target](https://leetcode.com/problems/all-paths-from-source-to-target) | Medium | 80.9%
+797 | [All Paths From Source to Target](src/main/kotlin/solution/Sol_797_all_paths_from_source_to_target.kt) | [797. All Paths From Source to Target](https://leetcode.com/problems/all-paths-from-source-to-target) | Medium | 80.9%
 844 | [Backspace String Compare](src/main/kotlin/solution/Sol_844_backspace_string_compare.kt) | [844. Backspace String Compare](https://leetcode.com/problems/backspace-string-compare) | Easy | 48.0%
 876 | [Middle of the Linked List](src/main/kotlin/solution/Sol_876_middle_of_the_linked_list.kt) | [876. Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list) | Easy | 72.6%
 905 | [Sort Array By Parity](src/main/kotlin/solution/Sol_905_sort_array_by_parity.kt) | [905. Sort Array By Parity](https://leetcode.com/problems/sort-array-by-parity) | Easy | 75.7%
@@ -80,6 +85,6 @@ Easy | Medium | Hard
 1209 | [Remove All Adjacent Duplicates in String II](src/main/kotlin/solution/Sol_1209_remove_all_adjacent_duplicates_in_string_ii.kt) | [1209. Remove All Adjacent Duplicates in String II](https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii) | Medium | 56.2%
 1337 | [The K Weakest Rows in a Matrix](src/main/kotlin/solution/Sol_1337_the_k_weakest_rows_in_a_matrix.kt) | [1337. The K Weakest Rows in a Matrix](https://leetcode.com/problems/the-k-weakest-rows-in-a-matrix) | Easy | 74.3%
 1342 | [Number of Steps to Reduce a Number to Zero](src/main/kotlin/solution/Sol_1342_number_of_steps_to_reduce_a_number_to_zero.kt) | [1342. Number of Steps to Reduce a Number to Zero](https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero) | Easy | 85.6%
-1641 | [Count Sorted Vowel Strings](src/main/kotlin/solution/Sol_1091_shortest_path_in_binary_matrix.kt) | [1641. Count Sorted Vowel Strings](https://leetcode.com/problems/count-sorted-vowel-strings) | Medium | 76.6%
+1641 | [Count Sorted Vowel Strings](src/main/kotlin/solution/Sol_1641_count_sorted_vowel_strings.kt) | [1641. Count Sorted Vowel Strings](https://leetcode.com/problems/count-sorted-vowel-strings) | Medium | 76.6%
 1672 | [Richest Customer Wealth](src/main/kotlin/solution/Sol_1672_richest_customer_wealth.kt) | [1672. Richest Customer Wealth](https://leetcode.com/problems/richest-customer-wealth) | Easy | 89.2%
 1679 | [Max Number of K-Sum Pairs](src/main/kotlin/solution/Sol_1679_max_number_of_k_sum_pairs.kt) | [1679. Max Number of K-Sum Pairs](https://leetcode.com/problems/max-number-of-k-sum-pairs) | Medium | 57.7%
