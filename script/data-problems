@@ -59,6 +59,7 @@
 704,binary-search,Binary Search,Easy,55.3%
 713,subarray-product-less-than-k,Subarray Product Less Than K,Medium,43.8%
 733,flood-fill,Flood Fill,Easy,58.2%
+743,network-delay-time,Network Delay Time,Medium,50.1%
 784,letter-case-permutation,Letter Case Permutation,Medium,72.4%
 797,all-paths-from-source-to-target,All Paths From Source to Target,Medium,80.9%
 844,backspace-string-compare,Backspace String Compare,Easy,48.0%
@@ -69,6 +70,7 @@
 994,rotting-oranges,Rotting Oranges,Medium,51.7%
 1091,shortest-path-in-binary-matrix,Shortest Path in Binary Matrix,Medium,42.7%
 1209,remove-all-adjacent-duplicates-in-string-ii,Remove All Adjacent Duplicates in String II,Medium,56.2%
+1302,deepest-leaves-sum,Deepest Leaves Sum,Medium,87.1%
 1337,the-k-weakest-rows-in-a-matrix,The K Weakest Rows in a Matrix,Easy,74.3%
 1342,number-of-steps-to-reduce-a-number-to-zero,Number of Steps to Reduce a Number to Zero,Easy,85.6%
 1641,count-sorted-vowel-strings,Count Sorted Vowel Strings,Medium,76.6%
