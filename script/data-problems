@@ -7,6 +7,7 @@
 17,letter-combinations-of-a-phone-number,Letter Combinations of a Phone Number,Medium,54.0%
 19,remove-nth-node-from-end-of-list,Remove Nth Node From End of List,Medium,38.3%
 21,merge-two-sorted-lists,Merge Two Sorted Lists,Easy,60.3%
+22,generate-parentheses,Generate Parentheses,Medium,70.2%
 33,search-in-rotated-sorted-array,Search in Rotated Sorted Array,Medium,37.8%
 34,find-first-and-last-position-of-element-in-sorted-array,Find First and Last Position of Element in Sorted Array,Medium,40.0%
 35,search-insert-position,Search Insert Position,Easy,42.3%
@@ -19,6 +20,7 @@
 74,search-a-2d-matrix,Search a 2D Matrix,Medium,44.4%
 77,combinations,Combinations,Medium,63.9%
 78,subsets,Subsets,Medium,71.6%
+79,word-search,Word Search,Medium,39.7%
 82,remove-duplicates-from-sorted-list-ii,Remove Duplicates from Sorted List II,Medium,44.3%
 90,subsets-ii,Subsets II,Medium,53.4%
 116,populating-next-right-pointers-in-each-node,Populating Next Right Pointers in Each Node,Medium,57.0%
@@ -73,6 +75,7 @@
 1302,deepest-leaves-sum,Deepest Leaves Sum,Medium,87.1%
 1337,the-k-weakest-rows-in-a-matrix,The K Weakest Rows in a Matrix,Easy,74.3%
 1342,number-of-steps-to-reduce-a-number-to-zero,Number of Steps to Reduce a Number to Zero,Easy,85.6%
+1379,find-a-corresponding-node-of-a-binary-tree-in-a-clone-of-that-tree,Find a Corresponding Node of a Binary Tree in a Clone of That Tree,Medium,87.2%
 1641,count-sorted-vowel-strings,Count Sorted Vowel Strings,Medium,76.6%
 1672,richest-customer-wealth,Richest Customer Wealth,Easy,89.2%
 1679,max-number-of-k-sum-pairs,Max Number of K-Sum Pairs,Medium,57.7%
