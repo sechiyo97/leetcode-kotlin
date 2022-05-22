@@ -58,6 +58,7 @@
 572,subtree-of-another-tree,Subtree of Another Tree,Easy,45.4%
 581,shortest-unsorted-continuous-subarray,Shortest Unsorted Continuous Subarray,Medium,35.4%
 617,merge-two-binary-trees,Merge Two Binary Trees,Easy,77.9%
+647,palindromic-substrings,Palindromic Substrings,Medium,65.3%
 695,max-area-of-island,Max Area of Island,Medium,69.7%
 704,binary-search,Binary Search,Easy,55.3%
 713,subarray-product-less-than-k,Subarray Product Less Than K,Medium,43.8%
