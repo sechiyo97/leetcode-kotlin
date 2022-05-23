@@ -4,11 +4,11 @@ LeetCode Algorithm Practice
 ## Problem Solved
 Total |
 ------------- |
-83 |
+84 |
 
 Easy | Medium | Hard
 ------------- | ------------- | -------------
-31 | 52 | 0
+31 | 53 | 0
 
 \# | Problem(Solution) | LeetCode Link | Difficulty | Accepted Rate
 ------------- | ------------- | ------------- | ------------- | -------------
@@ -65,6 +65,7 @@ Easy | Medium | Hard
 383 | [Ransom Note](src/main/kotlin/solution/Sol_383_ransom_note.kt) | [383. Ransom Note](https://leetcode.com/problems/ransom-note) | Easy | 55.8%
 412 | [Fizz Buzz](src/main/kotlin/solution/Sol_412_fizz_buzz.kt) | [412. Fizz Buzz](https://leetcode.com/problems/fizz-buzz) | Easy | 66.7%
 438 | [Find All Anagrams in a String](src/main/kotlin/solution/Sol_438_find_all_anagrams_in_a_string.kt) | [438. Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string) | Medium | 48.3%
+474 | [Ones and Zeroes](src/main/kotlin/solution/Sol_130_surrounded_regions.kt) | [474. Ones and Zeroes](https://leetcode.com/problems/ones-and-zeroes) | Medium | 45.6%
 542 | [01 Matrix](src/main/kotlin/solution/Sol_542_01_matrix.kt) | [542. 01 Matrix](https://leetcode.com/problems/01-matrix) | Medium | 43.8%
 547 | [Number of Provinces](src/main/kotlin/solution/Sol_547_number_of_provinces.kt) | [547. Number of Provinces](https://leetcode.com/problems/number-of-provinces) | Medium | 62.6%
 557 | [Reverse Words in a String III](src/main/kotlin/solution/Sol_557_reverse_words_in_a_string_iii.kt) | [557. Reverse Words in a String III](https://leetcode.com/problems/reverse-words-in-a-string-iii) | Easy | 78.7%
@@ -72,7 +73,7 @@ Easy | Medium | Hard
 572 | [Subtree of Another Tree](src/main/kotlin/solution/Sol_572_subtree_of_another_tree.kt) | [572. Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree) | Easy | 45.4%
 581 | [Shortest Unsorted Continuous Subarray](src/main/kotlin/solution/Sol_581_shortest_unsorted_continuous_subarray.kt) | [581. Shortest Unsorted Continuous Subarray](https://leetcode.com/problems/shortest-unsorted-continuous-subarray) | Medium | 35.4%
 617 | [Merge Two Binary Trees](src/main/kotlin/solution/Sol_617_merge_two_binary_trees.kt) | [617. Merge Two Binary Trees](https://leetcode.com/problems/merge-two-binary-trees) | Easy | 77.9%
-647 | [Palindromic Substrings](src/main/kotlin/solution/Sol_130_surrounded_regions.kt) | [647. Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings) | Medium | 65.3%
+647 | [Palindromic Substrings](src/main/kotlin/solution/Sol_647_palindromic_substrings.kt) | [647. Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings) | Medium | 65.3%
 695 | [Max Area of Island](src/main/kotlin/solution/Sol_695_max_area_of_island.kt) | [695. Max Area of Island](https://leetcode.com/problems/max-area-of-island) | Medium | 69.7%
 704 | [Binary Search](src/main/kotlin/solution/Sol_704_binary_search.kt) | [704. Binary Search](https://leetcode.com/problems/binary-search) | Easy | 55.3%
 713 | [Subarray Product Less Than K](src/main/kotlin/solution/Sol_713_subarray_product_less_than_k.kt) | [713. Subarray Product Less Than K](https://leetcode.com/problems/subarray-product-less-than-k) | Medium | 43.8%
