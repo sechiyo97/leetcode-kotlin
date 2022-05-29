@@ -43,8 +43,10 @@
 225,implement-stack-using-queues,Implement Stack using Queues,Easy,55.1%
 231,power-of-two,Power of Two,Easy,45.0%
 234,palindrome-linked-list,Palindrome Linked List,Easy,46.6%
+268,missing-number,Missing Number,Easy,60.4%
 278,first-bad-version,First Bad Version,Easy,41.7%
 283,move-zeroes,Move Zeroes,Easy,60.6%
+318,maximum-product-of-word-lengths,Maximum Product of Word Lengths,Medium,59.4%
 322,coin-change,Coin Change,Medium,40.4%
 341,flatten-nested-list-iterator,Flatten Nested List Iterator,Medium,59.9%
 344,reverse-string,Reverse String,Easy,74.9%
