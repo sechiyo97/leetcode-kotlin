@@ -4,11 +4,11 @@ LeetCode Algorithm Practice
 ## Problem Solved
 Total |
 ------------- |
-87 |
+89 |
 
 Easy | Medium | Hard
 ------------- | ------------- | -------------
-32 | 54 | 1
+32 | 56 | 1
 
 \# | Problem(Solution) | LeetCode Link | Difficulty | Accepted Rate
 ------------- | ------------- | ------------- | ------------- | -------------
@@ -22,6 +22,7 @@ Easy | Medium | Hard
 19 | [Remove Nth Node From End of List](src/main/kotlin/solution/Sol_19_remove_nth_node_from_end_of_list.kt) | [19. Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list) | Medium | 38.3%
 21 | [Merge Two Sorted Lists](src/main/kotlin/solution/Sol_21_merge_two_sorted_lists.kt) | [21. Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists) | Easy | 60.3%
 22 | [Generate Parentheses](src/main/kotlin/solution/Sol_22_generate_parentheses.kt) | [22. Generate Parentheses](https://leetcode.com/problems/generate-parentheses) | Medium | 70.2%
+31 | [Next Permutation](src/main/kotlin/solution/Sol_344_reverse_string.kt) | [31. Next Permutation](https://leetcode.com/problems/next-permutation) | Medium | 42.5%
 33 | [Search in Rotated Sorted Array](src/main/kotlin/solution/Sol_33_search_in_rotated_sorted_array.kt) | [33. Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array) | Medium | 37.8%
 34 | [Find First and Last Position of Element in Sorted Array](src/main/kotlin/solution/Sol_34_find_first_and_last_position_of_element_in_sorted_array.kt) | [34. Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array) | Medium | 40.0%
 35 | [Search Insert Position](src/main/kotlin/solution/Sol_35_search_insert_position.kt) | [35. Search Insert Position](https://leetcode.com/problems/search-insert-position) | Easy | 42.3%
@@ -66,6 +67,7 @@ Easy | Medium | Hard
 344 | [Reverse String](src/main/kotlin/solution/Sol_344_reverse_string.kt) | [344. Reverse String](https://leetcode.com/problems/reverse-string) | Easy | 74.9%
 354 | [Russian Doll Envelopes](src/main/kotlin/solution/Sol_354_russian_doll_envelopes.kt) | [354. Russian Doll Envelopes](https://leetcode.com/problems/russian-doll-envelopes) | Hard | 38.7%
 383 | [Ransom Note](src/main/kotlin/solution/Sol_383_ransom_note.kt) | [383. Ransom Note](https://leetcode.com/problems/ransom-note) | Easy | 55.8%
+406 | [Queue Reconstruction by Height](src/main/kotlin/solution/Sol_344_reverse_string.kt) | [406. Queue Reconstruction by Height](https://leetcode.com/problems/queue-reconstruction-by-height) | Medium | 74.0%
 412 | [Fizz Buzz](src/main/kotlin/solution/Sol_412_fizz_buzz.kt) | [412. Fizz Buzz](https://leetcode.com/problems/fizz-buzz) | Easy | 66.7%
 438 | [Find All Anagrams in a String](src/main/kotlin/solution/Sol_438_find_all_anagrams_in_a_string.kt) | [438. Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string) | Medium | 48.3%
 474 | [Ones and Zeroes](src/main/kotlin/solution/Sol_474_ones_and_zeroes.kt) | [474. Ones and Zeroes](https://leetcode.com/problems/ones-and-zeroes) | Medium | 45.6%
