@@ -2,11 +2,6 @@ package solution
 
 import Solution
 
-/**
- * In actual problem, default return value is Unit (in-place replacement).
- * But for code consistency with other problems,
- * this solution uses the input IntArray as return value.
- */
 // https://leetcode.com/problems/valid-parentheses/
 class Sol_20_valid_parentheses: Solution.General<Sol_20_valid_parentheses.Params, Boolean>() {
     fun isValid(s: String): Boolean {
