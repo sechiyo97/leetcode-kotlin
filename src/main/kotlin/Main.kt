@@ -1,4 +1,5 @@
-import solution.sample.SampleSolution_General
+import solution.*
+import solution.sample.*
 
 val solution = SampleSolution_General() // edit here
 
