@@ -4,6 +4,7 @@ import Solution
 import common.swap
 import common.toIntArray
 
+// https://leetcode.com/problems/remove-element/
 class Sol_27_remove_element: Solution.General<Sol_27_remove_element.Params, Int>() {
     fun removeElement(nums: IntArray, `val`: Int): Int {
         var k = 0
