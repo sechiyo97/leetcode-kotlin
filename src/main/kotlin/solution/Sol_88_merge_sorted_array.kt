@@ -3,7 +3,7 @@ package solution
 import Solution
 import common.toIntArray
 
-// https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/
+// https://leetcode.com/problems/merge-sorted-array/
 class Sol_88_merge_sorted_array: Solution.General<Sol_88_merge_sorted_array.Params, IntArray>() {
     fun merge(nums1: IntArray, m: Int, nums2: IntArray, n: Int): IntArray {
         var i = m-1
