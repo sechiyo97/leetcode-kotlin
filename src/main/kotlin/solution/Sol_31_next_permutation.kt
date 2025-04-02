@@ -4,11 +4,6 @@ import Solution
 import common.swap
 import common.toIntArray
 
-/**
- * In actual problem, default return value is Unit (in-place replacement).
- * But for code consistency with other problems,
- * this solution uses the input IntArray as return value.
- */
 // https://leetcode.com/problems/next-permutation/
 class Sol_31_next_permutation: Solution.General<IntArray, IntArray>() {
     fun nextPermutation(nums: IntArray): IntArray {

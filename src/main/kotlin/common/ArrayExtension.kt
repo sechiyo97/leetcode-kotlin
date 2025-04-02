@@ -4,12 +4,21 @@ fun IntArray.swap(first: Int, second: Int) { this[first] = this[second].also { t
 
 fun String.toIntArray(): IntArray {
     val exceptParenthesis = this.removePrefix("[").removeSuffix("]")
-    return exceptParenthesis.split(",").map { it.trim().toIntOrNull() }.filterNotNull().toIntArray()
+    return exceptParenthesis.split(",").mapNotNull { it.trim().toIntOrNull() }.toIntArray()
+}
+fun String.toDoubleArray(): DoubleArray {
+    val exceptParenthesis = this.removePrefix("[").removeSuffix("]")
+    return exceptParenthesis.split(",").mapNotNull { it.trim().toDoubleOrNull() }.toDoubleArray()
 }
 fun String.toNullableIntArray(): Array<Int?> {
     val exceptParenthesis = this.removePrefix("[").removeSuffix("]")
     return exceptParenthesis.split(",").map { it.trim().toIntOrNull() }.toTypedArray()
 }
+fun String.toStringArray(): Array<String> {
+    val exceptParenthesis = this.trim().removePrefix("[").removeSuffix("]").replace("\"", "")
+    return exceptParenthesis.split(',').toTypedArray()
+}
+
 
 fun String.to2DIntArray(): Array<IntArray> {
     val exceptParenthesis = this.removePrefix("[").removeSuffix("]")
@@ -31,4 +40,8 @@ fun String.to2DIntArray(): Array<IntArray> {
 fun String.to2DCharArray(): Array<CharArray> {
     val exceptParenthesis = this.removePrefix("[").removeSuffix("]")
     return exceptParenthesis.split(',').map { it.toCharArray() }.toTypedArray()
+}
+fun String.to2DStringArray(): Array<Array<String>> {
+    val exceptParenthesis = this.removePrefix("[").removeSuffix("]")
+    return exceptParenthesis.split(",[").map { it.toStringArray() }.toTypedArray()
 }
