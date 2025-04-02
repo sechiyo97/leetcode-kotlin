@@ -6,29 +6,40 @@
 15,3sum,3Sum,Medium,31.1%
 17,letter-combinations-of-a-phone-number,Letter Combinations of a Phone Number,Medium,54.0%
 19,remove-nth-node-from-end-of-list,Remove Nth Node From End of List,Medium,38.3%
+20,valid-parentheses,Valid Parentheses,Easy,42.0%
 21,merge-two-sorted-lists,Merge Two Sorted Lists,Easy,60.3%
 22,generate-parentheses,Generate Parentheses,Medium,70.2%
+26,remove-duplicates-from-sorted-array,Remove Duplicates from Sorted Array,Easy,59.7%
+27,remove-element,Remove Element,Easy,59.6%
 31,next-permutation,Next Permutation,Medium,42.5%
 33,search-in-rotated-sorted-array,Search in Rotated Sorted Array,Medium,37.8%
 34,find-first-and-last-position-of-element-in-sorted-array,Find First and Last Position of Element in Sorted Array,Medium,40.0%
 35,search-insert-position,Search Insert Position,Easy,42.3%
+36,valid-sudoku,Valid Sudoku,Medium,61.8%
 39,combination-sum,Combination Sum,Medium,65.6%
 40,combination-sum-ii,Combination Sum II,Medium,52.4%
 46,permutations,Permutations,Medium,72.3%
 47,permutations-ii,Permutations II,Medium,55.3%
 53,maximum-subarray,Maximum Subarray,Easy,49.5%
+56,merge-intervals,Merge Intervals,Medium,49.0%
 70,climbing-stairs,Climbing Stairs,Easy,51.0%
+71,simplify-path,Simplify Path,Medium,46.9%
 74,search-a-2d-matrix,Search a 2D Matrix,Medium,44.4%
 77,combinations,Combinations,Medium,63.9%
 78,subsets,Subsets,Medium,71.6%
 79,word-search,Word Search,Medium,39.7%
+80,remove-duplicates-from-sorted-array-ii,Remove Duplicates from Sorted Array II,Medium,62.4%
 82,remove-duplicates-from-sorted-list-ii,Remove Duplicates from Sorted List II,Medium,44.3%
+88,merge-sorted-array,Merge Sorted Array,Easy,52.4%
 90,subsets-ii,Subsets II,Medium,53.4%
+108,convert-sorted-array-to-binary-search-tree,Convert Sorted Array to Binary Search Tree,Easy,73.7%
 116,populating-next-right-pointers-in-each-node,Populating Next Right Pointers in Each Node,Medium,57.0%
 117,populating-next-right-pointers-in-each-node-ii,Populating Next Right Pointers in Each Node II,Medium,46.7%
 120,triangle,Triangle,Medium,50.8%
 130,surrounded-regions,Surrounded Regions,Medium,34.1%
 136,single-number,Single Number,Easy,69.4%
+139,word-break,Word Break,Medium,48.0%
+150,kth-smallest-element-in-a-bst,Kth Smallest Element in a BST,Medium,74.9%
 153,find-minimum-in-rotated-sorted-array,Find Minimum in Rotated Sorted Array,Medium,47.9%
 162,find-peak-element,Find Peak Element,Medium,46.0%
 167,two-sum-ii-input-array-is-sorted,Two Sum II - Input Array Is Sorted,Medium,58.7%
@@ -37,11 +48,13 @@
 191,number-of-1-bits,Number of 1 Bits,Easy,60.5%
 198,house-robber,House Robber,Medium,47.2%
 200,number-of-islands,Number of Islands,Medium,54.0%
+202,happy-number,Happy Number,Easy,57.7%
 206,reverse-linked-list,Reverse Linked List,Easy,70.3%
 209,minimum-size-subarray-sum,Minimum Size Subarray Sum,Medium,43.4%
 216,combination-sum-iii,Combination Sum III,Medium,65.9%
 217,contains-duplicate,Contains Duplicate,Easy,60.8%
 225,implement-stack-using-queues,Implement Stack using Queues,Easy,55.1%
+228,summary-ranges,Summary Ranges,Easy,52.7%
 231,power-of-two,Power of Two,Easy,45.0%
 234,palindrome-linked-list,Palindrome Linked List,Easy,46.6%
 268,missing-number,Missing Number,Easy,60.4%
@@ -64,6 +77,7 @@
 572,subtree-of-another-tree,Subtree of Another Tree,Easy,45.4%
 581,shortest-unsorted-continuous-subarray,Shortest Unsorted Continuous Subarray,Medium,35.4%
 617,merge-two-binary-trees,Merge Two Binary Trees,Easy,77.9%
+637,average-of-levels-in-binary-tree,Average of Levels in Binary Tree,Easy,73.9%
 647,palindromic-substrings,Palindromic Substrings,Medium,65.3%
 695,max-area-of-island,Max Area of Island,Medium,69.7%
 704,binary-search,Binary Search,Easy,55.3%
